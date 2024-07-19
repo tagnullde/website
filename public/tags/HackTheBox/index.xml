@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HackTheBox on tagnull.de</title>
+    <link>//localhost:1313/tags/HackTheBox/</link>
+    <description>Recent content in HackTheBox on tagnull.de</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 20 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/HackTheBox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BountyHunter - WriteUp</title>
+      <link>//localhost:1313/posts/bountyhunter/</link>
+      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/bountyhunter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cap - WriteUp</title>
+      <link>//localhost:1313/posts/cap/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/cap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>The Notebook - WriteUp</title>
+      <link>//localhost:1313/posts/the-notebook/</link>
+      <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/the-notebook/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Traceback - WriteUp</title>
+      <link>//localhost:1313/posts/traceback/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/traceback/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Safe - WriteUp</title>
+      <link>//localhost:1313/posts/safe/</link>
+      <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/safe/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fortune - WriteUp</title>
+      <link>//localhost:1313/posts/fortune/</link>
+      <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/fortune/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OneTwoSeven - WriteUp</title>
+      <link>//localhost:1313/posts/onetwoseven/</link>
+      <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/onetwoseven/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Querier - WriteUp</title>
+      <link>//localhost:1313/posts/querier/</link>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/querier/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Irked - WriteUp</title>
+      <link>//localhost:1313/posts/irked/</link>
+      <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/irked/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stratosphere - WriteUp [Video]</title>
+      <link>//localhost:1313/posts/stratosphere/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/stratosphere/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Access - WriteUp</title>
+      <link>//localhost:1313/posts/access/</link>
+      <pubDate>Sat, 02 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/access/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ypuffy - WriteUp</title>
+      <link>//localhost:1313/posts/ypuffy/</link>
+      <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ypuffy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SecNotes - WriteUp</title>
+      <link>//localhost:1313/posts/secnotes/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/secnotes/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
