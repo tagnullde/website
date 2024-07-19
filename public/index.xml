@@ -2,150 +2,150 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>about on www.tagnull.de</title>
-    <link>//localhost:1313/</link>
+    <link>/</link>
     <description>Recent content in about on www.tagnull.de</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 20 Nov 2021 17:54:29 +0200</lastBuildDate>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Path to OSCP</title>
-      <link>//localhost:1313/docs/OSCP/oscp-reporting/</link>
+      <link>/docs/OSCP/oscp-reporting/</link>
       <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/OSCP/oscp-reporting/</guid>
+      <guid>/docs/OSCP/oscp-reporting/</guid>
       <description>Introduction # I had to write a report for the OSCP exam and I was asked to explain my personal setup and the process of writing the report.&#xA;Setup all the things # First we need to install the following tools:&#xA;Joplin (optional) Latex Pandoc Eisvogel Latex Template Noraj Markdown OSCP Template Install Joplin # Depending on your operating system you need to use a different installer. Just go to Joplin.</description>
     </item>
     <item>
       <title>Path to OSCP - Exploit Development</title>
-      <link>//localhost:1313/docs/OSCP/oscp-exploitdev/</link>
+      <link>/docs/OSCP/oscp-exploitdev/</link>
       <pubDate>Thu, 08 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/OSCP/oscp-exploitdev/</guid>
+      <guid>/docs/OSCP/oscp-exploitdev/</guid>
       <description>Topic # I want to take the OSCP exam in 2020.&#xA;With this blog-series I want to motivate myself, document my progress and give back to the community. It also might encourage you to take the exam yourself.&#xA;In this first installment I would like to talk about &amp;ldquo;Buffer-Overflows&amp;rdquo;. What are they? How do they work? How can you exploit them?&#xA;I am not a developer by any means. I have exactly 0% knowledge in C or any other compiled language.</description>
     </item>
     <item>
       <title>Path to OSCP - Review</title>
-      <link>//localhost:1313/docs/OSCP/oscp-review/</link>
+      <link>/docs/OSCP/oscp-review/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/OSCP/oscp-review/</guid>
+      <guid>/docs/OSCP/oscp-review/</guid>
       <description>Introduction # I think everybody expects some kind of experience-report after getting the &amp;ldquo;OSCP certification&amp;rdquo;. So this is my take on this. Before I dive in - please keep in mind:&#xA;I will only describe how I approached the &amp;ldquo;PWK course&amp;rdquo; and &amp;ldquo;OSCP certification&amp;rdquo;.&#xA;THIS MIGHT NOT WORK FOR YOU!&#xA;With this out of the way, let&amp;rsquo;s dive right in.&#xA;[Top]&#xA;Pre-Enrollment # My journey started a long time before actually enrolling in the exam in 2019.</description>
     </item>
     <item>
       <title>network</title>
-      <link>//localhost:1313/docs/Cheatsheet/enumeration/network/</link>
+      <link>/docs/Cheatsheet/enumeration/network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/Cheatsheet/enumeration/network/</guid>
+      <guid>/docs/Cheatsheet/enumeration/network/</guid>
       <description>nmap # enumerate services and use default scripts&#xA;nmap -sC -sV -oN normal.txt target-ip scan all tcp ports&#xA;nmap -p- -oN all_ports.txt target-ip scan all udp ports&#xA;nmap -p- -sU -oN all_udp_ports.txt target-ip use script categories&#xA;nmap --script vuln,safe,discovery -oN scan.txt target-ip list all nse scripts&#xA;ls -lh /usr/share/nmap/scripts/ nmap through socks4 proxy&#xA;nmap --proxies socks4://proxy-ip:1080 target-ip ftp bounce scan&#xA;nmap -P0 -n -b username:password@target-ip target2-ip --proxies socks4://proxy-ip:1080 -vvvv massscan # tbd</description>
     </item>
     <item>
       <title>web</title>
-      <link>//localhost:1313/docs/Cheatsheet/enumeration/web/</link>
+      <link>/docs/Cheatsheet/enumeration/web/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/Cheatsheet/enumeration/web/</guid>
+      <guid>/docs/Cheatsheet/enumeration/web/</guid>
       <description> gobuster # </description>
     </item>
     <item>
       <title>BountyHunter</title>
-      <link>//localhost:1313/docs/HTB-Writeups/bountyhunter/</link>
+      <link>/docs/HTB-Writeups/bountyhunter/</link>
       <pubDate>Sat, 20 Nov 2021 17:54:29 +0200</pubDate>
-      <guid>//localhost:1313/docs/HTB-Writeups/bountyhunter/</guid>
+      <guid>/docs/HTB-Writeups/bountyhunter/</guid>
       <description>External Recon # We start with nmap to do our external recon:&#xA;Nmap scan report for 10.129.192.33 PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 d4:4c:f5:79:9a:79:a3:b0:f1:66:25:52:c9:53:1f:e1 (RSA) | 256 a2:1e:67:61:8d:2f:7a:37:a7:ba:3b:51:08:e8:89:a6 (ECDSA) |_ 256 a5:75:16:d9:69:58:50:4a:14:11:7a:42:c1:b6:23:44 (ED25519) 80/tcp open http Apache httpd 2.4.41 ((Ubuntu)) |_http-server-header: Apache/2.4.41 (Ubuntu) |_http-title: Bounty Hunters Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel We find a ssh service on port 22 and http service on port 80.</description>
     </item>
     <item>
       <title>Cap</title>
-      <link>//localhost:1313/docs/HTB-Writeups/cap/</link>
+      <link>/docs/HTB-Writeups/cap/</link>
       <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/HTB-Writeups/cap/</guid>
+      <guid>/docs/HTB-Writeups/cap/</guid>
       <description>External Recon # As always we start to get a lay of the land with our default &amp;ldquo;nmap&amp;rdquo; scan:&#xA;nmap -sC -sV 10.10.10.245 PORT STATE SERVICE VERSION PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 3.0.3 22/tcp open ssh OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0) 80/tcp open http gunicorn Nothing unusual so far. However, since we have some version numbers let&amp;rsquo;s check them with searchsploit.&#xA;Nothing for vsftp.</description>
     </item>
     <item>
       <title>The Notebook</title>
-      <link>//localhost:1313/docs/HTB-Writeups/the-notebook/</link>
+      <link>/docs/HTB-Writeups/the-notebook/</link>
       <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/HTB-Writeups/the-notebook/</guid>
+      <guid>/docs/HTB-Writeups/the-notebook/</guid>
       <description>External Recon # We start our external recon with an nmap scan. Only two ports are open with a third one filtered.&#xA;nmap -sC -sV -oN inital 10.10.10.230 PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 86:df:10:fd:27:a3:fb:d8:36:a7:ed:90:95:33:f5:bf (RSA) | 256 e7:81:d6:6c:df:ce:b7:30:03:91:5c:b5:13:42:06:44 (ECDSA) |_ 256 c6:06:34:c7:fc:00:c4:62:06:c2:36:0e:ee:5e:bf:6b (ED25519) 80/tcp open http nginx 1.14.0 (Ubuntu) |_http-server-header: nginx/1.14.0 (Ubuntu) |_http-title: The Notebook - Your Note Keeper 10010/tcp filtered rxapi The most interessting service so far is http on port 80.</description>
     </item>
     <item>
       <title>Traceback</title>
-      <link>//localhost:1313/docs/HTB-Writeups/traceback/</link>
+      <link>/docs/HTB-Writeups/traceback/</link>
       <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/HTB-Writeups/traceback/</guid>
+      <guid>/docs/HTB-Writeups/traceback/</guid>
       <description>External Recon # Welcome to my first box and writeup since my OSCP. We start with a nmap scan as usual:&#xA;Website # Checking the website it seems like somebody already defaced the website.&#xA;We find a little hint in the sourcecode.&#xA;A google search on &amp;ldquo;webshells + Xh4H&amp;rdquo; reveals a github repository with a bunch of webshells. And sure enough we try all of them on our target.</description>
     </item>
     <item>
       <title>Exploit-Development - ret2plt</title>
-      <link>//localhost:1313/docs/HTB-Writeups/ret2plt-exploit/</link>
+      <link>/docs/HTB-Writeups/ret2plt-exploit/</link>
       <pubDate>Tue, 21 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/HTB-Writeups/ret2plt-exploit/</guid>
+      <guid>/docs/HTB-Writeups/ret2plt-exploit/</guid>
       <description>Introduction # In the last couple of days, I had some time and wanted to get a better understanding and some experience in modern binary exploitation techniques. Part of this learning process is to explain what I&amp;rsquo;ve learned to others. If you find an error, please let me know.&#xA;Also: While preparing for the OSCP I already tried a couple of protection bypasses like NX/DEP (Data Execution Prevention) with the ROPEmporium challenges.</description>
     </item>
     <item>
       <title>Safe</title>
-      <link>//localhost:1313/docs/HTB-Writeups/safe/</link>
+      <link>/docs/HTB-Writeups/safe/</link>
       <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/HTB-Writeups/safe/</guid>
+      <guid>/docs/HTB-Writeups/safe/</guid>
       <description>External Recon # You know the dance. We start with nmap.&#xA;nmap -sV -sC -oN initial -T4 10.10.10.147 22/tcp open ssh OpenSSH 7.4p1 Debian 10+deb9u6 (protocol 2.0) | ssh-hostkey: | 2048 6d:7c:81:3d:6a:3d:f9:5f:2e:1f:6a:97:e5:00:ba:de (RSA) | 256 99:7e:1e:22:76:72:da:3c:c9:61:7d:74:d7:80:33:d2 (ECDSA) |_ 256 6a:6b:c3:8e:4b:28:f7:60:85:b1:62:ff:54:bc:d8:d6 (ED25519) 80/tcp open http Apache httpd 2.4.25 ((Debian)) |_http-server-header: Apache/2.4.25 (Debian) |_http-title: Apache2 Debian Default Page: It works Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel As there&amp;rsquo;s not much to see here I visited the website.</description>
     </item>
     <item>
       <title>Fortune</title>
-      <link>//localhost:1313/docs/HTB-Writeups/fortune/</link>
+      <link>/docs/HTB-Writeups/fortune/</link>
       <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/HTB-Writeups/fortune/</guid>
+      <guid>/docs/HTB-Writeups/fortune/</guid>
       <description>External Recon # I started with my usual &amp;ldquo;nmap&amp;rdquo; scan:&#xA;nmap -sC -sV -oN initial 10.10.10.127 PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.9 (protocol2.0) 80/tcp open http OpenBSD httpd |_http-server-header: OpenBSD httpd |_http-title: Fortune 443/tcp open ssl/https? Most of the time you&amp;rsquo;ll have the best chances to find something on the webservices rather than &amp;ldquo;ssh&amp;rdquo;.&#xA;So let&amp;rsquo;s take a look at &amp;ldquo;port 80&amp;rdquo;:&#xA;You can select a fortune-database as it seems and get a fortune-cookie.</description>
     </item>
     <item>
       <title>OneTwoSeven</title>
-      <link>//localhost:1313/docs/HTB-Writeups/onetwoseven/</link>
+      <link>/docs/HTB-Writeups/onetwoseven/</link>
       <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/HTB-Writeups/onetwoseven/</guid>
+      <guid>/docs/HTB-Writeups/onetwoseven/</guid>
       <description>External Recon # I started with my usual &amp;ldquo;nmap&amp;rdquo; scan:&#xA;$ nmap -sC -sV -oN initial 10.10.10.133 PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.4p1 Debian 10+deb9u6 (protocol 2.0) 80/tcp open http Apache httpd 2.4.25 ((Debian)) After this scan I &amp;ldquo;triple-tap&amp;rdquo; my target with a &amp;ldquo;script-&amp;rdquo; and a &amp;ldquo;all-ports-scan&amp;rdquo;. While the script-scan gave me no obvious further information to work with, the all-ports scan gave me another &amp;ldquo;port 60080 to work with.</description>
     </item>
     <item>
       <title>Querier</title>
-      <link>//localhost:1313/docs/HTB-Writeups/querier/</link>
+      <link>/docs/HTB-Writeups/querier/</link>
       <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/HTB-Writeups/querier/</guid>
+      <guid>/docs/HTB-Writeups/querier/</guid>
       <description>External Recon # I started with my usual &amp;ldquo;nmap&amp;rdquo; scan:&#xA;$ nmap -sC -sV -oN initial 10.10.10.125 135/tcp open msrpc Microsoft Windows RPC 139/tcp open netbios-ssn Microsoft Windows netbios-ssn 445/tcp open microsoft-ds? 1433/tcp open ms-sql-s Microsoft SQL Server 14.00.1000.00 | ms-sql-ntlm-info: | Target_Name: HTB | NetBIOS_Domain_Name: HTB | NetBIOS_Computer_Name: QUERIER | DNS_Domain_Name: HTB.LOCAL | DNS_Computer_Name: QUERIER.HTB.LOCAL | DNS_Tree_Name: HTB.LOCAL |_ Product_Version: 10.0.17763 I reduced the output to the interesting pieces.</description>
     </item>
     <item>
       <title>Irked</title>
-      <link>//localhost:1313/docs/HTB-Writeups/irked/</link>
+      <link>/docs/HTB-Writeups/irked/</link>
       <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/HTB-Writeups/irked/</guid>
+      <guid>/docs/HTB-Writeups/irked/</guid>
       <description>External Recon # As usual we work our way down the KillChain. Starting with a typical nmap scan.&#xA;nmap -sC -sV -oN inital 10.10.10.117&#xA;This runs all the default labled nmap scripts, enumerates versions of found services and dumps everything into the file inital. Note that a default nmap scan just does TCP scans and only the top 1000 ports.&#xA;Here&amp;rsquo;s the output of said scan:&#xA;PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 6.</description>
     </item>
     <item>
       <title>NTLM Hashes via GPO redirect</title>
-      <link>//localhost:1313/docs/HTB-Writeups/gettinghashes/</link>
+      <link>/docs/HTB-Writeups/gettinghashes/</link>
       <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/HTB-Writeups/gettinghashes/</guid>
+      <guid>/docs/HTB-Writeups/gettinghashes/</guid>
       <description>A couple of days ago Darren Mar-Elia tweeted about sending gpos down the wrong path. More security fun with GPOs :) : https://t.co/wEJhjn9uT5 #grouppolicy #infosec&#xA;&amp;mdash; Darren Mar-Elia (@grouppolicyguy) April 3, 2019 You should read his article before we move on here.&#xA;After I was done I thought: &amp;ldquo;If an attacker can redirect the GPO to a SMB-Share, shouldn&amp;rsquo;t he be able to use tools like impacket&amp;rsquo;s SMB-Server to capture all the NTML hashes in a domain?</description>
     </item>
     <item>
       <title>Stratosphere</title>
-      <link>//localhost:1313/docs/HTB-Writeups/stratosphere/</link>
+      <link>/docs/HTB-Writeups/stratosphere/</link>
       <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/HTB-Writeups/stratosphere/</guid>
+      <guid>/docs/HTB-Writeups/stratosphere/</guid>
       <description>I made this video way back in 2018 for a company meeting. I tried to give even non-technical people a sense of how an attack is carried out. I put it on the HackTheBox Forums a couple weeks ago and decided to get it on my website too.&#xA;Have fun watching it!&#xA;x41</description>
     </item>
     <item>
       <title>Access</title>
-      <link>//localhost:1313/docs/HTB-Writeups/access/</link>
+      <link>/docs/HTB-Writeups/access/</link>
       <pubDate>Sat, 02 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/HTB-Writeups/access/</guid>
+      <guid>/docs/HTB-Writeups/access/</guid>
       <description>External Recon # We kick off a basic &amp;ldquo;nmap&amp;rdquo; scan:&#xA;nmap -sC -sV 10.10.10.98 PORT STATE SERVICE VERSION 21/tcp open ftp Microsoft ftpd 23/tcp open telnet? 80/tcp open http Microsoft IIS httpd 7.5 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows As you can see, we find some very common ports. When we visit the website listening on &amp;ldquo;port 80&amp;rdquo; we just find a picture of a server-room.&#xA;Let&amp;rsquo;s check &amp;ldquo;ftp&amp;rdquo; and &amp;ldquo;telnet&amp;rdquo; by running another &amp;ldquo;nmap&amp;rdquo; scan.</description>
     </item>
     <item>
       <title>Ypuffy</title>
-      <link>//localhost:1313/docs/HTB-Writeups/ypuffy/</link>
+      <link>/docs/HTB-Writeups/ypuffy/</link>
       <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/HTB-Writeups/ypuffy/</guid>
+      <guid>/docs/HTB-Writeups/ypuffy/</guid>
       <description>External Recon # Let&amp;rsquo;s start with nmap. But let&amp;rsquo;s spice it up a bit with an additional script:&#xA;nmap -sC -sV -oN initial --script discovery 10.10.10.107&#xA;The output is quite big. You can the output here.&#xA;The script tries to get as much information as possible of your target and in this case shows some LDAP information and the following open ports:&#xA;Open Ports 22, 80, 139, 389, 445 [Top]</description>
     </item>
     <item>
       <title>SecNotes - WriteUp</title>
-      <link>//localhost:1313/docs/HTB-Writeups/secnotes/</link>
+      <link>/docs/HTB-Writeups/secnotes/</link>
       <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/HTB-Writeups/secnotes/</guid>
+      <guid>/docs/HTB-Writeups/secnotes/</guid>
       <description></description>
     </item>
   </channel>
