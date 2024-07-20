@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>www.tagnull.de</title>
-    <link>http://localhost:1313/docs/OSCP/</link>
+    <link>https://www.tagnull.de/docs/OSCP/</link>
     <description>Recent content on www.tagnull.de</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 30 Mar 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/OSCP/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.tagnull.de/docs/OSCP/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Path to OSCP</title>
-      <link>http://localhost:1313/docs/OSCP/oscp-reporting/</link>
+      <link>https://www.tagnull.de/docs/OSCP/oscp-reporting/</link>
       <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/OSCP/oscp-reporting/</guid>
+      <guid>https://www.tagnull.de/docs/OSCP/oscp-reporting/</guid>
       <description>Introduction # I had to write a report for the OSCP exam and I was asked to explain my personal setup and the process of writing the report.&#xA;Setup all the things # First we need to install the following tools:&#xA;Joplin (optional) Latex Pandoc Eisvogel Latex Template Noraj Markdown OSCP Template Install Joplin # Depending on your operating system you need to use a different installer. Just go to Joplin.</description>
     </item>
     <item>
       <title>Path to OSCP - Exploit Development</title>
-      <link>http://localhost:1313/docs/OSCP/oscp-exploitdev/</link>
+      <link>https://www.tagnull.de/docs/OSCP/oscp-exploitdev/</link>
       <pubDate>Thu, 08 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/OSCP/oscp-exploitdev/</guid>
+      <guid>https://www.tagnull.de/docs/OSCP/oscp-exploitdev/</guid>
       <description>Topic # I want to take the OSCP exam in 2020.&#xA;With this blog-series I want to motivate myself, document my progress and give back to the community. It also might encourage you to take the exam yourself.&#xA;In this first installment I would like to talk about &amp;ldquo;Buffer-Overflows&amp;rdquo;. What are they? How do they work? How can you exploit them?&#xA;I am not a developer by any means. I have exactly 0% knowledge in C or any other compiled language.</description>
     </item>
     <item>
       <title>Path to OSCP - Review</title>
-      <link>http://localhost:1313/docs/OSCP/oscp-review/</link>
+      <link>https://www.tagnull.de/docs/OSCP/oscp-review/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/OSCP/oscp-review/</guid>
+      <guid>https://www.tagnull.de/docs/OSCP/oscp-review/</guid>
       <description>Introduction # I think everybody expects some kind of experience-report after getting the &amp;ldquo;OSCP certification&amp;rdquo;. So this is my take on this. Before I dive in - please keep in mind:&#xA;I will only describe how I approached the &amp;ldquo;PWK course&amp;rdquo; and &amp;ldquo;OSCP certification&amp;rdquo;.&#xA;THIS MIGHT NOT WORK FOR YOU!&#xA;With this out of the way, let&amp;rsquo;s dive right in.&#xA;[Top]&#xA;Pre-Enrollment # My journey started a long time before actually enrolling in the exam in 2019.</description>
     </item>
   </channel>

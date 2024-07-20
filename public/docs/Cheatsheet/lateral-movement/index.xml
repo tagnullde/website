@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>www.tagnull.de</title>
+    <link>https://www.tagnull.de/docs/Cheatsheet/lateral-movement/</link>
+    <description>Recent content on www.tagnull.de</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://www.tagnull.de/docs/Cheatsheet/lateral-movement/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>network</title>
+      <link>https://www.tagnull.de/docs/Cheatsheet/lateral-movement/network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.tagnull.de/docs/Cheatsheet/lateral-movement/network/</guid>
+      <description>evil-winrm # get shell via evil-winrm&#xA;./evil-winrm.rb -u username -p password -i target-ip ssh / tunneling # create ssh-key&#xA;ssh-keygen add public-key to authorized_keys&#xA;cat rsa.pub &amp;gt;&amp;gt; authorized_keys set permission on private-key&#xA;chmod 600 id_rsa login via ssh-key&#xA;ssh -i id_rsa username@target-ip login with older ciphers&#xA;ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -c aes128-cbc username@target-ip start tool after ssh login&#xA;ssh username@target-ip -o &amp;#34;ProxyCommand=ncat --proxy-type http --proxy target-ip:proxy-port 127.0.0.1 22&amp;#34; ssh port forwarding</description>
+    </item>
+  </channel>
+</rss>

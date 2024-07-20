@@ -1,0 +1,8 @@
+# My security address
+Contact: mailto:infosec@tagnull.de
+
+# My security acknowledgements
+Acknowledgements: https://www.tagnull.de/acknowledgements
+
+# My security policy
+Policy: https://www.tagnull.de/security-policy

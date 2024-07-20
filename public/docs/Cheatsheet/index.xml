@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>www.tagnull.de</title>
-    <link>http://localhost:1313/docs/Cheatsheet/</link>
+    <link>https://www.tagnull.de/docs/Cheatsheet/</link>
     <description>Recent content on www.tagnull.de</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/docs/Cheatsheet/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.tagnull.de/docs/Cheatsheet/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

