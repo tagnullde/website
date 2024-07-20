@@ -49,8 +49,6 @@ there's more to find. Nmap by default just checks the Top1000.
 
 Spoileralert: I found Port 8808 to be open also.
 
-[[Top]](#top)
-
 # Explore
 
 ##### Port 445
@@ -110,8 +108,6 @@ You should watch (and subscribe!) his video for a better explaination on this ty
 
 So let's try some handcrafted "SQLi".
 
-[[Top]](#top)
-
 # Weaponize
 So, we could login with our regular user. First, let's logout and create another user like so:
 
@@ -147,8 +143,6 @@ provided. But as we commented the original one out, we have now a valid statemen
 the already existing useraccount "x41" (without the single-quote).
 
 Nice! You know what we need to do next, do you?! ;)
-
-[[Top]](#top)
 
 # Exploit
 Let's create another user, hmm, let's target "tyler" as he seems to be an admin of some sorts.
@@ -203,8 +197,6 @@ some programs won't work. So I switched to "nc64.exe".
 
 We've got a shell AND....
 
-[[Top]](#top)
-
 # User Flag
 
 ...sure enough "user.txt"! :)
@@ -220,8 +212,6 @@ C:\Users\tyler\Desktop>dir
 08/19/2018  08:25 AM                34 user.txt
 
 {{< / highlight >}}
-
-[[Top]](#top)
 
 # Internal Recon
 While searching around on the box to find clues on the next step to `root.txt`,
@@ -245,9 +235,6 @@ After that I used "wsl.exe" and "wsl.config" to start up the preconfigued "Ubunt
 Hoping for a quick win for root. Perhaps I can read the Windows filesystem from it without
 "ACLs" messing with me?
 
-[[Top]](#top)
-
-
 # Privilege Escalation
 "Sadly" that wasn't possible.
 I had to search a lot, after a little nudge I headed into the right direction.
@@ -257,16 +244,12 @@ If I had done it, I immediately would have tried this:
 
 ![AdminPW](SecNotes-AdminPW.png)
 
-[[Top]](#top)
-
 # Root Flag
 From here it just was connecting to the SMB share to get the root flag.
 I didn't bother getting a propper shell as admin, which I leave up to the reader how
 to do that. ;) (Hint: Impacket)
 
 ![Root.txt](SecNotes-root.txt.png)
-
-[[Top]](#top)
 
 # Lessons Learned
 First, my "Enumeration" failed me and I didn't followed my initial thoughts about the Ubuntu folders.
@@ -282,5 +265,3 @@ I recommend watching it.
 That's it for today. Have a nice one!
 <br>
 x41
-
-[[Top]](#top)

@@ -15,7 +15,7 @@ weight: 1
 <br>
 I am a Penetrationtester and this site it my personal documentation of the tools I used on engagements, HackTheBox and during certifications.
 <br>
-My blog has some older writeups of <a href="https://www.hackthebox.eu" target="_blank">HackTheBox</a> machines and my review / progress of the 2020 version of the OSCP. 
+You can also find some older writeups here, of <a href="https://www.hackthebox.eu" target="_blank">HackTheBox</a> machines and my review / progress of the 2020 version of the OSCP. 
 <br>
 <h1>The Cheatsheet is a work in progress, since I have to migrate a lot of commands over here and figure out how to sort them. Might take a while.</h1>
 <br>

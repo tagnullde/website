@@ -33,7 +33,6 @@ Nothing for vsftp. OpenSSH looks quite new but I suggest checking it aswell.
 I just made a mental note to come back to SSH should other paths seem to be a dead end.
 Gunicorn had no version number, so I skipped the searchsploit aswell. But we can take a look at the website itself.
 
-[[Top]](#top)
 
 # Explore
 
@@ -75,8 +74,6 @@ Let's download it and open it with wireshark.
 
 Awesome. We have his FTP credentials.
 
-[[Top]](#top)
-
 
 # Exploit
 
@@ -86,8 +83,6 @@ Nathan probably reused his password, and SSH is far more interessting than FTP. 
 ![nathan](nathan.png)
 
 Told you. Oh, we also have the user flag here.
-
-[[Top]](#top)
 
 # Internal Recon
 
@@ -99,9 +94,6 @@ To do that I fire up a simple http server on my own machine with `python3 -m htt
 After launching it and going through the output my eyes fell on this entry.
 
 ![capabilities](capabilities.png)
-
-[[Top]](#top)
-
 
 # Privilege Escalation
 Capabilities are often easy to exploit. They are [explained here](https://book.hacktricks.xyz/linux-unix/privilege-escalation/linux-capabilities).
@@ -118,5 +110,3 @@ Great. It worked as expected. We can take the root flag and finish the box.
 That's it for today. Have a nice one!
 
 x41
-
-[[Top]](#top)

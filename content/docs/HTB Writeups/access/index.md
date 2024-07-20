@@ -53,7 +53,6 @@ PORT   STATE SERVICE VERSION
 First thing to note is that we have anonymous access to the "ftp" server.
 Let's login an see what we find.
 
-[[Top]](#top)
 
 # Explore
 
@@ -109,8 +108,6 @@ In it you find an email from John.
 
 How kind! Thanks John! :)
 
-[[Top]](#top)
-
 
 # Exploit
 
@@ -135,8 +132,6 @@ C:\Users\security\Desktop>dir
 
 ```
 
-[[Top]](#top)
-
 # Internal Recon
 
 I searched around in the box for clues how to proceed. Eventually I checked for stored
@@ -154,15 +149,11 @@ User: ACCESS\Administrator
 If you want to learn more about "Windows Enumeration" check this <a href="https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide" target="_blank">blog</a>.
 He has some `HackTheBox` WriteUps too.
 
-[[Top]](#top)
-
 
 # Privilege Escalation
 In order to use those stored credentials, I used "runas" with the "/savecreds" option.
 
 `runas /user:ACCESS\Administrator /savecred "cmd.exe /c type c:\users\administrator\desktop\root.txt C:\Users\security\AppData\Local\Temp\root.txt"`
-
-[[Top]](#top)
 
 # Root Flag
 
@@ -179,13 +170,9 @@ Just get yourself this repo: <a href="https://github.com/samratashok/nishang" ta
 
 ![Shell](access-shell.png)
 
-[[Top]](#top)
-
 # Lessons Learned
 I should learn to take propper notes on my machines. I had to do the machine a second time basicly. *sigh*
 
 That's it for today. Have a nice one!
 
 x41
-
-[[Top]](#top)

@@ -58,7 +58,6 @@ First let's feed it with legitimate data.
 From the output we can determine that the system will use a database in the future and that our data gets displayed back to us.
 Nothing crazy on the surface. To look under the hood we need a tool like `burp` and use it as our proxy (google is your friend).
 
-[[Top]](#top)
 
 # Explore
 
@@ -110,7 +109,6 @@ If we send this request we will indeed get the contents of `/etc/passwd`.
 
 ![burp-3.png](burp-3.png)
 
-[[Top]](#top)
 
 # Exploit
 
@@ -159,8 +157,6 @@ $dbpassword = "m19RoAU0hP41A1sTsq6K";
 $testuser = "test";
 ?>
 ```
-
-[[Top]](#top)
 
 # Recon
 
@@ -242,8 +238,6 @@ __Ticket Code:__
 As you can see, we provided a valid ticket file. You might notice that the "Destination" is empty. This is because I haven't provided one. This is not needed to make the exploit
 work. But it looks nicer. So the next interation of the ticket file will have "development" in the "Ticket to" field.
 
-[[Top]](#top)
-
 # Privilege Escalation
 
 But now we need to think about a way to exploit this. If you read the code again, you might notice the `eval()` function close to the end of the script. This function can be used to run
@@ -268,5 +262,3 @@ And there we have it.
 Have a good one!
 
 x41
-
-[[Top]](#top)

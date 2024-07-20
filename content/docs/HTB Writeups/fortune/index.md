@@ -78,8 +78,6 @@ So what's the solution to this? Well, append a command to the existing one.
 Easy! Well, when you remember the stuff you've done a dozen times by now.
 However, I wasn't able so spawn a "reverse-shell" this way. So I spent some time enumerating the filesystem.
 
-[[Top]](#top)
-
 # Explore
 
 I started with `id` and `/etc/passwd` to see who's boss on that box.
@@ -178,8 +176,6 @@ PORT     STATE SERVICE VERSION
 
 The "nfs" service was the most interesting service. Let's see if there's an open share for us!
 
-[[Top]](#top)
-
 # Weaponize
 
 ```
@@ -207,9 +203,6 @@ drwxr-xr-x 2 1002    1002  512 Nov  3 03:39 nfsuser
 Bummer. We can't access `charlies` folder. Or can we?
 When we check the `UID/GUID` we just see a number. What would happen
 when we create a new user with `UID/GUID` of `1000` on our own system?
-
-
-[[Top]](#top)
 
 # Exploit
 
@@ -240,8 +233,6 @@ To make my life easier I added a propper ssh-key into charlies account.
 I just created a "ssh-key", added the "public-key" to his ".ssh/authorized_keys" file and login into "ssh".
 
 `ssh -i .ssh/id_rsa charlie@10.10.10.127`
-
-[[Top]](#top)
 
 # Internal Recon
 According to Bobs Email. He worked on "pgadmin4" let's locate the database and see if we can mess with it.
@@ -275,8 +266,6 @@ bob@fortune.htb$pbkdf2-sha512$25000$z9nbm1Oq9Z5TytkbQ8h5Dw$Vtx9YWQsgwdXpBnsa8BtO
 charlie@fortune.htb$pbkdf2-sha512$25000$3hvjXAshJKQUYgxhbA0BYA$iuBYZKTTtTO.cwSvMwPAYlhXRZw8aAn9gBtyNQW3Vge23gNUMe95KqiAyf37.v1lmCunWVkmfr93Wi6.W.UzaQ
 ```
 
-[[Top]](#top)
-
 # Privilege Escalation
 
 According to the mail, the root password and the password for the database
@@ -291,8 +280,6 @@ go through the coding process, knowing that it wouldn't prevent my victory only 
 Which was importing the crypto-lib from "github" and changing the propper values from the database.
 
 You can find the finished script here: <a href="https://www.tagnull.de/post/fortune/decrypt.py">decrypt.py</a>.
-
-[[Top]](#top)
 
 # Root Flag
 Running the script, decrypted the database password to `R3us3-0f-a-P4ssw0rdl1k3th1s?_B4D.ID3A!`
@@ -309,5 +296,3 @@ Another fun box down! :)<br>
 Also I got a new shiny badge for it!
 
 ![fortune_badge](fortune_badge.png)
-
-[[Top]](#top)

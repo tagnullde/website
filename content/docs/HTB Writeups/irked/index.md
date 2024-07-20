@@ -55,8 +55,6 @@ But this leads to a dead end. We find just the Apache manual and nothing more.
 
 So let's start exploreing what else we've got so far.
 
-[[Top]](#top)
-
 # Explore
 <br>
 #### Port 22:
@@ -142,8 +140,6 @@ searchsploit unreal
 Seems like it. :)
 Let's break in!
 
-[[Top]](#top)
-
 # Exploit
 Let's fire up Metasploit. And load the exploit with `use exploit`.
 The commands within `msf` are fairly simple. So I don't write them all down.
@@ -205,8 +201,6 @@ python3 -c 'import pty;pty.spawn("/bin/bash")'
 ircd@irked:~/Unreal3.2$
 {{< / highlight >}}
 
-[[Top]](#top)
-
 # Internal Recon
 Awesome, now we have a shell. Let's find out which users are on this box. And if we can find
 something usefull.
@@ -267,8 +261,6 @@ Kab6h+m+bbp2J:HG
 Awesome! We've got another password. Since we found it in "djmardov" directory
 let's check if it's a password for "ssh".
 
-[[Top]](#top)
-
 # User Flag
 
 ```
@@ -281,8 +273,6 @@ djmardov@irked:~$ cat Documents/user.txt
 
 Awesome. We are not only authenticated as a propper user, we also can
 get the "userflag" now.
-
-[[Top]](#top)
 
 # Privilege Escalation
 Let's hunt for the "rootflag". I start with downloading "LinEnum.sh" from my attacker
@@ -352,8 +342,6 @@ root@irked:/usr/bin#
 
 Aaand we are root! =)
 
-[[Top]](#top)
-
 # <a name="RFlag"></a>Root Flag
 So all that is left, is to get the `rootflag`.
 
@@ -363,8 +351,6 @@ root@irked:# cat /root/root.txt
 ```
 
 This is a box done!
-
-[[Top]](#top)
 
 # <a name="Learned"></a>Lessons Learned
 I always forget to either scan for all ports or UDP ports when I can't find a first entry point.
@@ -383,5 +369,3 @@ To cite ippsec:
 That's all for today. Have a good one!
 
 x41
-
-[[Top]](#top)

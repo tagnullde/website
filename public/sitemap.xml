@@ -24,15 +24,17 @@
     <loc>https://www.tagnull.de/docs/OSCP/oscp-review/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.tagnull.de/docs/Cheatsheet/collection/</loc>
-  </url><url>
     <loc>https://www.tagnull.de/docs/Cheatsheet/enumeration/</loc>
   </url><url>
     <loc>https://www.tagnull.de/docs/Cheatsheet/initial-access/</loc>
   </url><url>
+    <loc>https://www.tagnull.de/docs/Cheatsheet/collection/</loc>
+  </url><url>
     <loc>https://www.tagnull.de/docs/Cheatsheet/lateral-movement/</loc>
   </url><url>
     <loc>https://www.tagnull.de/docs/Cheatsheet/active-directory/</loc>
+  </url><url>
+    <loc>https://www.tagnull.de/docs/Cheatsheet/av-bypass/</loc>
   </url><url>
     <loc>https://www.tagnull.de/docs/Cheatsheet/active-directory/discovery/</loc>
   </url><url>
@@ -45,6 +47,8 @@
     <loc>https://www.tagnull.de/docs/Cheatsheet/initial-access/network/</loc>
   </url><url>
     <loc>https://www.tagnull.de/docs/Cheatsheet/lateral-movement/network/</loc>
+  </url><url>
+    <loc>https://www.tagnull.de/docs/Cheatsheet/av-bypass/reflective-code-loading/</loc>
   </url><url>
     <loc>https://www.tagnull.de/docs/Cheatsheet/initial-access/sql/</loc>
   </url><url>

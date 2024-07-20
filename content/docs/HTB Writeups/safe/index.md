@@ -42,8 +42,6 @@ In the very long output of this scan we can find this line comment out in the so
 
 ![safe-comment-myapp](safe-comment-myapp.png)
 
-[[Top]](#top)
-
 # Explore
 
 Let's see if "Port 1337" is indeed open:
@@ -67,8 +65,6 @@ Second it has the "NX-Bit" set. Which means the "Stack" is not executable.
 
 In order to overcome this, we need to use a exploitation-technique known as "ROP - Return Oriented Programming".
 But, it's an easy rated box - this can't be too hard - right?
-
-[[Top]](#top)
 
 # Exploit
 
@@ -309,8 +305,6 @@ p.sendline(payload)
 p.interactive()
 {{< / highlight >}}
 
-[[Top]](#top)
-
 # Internal Recon
 Phew. That was quite a trip. But the last part is super easy.
 In the user folder, next to the `user.txt` we already see a "keepass-database"
@@ -321,8 +315,6 @@ Keepass, like many other password managers, have a feature where you can enter y
 Which can be anything. A text file. An image. Something that won't change. And it will be used as a second factor to the password.
 
 Seems logical that we try cracking the "keepass-database" before anything else.
-
-[[Top]](#top)
 
 # Privilege Escalation
 
@@ -351,9 +343,6 @@ We will use "hashcat" to crack the hashes.
 
 In my case the 3rd key was correct and the password is: </kbd>bullshit</kbd>.
 
-
-[[Top]](#top)
-
 # Root Flag
 
 Armed with this "password" we can open the password-safe and get the password for root.
@@ -371,5 +360,3 @@ Box solved. But most important - I learned a lot of new things! :)
 Till next time!
 
 x41
-
-[[Top]](#top)

@@ -33,6 +33,21 @@ list all nse scripts
 ls -lh /usr/share/nmap/scripts/
 ```
 
+host discovery for fast scan
+```shell
+nmap -sn -v -oA nmap/host_discovery target-ip
+```
+
+find all host that are up
+```shell
+grep "Up" nmap/host_discovery.gnmap | awk '{print $2}' > ips_host_discovery.tx
+```
+
+scan only hosts that are up
+```shell
+nmap -p- -sC -sV -T5 --min-parallelism 100 -oA nmap/all_ports -iL host_discovery -v
+```
+
 nmap through socks4 proxy  
 ```shell
 nmap --proxies socks4://proxy-ip:1080 target-ip

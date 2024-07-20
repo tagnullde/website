@@ -33,8 +33,6 @@ PORT      STATE    SERVICE VERSION
 60080/tcp filtered unknown
 ```
 
-[[Top]](#top)
-
 # Explore
 
 Since we just have one really interesting port to play with I focused on it.
@@ -134,8 +132,6 @@ I tried to login to "SFTP" but get a "permission denied".
 
 Remember that "admin" option? It's time check it ..... somehow.
 
-[[Top]](#top)
-
 # Weaponize
 
 Let's recap what we know and have.
@@ -191,8 +187,6 @@ But as you can see - there's a disabled upload button again. We can just enable 
 
 But because we might want to upload something over and over again - it would be a time saver to do it with "curl".
 
-[[Top]](#top)
-
 # Exploit
 
 In order to build my "curl" query I started "Burp" to see how the request would look like and what "cookie" value I need to send over.
@@ -218,8 +212,6 @@ After uploading a simple "php-reverse-shell", we can open a "ncat" session and l
 ![shell-magic](onetwoseven-revshellmagic.png)
 
 ![trinity-wearein](onetwoseven-wearein.png)
-
-[[Top]](#top)
 
 # Privilege Escalation
 
@@ -303,8 +295,6 @@ Let's setup "Burp" and "http_proxy":
 
 Make sure "Intercept" is off.
 
-[[Top]](#top)
-
 # Root Flag
 
 After running an `update` we see hits on our webserver. And after an `upgrade` we can install our backdoored
@@ -316,8 +306,6 @@ After running an `update` we see hits on our webserver. And after an `upgrade` w
 
 One of my favorite boxes so far! :)
 See you next time.
-
-[[Top]](#top)
 
 Additional Ressoures:
 * <a href="https://versprite.com/blog/apt-mitm-package-injection/" target="_blank">APT-Mitm-Package-Injection</a>

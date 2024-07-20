@@ -8,9 +8,9 @@ nmap -sC -sV -oN normal.txt target-ip scan all tcp ports
 nmap -p- -oN all_ports.txt target-ip scan all udp ports
 nmap -p- -sU -oN all_udp_ports.txt target-ip use script categories
 nmap --script vuln,safe,discovery -oN scan.txt target-ip list all nse scripts
-ls -lh /usr/share/nmap/scripts/ nmap through socks4 proxy
-nmap --proxies socks4://proxy-ip:1080 target-ip ftp bounce scan
-nmap -P0 -n -b username:password@target-ip target2-ip --proxies socks4://proxy-ip:1080 -vvvv massscan # todo">
+ls -lh /usr/share/nmap/scripts/ host discovery for fast scan
+nmap -sn -v -oA nmap/host_discovery target-ip find all host that are up
+grep &#34;Up&#34; nmap/host_discovery.gnmap | awk &#39;{print $2}&#39; &gt; ips_host_discovery.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://www.tagnull.de/docs/Cheatsheet/enumeration/network/">
@@ -21,9 +21,9 @@ nmap -sC -sV -oN normal.txt target-ip scan all tcp ports
 nmap -p- -oN all_ports.txt target-ip scan all udp ports
 nmap -p- -sU -oN all_udp_ports.txt target-ip use script categories
 nmap --script vuln,safe,discovery -oN scan.txt target-ip list all nse scripts
-ls -lh /usr/share/nmap/scripts/ nmap through socks4 proxy
-nmap --proxies socks4://proxy-ip:1080 target-ip ftp bounce scan
-nmap -P0 -n -b username:password@target-ip target2-ip --proxies socks4://proxy-ip:1080 -vvvv massscan # todo">
+ls -lh /usr/share/nmap/scripts/ host discovery for fast scan
+nmap -sn -v -oA nmap/host_discovery target-ip find all host that are up
+grep &#34;Up&#34; nmap/host_discovery.gnmap | awk &#39;{print $2}&#39; &gt; ips_host_discovery.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
@@ -33,7 +33,7 @@ nmap -P0 -n -b username:password@target-ip target2-ip --proxies socks4://proxy-i
 <link rel="canonical" href="https://www.tagnull.de/docs/Cheatsheet/enumeration/network/">
 <link rel="stylesheet" href="/book.min.aaab74181c6b1b4045b90f1cce4aaa1631e06c4b04ec2890a00c5723953b070a.css" integrity="sha256-qqt0GBxrG0BFuQ8czkqqFjHgbEsE7CiQoAxXI5U7Bwo=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.2323b3bb3c0c7c6758b4a4ad8d0d6d2f21440a0a4886e59ff5fe292f37603e23.js" integrity="sha256-IyOzuzwMfGdYtKStjQ1tLyFECgpIhuWf9f4pLzdgPiM=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.2e50a8bec8fd3cbe3569e29452a4e60825c7d8e7f03f3bf38b10781d66c15512.js" integrity="sha256-LlCovsj9PL41aeKUUqTmCCXH2OfwPzvzixB4HWbBVRI=" crossorigin="anonymous"></script>
 
   
 
@@ -94,40 +94,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-d7b6e2b3b2bd9f24f70a74fad4ae1939" class="toggle"  />
-    <label for="section-d7b6e2b3b2bd9f24f70a74fad4ae1939" class="flex justify-between">
-      <a role="button" class="">Collection</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/collection/mail/" class="">mail</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
     
       
         <li>
@@ -308,6 +274,40 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <input type="checkbox" id="section-d7b6e2b3b2bd9f24f70a74fad4ae1939" class="toggle"  />
+    <label for="section-d7b6e2b3b2bd9f24f70a74fad4ae1939" class="flex justify-between">
+      <a role="button" class="">Collection</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/collection/mail/" class="">mail</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <input type="checkbox" id="section-73088f9e1c7f62d1ff61f2cb6b3a8135" class="toggle"  />
     <label for="section-73088f9e1c7f62d1ff61f2cb6b3a8135" class="flex justify-between">
       <a role="button" class="">Lateral Movement</a>
@@ -359,6 +359,40 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="/docs/Cheatsheet/active-directory/discovery/" class="">discovery</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1e75615556d5887423d6562f3883a23d" class="toggle"  />
+    <label for="section-1e75615556d5887423d6562f3883a23d" class="flex justify-between">
+      <a role="button" class="">Av Bypass</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/av-bypass/reflective-code-loading/" class="">reflective code loading</a>
   
 
         </li>
@@ -715,6 +749,12 @@ https://github.com/alex-shpak/hugo-book
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nmap --script vuln,safe,discovery -oN scan.txt target-ip
 </span></span></code></pre></div><p>list all nse scripts</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>ls -lh /usr/share/nmap/scripts/
+</span></span></code></pre></div><p>host discovery for fast scan</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nmap -sn -v -oA nmap/host_discovery target-ip
+</span></span></code></pre></div><p>find all host that are up</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>grep <span style="color:#e6db74">&#34;Up&#34;</span> nmap/host_discovery.gnmap | awk <span style="color:#e6db74">&#39;{print $2}&#39;</span> &gt; ips_host_discovery.tx
+</span></span></code></pre></div><p>scan only hosts that are up</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nmap -p- -sC -sV -T5 --min-parallelism <span style="color:#ae81ff">100</span> -oA nmap/all_ports -iL host_discovery -v
 </span></span></code></pre></div><p>nmap through socks4 proxy</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nmap --proxies socks4://proxy-ip:1080 target-ip
 </span></span></code></pre></div><p>ftp bounce scan</p>

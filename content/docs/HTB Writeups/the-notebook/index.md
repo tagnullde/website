@@ -36,8 +36,6 @@ The most interessting service so far is http on port 80. Let's take a peek there
 
 Looks like an app to take notes. We could try to bruteforce the login page. But I would rather explore the app first. Let's register an account. 
 
-[[Top]](#top)
-
 # Explore
 
 Once the account has been created we can explore the various parts of the webapp and create notes. I even tried some simple injections with
@@ -57,8 +55,6 @@ On the bottom-right we see our login data. And as the `admin_cap` paramater stat
 We can edit the token and change the 0 to a 1. But that would invalidate the signature. At least if the application in the backend checkes the signature. After playing with the token a bit, it seemed like it does check the signature. So we have to find a way to sign the token with a valid key.
 
 Maybe the application allows us to inject our own value in the `kid` parameter. This way we could host a webserver with our own keys, which we would use to sign our forged token.
-
-[[Top]](#top)
 
 # Exploit
 
@@ -85,8 +81,6 @@ Don't stop your webserver just yet. It's still needed to stay authenticated.
 We have a shell. Let's upgrade our shell to a propper tty with `python3 -c 'import pty;pty.spawn("/bin/bash")'` then `ctrl-z` to background the shell. Then type `stty raw -echo` and hit enter
 followed by `fg` and enter twice. Now you should be back. Last step is `export TERM=xterm`.
 
-[[Top]](#top)
-
 # Internal Recon
 
 Now that we are in, we need to find a way to escalate our privileges. A look into `/etc/passwd` reveals a user named "noah". We've seen this name in the notes on the website before.
@@ -97,8 +91,6 @@ In there is a tar.gz backup of noah home directory. We will copy it to `/tmp` an
 ![ssh.png](ssh.png)
 
 Here we also find the user.txt.
-
-[[Top]](#top)
 
 # Privilege Escalation
 
@@ -158,5 +150,3 @@ You can do a lot of more things with jwt_tool. But that's another topic.
 Have a nice one.
 
 x41
-
-[[Top]](#top)

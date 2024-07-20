@@ -23,7 +23,7 @@ nmap -sC -sV -oN inital 10.10.10.230 PORT STATE SERVICE VERSION 22/tcp open ssh 
 <link rel="canonical" href="https://www.tagnull.de/docs/HTB-Writeups/the-notebook/">
 <link rel="stylesheet" href="/book.min.aaab74181c6b1b4045b90f1cce4aaa1631e06c4b04ec2890a00c5723953b070a.css" integrity="sha256-qqt0GBxrG0BFuQ8czkqqFjHgbEsE7CiQoAxXI5U7Bwo=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.2323b3bb3c0c7c6758b4a4ad8d0d6d2f21440a0a4886e59ff5fe292f37603e23.js" integrity="sha256-IyOzuzwMfGdYtKStjQ1tLyFECgpIhuWf9f4pLzdgPiM=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.2e50a8bec8fd3cbe3569e29452a4e60825c7d8e7f03f3bf38b10781d66c15512.js" integrity="sha256-LlCovsj9PL41aeKUUqTmCCXH2OfwPzvzixB4HWbBVRI=" crossorigin="anonymous"></script>
 
   
 
@@ -84,40 +84,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-d7b6e2b3b2bd9f24f70a74fad4ae1939" class="toggle"  />
-    <label for="section-d7b6e2b3b2bd9f24f70a74fad4ae1939" class="flex justify-between">
-      <a role="button" class="">Collection</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/collection/mail/" class="">mail</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
     
       
         <li>
@@ -298,6 +264,40 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <input type="checkbox" id="section-d7b6e2b3b2bd9f24f70a74fad4ae1939" class="toggle"  />
+    <label for="section-d7b6e2b3b2bd9f24f70a74fad4ae1939" class="flex justify-between">
+      <a role="button" class="">Collection</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/collection/mail/" class="">mail</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <input type="checkbox" id="section-73088f9e1c7f62d1ff61f2cb6b3a8135" class="toggle"  />
     <label for="section-73088f9e1c7f62d1ff61f2cb6b3a8135" class="flex justify-between">
       <a role="button" class="">Lateral Movement</a>
@@ -349,6 +349,40 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="/docs/Cheatsheet/active-directory/discovery/" class="">discovery</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1e75615556d5887423d6562f3883a23d" class="toggle"  />
+    <label for="section-1e75615556d5887423d6562f3883a23d" class="flex justify-between">
+      <a role="button" class="">Av Bypass</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/Cheatsheet/av-bypass/reflective-code-loading/" class="">reflective code loading</a>
   
 
         </li>
@@ -715,8 +749,6 @@ PORT      STATE    SERVICE VERSION
 <p>
   <img src="website-inital.png" alt="website-inital.png" /></p>
 <p>Looks like an app to take notes. We could try to bruteforce the login page. But I would rather explore the app first. Let&rsquo;s register an account.</p>
-<p>
-  <a href="/#top">[Top]</a></p>
 <h1 id="explore">
   Explore
   <a class="anchor" href="#explore">#</a>
@@ -734,8 +766,6 @@ single quotes etc. but the app seems not vulnerable to those attacks.</p>
 <p>On the bottom-right we see our login data. And as the <code>admin_cap</code> paramater states, we are not an admin. We would like to change that though.
 We can edit the token and change the 0 to a 1. But that would invalidate the signature. At least if the application in the backend checkes the signature. After playing with the token a bit, it seemed like it does check the signature. So we have to find a way to sign the token with a valid key.</p>
 <p>Maybe the application allows us to inject our own value in the <code>kid</code> parameter. This way we could host a webserver with our own keys, which we would use to sign our forged token.</p>
-<p>
-  <a href="/#top">[Top]</a></p>
 <h1 id="exploit">
   Exploit
   <a class="anchor" href="#exploit">#</a>
@@ -758,8 +788,6 @@ Don&rsquo;t stop your webserver just yet. It&rsquo;s still needed to stay authen
   <img src="low-shell.png" alt="low-shell.png" /></p>
 <p>We have a shell. Let&rsquo;s upgrade our shell to a propper tty with <code>python3 -c 'import pty;pty.spawn(&quot;/bin/bash&quot;)'</code> then <code>ctrl-z</code> to background the shell. Then type <code>stty raw -echo</code> and hit enter
 followed by <code>fg</code> and enter twice. Now you should be back. Last step is <code>export TERM=xterm</code>.</p>
-<p>
-  <a href="/#top">[Top]</a></p>
 <h1 id="internal-recon">
   Internal Recon
   <a class="anchor" href="#internal-recon">#</a>
@@ -770,8 +798,6 @@ He just managed to setup his backup. With <code>find / -type d -name &quot;*back
 <p>
   <img src="ssh.png" alt="ssh.png" /></p>
 <p>Here we also find the user.txt.</p>
-<p>
-  <a href="/#top">[Top]</a></p>
 <h1 id="privilege-escalation">
   Privilege Escalation
   <a class="anchor" href="#privilege-escalation">#</a>
@@ -811,8 +837,6 @@ successfully triggered.</p>
 </code></pre><p>You can do a lot of more things with jwt_tool. But that&rsquo;s another topic.</p>
 <p>Have a nice one.</p>
 <p>x41</p>
-<p>
-  <a href="/#top">[Top]</a></p>
 </article>
  
       

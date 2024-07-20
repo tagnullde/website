@@ -25,8 +25,6 @@ and the following open ports:
 |:----------:|
 |22, 80, 139, 389, 445|
 
-[[Top]](#top)
-
 # Explore
 The `sambaNTPassword` Hash immediately caught my attention.
 
@@ -46,8 +44,6 @@ So it's a convenience thing.
 
 The method is called Pass-The-Hash. And of cause there are tools out there, that help
 you with this. Like: `pth-smbclient`. If you don't have it, just got to github and get the `pth-toolkit`.
-
-[[Top]](#top)
 
 # Exploit
 After fiddeling around with the options, syntax and where to connect to I managed to connect to alice
@@ -70,15 +66,11 @@ chmod 600 id_rsa
 ssh -i id_rsa alice1978@10.10.10.107
 {{< / highlight >}}
 
-[[Top]](#top)
-
 # User Flag
 
 As you can see in the screenshot. A simple `ls` gives us the "user.txt".
 
 ![Shell-Alice](shell-alice.png)
-
-[[Top]](#top)
 
 # Internal Recon
 A quick `uname -a` reveals a BSD box. Which was quite handy. Shortly after this box
@@ -109,9 +101,6 @@ AuthorizedPrincipalsCommand /usr/local/bin/curl http://127.0.0.1/sshauth?type=pr
 {{< / highlight >}}
 
 So, apparently we can issue a `curl` to the "CA"...I guess, not sure what happens here. I still need to look this up...
-
-[[Top]](#top)
-
 
 # Privilege Escalation
 Let's step back and catch up with the XORG exploit first.
@@ -144,8 +133,6 @@ ypuffy$ cp id_rsa-cert.pub /home/alice1978/.ssh/
 
 This seems to work so far. But can we login now?
 
-[[Top]](#top)
-
 # Root Flag
 
 {{< highlight bash >}}
@@ -162,5 +149,3 @@ This is it. We got the box. =)
 See ya next time!
 
 x41
-
-[[Top]](#top)
