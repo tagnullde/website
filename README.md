@@ -6,4 +6,5 @@ Todo:
 
 - Find a good way to organize cheatsheet
 - Finish cheatsheet
-- "TOP" in the HTB Writeups doesn't work anymore. Need to fix that.
+- ~~"TOP" in the HTB Writeups doesn't work anymore. Need to fix that.~~
+- Open Stratosphere Video in a new tab

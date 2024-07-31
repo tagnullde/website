@@ -1,5 +1,5 @@
 ---
-title: SecNotes - WriteUp
+title: SecNotes
 date: 2019-01-19
 # image: SecNotes-Banner.png
 # bookComments: false

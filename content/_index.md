@@ -17,7 +17,7 @@ I am a Penetrationtester and this site it my personal documentation of the tools
 <br>
 You can also find some older writeups here, of <a href="https://www.hackthebox.eu" target="_blank">HackTheBox</a> machines and my review / progress of the 2020 version of the OSCP. 
 <br>
-<h1>The Cheatsheet is a work in progress, since I have to migrate a lot of commands over here and figure out how to sort them. Might take a while.</h1>
+I am still working on the cheatsheet. This is a work in progress right now.
 <br>
 <br>
 <center><a href="https://app.hackthebox.eu/profile/19285" target="_blank"><img src="https://www.hackthebox.eu/badge/image/19285" alt="Hack The Box"></a></center>

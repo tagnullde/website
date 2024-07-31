@@ -35,12 +35,12 @@ PORT      STATE    SERVICE VERSION
 
 # Explore
 
-Since we just have one really interesting port to play with I focused on it.
-Opening "port 80" in my browser showed a website boosting their "secure" "SFTP" Service.
+Since we just have one really interesting port to play with, I focused on it.
+Opening "port 80" in my browser showed a website advertising their "secure" "SFTP" Service.
 
 ![sftp_website](onetwoseven-securesftp.png)
 
-First thing that stands out is that "admin" option in the menu.
+First thing that stands out is the "admin" option in the menu.
 But it's disabled and not clickable.
 
 ![website_menu](onetwoseven-menu.png)
@@ -80,7 +80,7 @@ Let's put some content on it, shall we?
 ![sftp-put-php](onetwoseven-put-php.png)
 
 As you can see, I tried uploading a "php-info.php" script into the root-directory but are not allowed to.
-After switching to the subdirectory the upload was successfull.
+After switching to the subdirectory the upload was successful.
 Can we get code-execution?
 
 ![sftp-php-forbidden](onetwoseven-forbidden.png)
@@ -91,7 +91,7 @@ Let's try something else:
 ![sftp-index](onetwoseven-index.png)
 
 Ok. We are just not allowed to use php on the server. What now?
-I tried a couple of things at this point like:
+I tried a couple of things at this point, like:
 
 * Directory-Traversals
 * Different types of executables like "asp" or "aspx". (I test such things even when it's a Linux server. You never know. ;)
@@ -123,7 +123,7 @@ as much stuff out of there as possible. Which actually was quite successful if y
 
 ![login-hash](onetwoseven-loginswp-hash.png)
 
-With the the found hash I went to an <a href="https://crackstation.net/" target="_blank">online-hashcrack-website</a> to see if it's a known hash.
+With a hash found, I went to an <a href="https://crackstation.net/" target="_blank">online-hashcrack-website</a> to see if it's a known hash.
 
 ![crackstation-hash](onetwoseven-crackstation.png)
 
@@ -162,7 +162,7 @@ Well - take a look at the "SignUp" Page.
 
 ![user-passwd](onetwoseven-userpasswd.png)
 
-We come from "127.0.0.1" therefore the application thinks we are him and present us the password.
+We come from "127.0.0.1" therefore the application thinks we are him and presents us the password.
 But before we can use the credentials we need to make sure we are comming from "127.0.0.1" for the "SFTP"
 service aswell. Our present tunnel is just for "port 80" not "port 22".
 
@@ -171,7 +171,7 @@ service aswell. Our present tunnel is just for "port 80" not "port 22".
 ![user-txt](onetwoseven-usertxt.png)
 
 Oh - there's the `user.txt`. That was unexpected right? We can now focus to get access to that box.
-Although the "admin-panel" links is now clickable - we can't access the site right away because it's listening on "port 60080".
+Although the "admin-panel" link is now clickable - we can't access the site right away because it's listening on "port 60080".
 Yep - you guest it. Another "tunnel" is needed.
 
 `ssh -N -L 60080:127.0.0.1:60080 ots-iM2I4N2Q@10.10.10.133`
@@ -204,7 +204,6 @@ curl -H 'Cookie: PHPSESSID=immqdajjjet662lm9qctfrt7h3' -H 'Host: onetwoseven.htb
 
 ```
 
-
 <a href="https://davidwalsh.name/curl-post-file" target="_blank">This article</a> was very helpful if you want to learn more.
 
 After uploading a simple "php-reverse-shell", we can open a "ncat" session and launch our "reverse-shell" and doing our cli-magic after receiving it.
@@ -216,7 +215,7 @@ After uploading a simple "php-reverse-shell", we can open a "ncat" session and l
 # Privilege Escalation
 
 This write-up is already getting very long. So I come right to the meat of the "PrivEsc".
-When doing proper post-exploitation-recon one command should not be missed: `sudo -l`.
+When doing proper post-exploitation-recon, one command should not be missed: `sudo -l`.
 
 Also this time it reveals what our target is.
 
@@ -283,7 +282,7 @@ A very simple tool for such things. In fact, I used this for this Write-up too.
 First because I want to try it myself. Second because my VPN-IP changed, so my "backdoored nano package" wasn't working anymore.
 I couldn't be bothered to go through the process of getting the signatures and hashes right again. It obviously has NOTHING to do with crappy note-taking for this part.....
 
-If you would like to roll your own repo for this, you could watch watch ippsec's video.
+If you would like to roll your own repo for this, you could watch ippsec's video.
 
 {{< youtube EXuEDHFjS9E >}}
 

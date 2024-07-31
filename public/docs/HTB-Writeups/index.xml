@@ -37,13 +37,6 @@
       <description>External Recon # Welcome to my first box and writeup since my OSCP. We start with a nmap scan as usual:&#xA;Website # Checking the website it seems like somebody already defaced the website.&#xA;We find a little hint in the sourcecode.&#xA;A google search on &amp;ldquo;webshells + Xh4H&amp;rdquo; reveals a github repository with a bunch of webshells. And sure enough we try all of them on our target.</description>
     </item>
     <item>
-      <title>Exploit-Development - ret2plt</title>
-      <link>https://www.tagnull.de/docs/HTB-Writeups/ret2plt-exploit/</link>
-      <pubDate>Tue, 21 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.tagnull.de/docs/HTB-Writeups/ret2plt-exploit/</guid>
-      <description>Introduction # In the last couple of days, I had some time and wanted to get a better understanding and some experience in modern binary exploitation techniques. Part of this learning process is to explain what I&amp;rsquo;ve learned to others. If you find an error, please let me know.&#xA;Also: While preparing for the OSCP I already tried a couple of protection bypasses like NX/DEP (Data Execution Prevention) with the ROPEmporium challenges.</description>
-    </item>
-    <item>
       <title>Safe</title>
       <link>https://www.tagnull.de/docs/HTB-Writeups/safe/</link>
       <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
@@ -79,13 +72,6 @@
       <description>External Recon # As usual we work our way down the KillChain. Starting with a typical nmap scan.&#xA;nmap -sC -sV -oN inital 10.10.10.117&#xA;This runs all the default labled nmap scripts, enumerates versions of found services and dumps everything into the file inital. Note that a default nmap scan just does TCP scans and only the top 1000 ports.&#xA;Here&amp;rsquo;s the output of said scan:&#xA;PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 6.</description>
     </item>
     <item>
-      <title>NTLM Hashes via GPO redirect</title>
-      <link>https://www.tagnull.de/docs/HTB-Writeups/gettinghashes/</link>
-      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.tagnull.de/docs/HTB-Writeups/gettinghashes/</guid>
-      <description>A couple of days ago Darren Mar-Elia tweeted about sending gpos down the wrong path. More security fun with GPOs :) : https://t.co/wEJhjn9uT5 #grouppolicy #infosec&#xA;&amp;mdash; Darren Mar-Elia (@grouppolicyguy) April 3, 2019 You should read his article before we move on here.&#xA;After I was done I thought: &amp;ldquo;If an attacker can redirect the GPO to a SMB-Share, shouldn&amp;rsquo;t he be able to use tools like impacket&amp;rsquo;s SMB-Server to capture all the NTML hashes in a domain?</description>
-    </item>
-    <item>
       <title>Stratosphere</title>
       <link>https://www.tagnull.de/docs/HTB-Writeups/stratosphere/</link>
       <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
@@ -107,7 +93,7 @@
       <description>External Recon # Let&amp;rsquo;s start with nmap. But let&amp;rsquo;s spice it up a bit with an additional script:&#xA;nmap -sC -sV -oN initial --script discovery 10.10.10.107&#xA;The output is quite big. You can the output here.&#xA;The script tries to get as much information as possible of your target and in this case shows some LDAP information and the following open ports:&#xA;Open Ports 22, 80, 139, 389, 445 Explore # The sambaNTPassword Hash immediately caught my attention.</description>
     </item>
     <item>
-      <title>SecNotes - WriteUp</title>
+      <title>SecNotes</title>
       <link>https://www.tagnull.de/docs/HTB-Writeups/secnotes/</link>
       <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
       <guid>https://www.tagnull.de/docs/HTB-Writeups/secnotes/</guid>
