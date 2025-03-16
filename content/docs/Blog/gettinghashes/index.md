@@ -13,7 +13,7 @@ date: 2019-04-08
 
 A while back Darren Mar-Elia tweeted about sending gpos down the wrong path.
 <br>
-{{< tweet user="grouppolicyguy" id="1113568591322865664" >}}
+![Tweet](tweet.png)
 <br>
 You should read <a href="https://sdmsoftware.com/group-policy-blog/security-related/sending-gpos-down-the-wrong-track-redirecting-the-gpt/" target="_blank">his article</a> before we move on here.
 

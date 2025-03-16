@@ -172,8 +172,6 @@ But try again - just one fucking more time. Then turn the report in. Done.
 
 7 days later, I got the sweet sweet email from OffSec. I passed! :)
 
-{{< tweet user="tagnullde" id="1242131364511711233" >}}
-
 [[Top]](#top)
 
 # Tips
