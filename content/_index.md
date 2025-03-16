@@ -16,9 +16,8 @@ weight: 1
 <center>
 I am a Penetrationtester and this site it my personal documentation of the tools I used on engagements, HackTheBox and during certifications.
 You can also find some older writeups here, of <a href="https://www.hackthebox.eu" target="_blank">HackTheBox</a> machines and my review / progress of the 2020 version of the OSCP. 
+Right now I am working on my CPTS and CAPE certifications.
 <br>
-<br>
-I am still working on the cheatsheet. This is a work in progress right now.
 <br>
 </center>
 <div style="display: flex; justify-content: center;">

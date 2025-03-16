@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>www.tagnull.de</title>
-    <link>https://www.tagnull.de/docs/Blog/</link>
+    <link>http://localhost:1313/docs/Blog/</link>
     <description>Recent content on www.tagnull.de</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 25 Mar 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.tagnull.de/docs/Blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/docs/Blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OSCP Review</title>
-      <link>https://www.tagnull.de/docs/Blog/oscp-review/</link>
+      <link>http://localhost:1313/docs/Blog/oscp-review/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.tagnull.de/docs/Blog/oscp-review/</guid>
+      <guid>http://localhost:1313/docs/Blog/oscp-review/</guid>
       <description>Introduction # I think everybody expects some kind of experience-report after getting the &amp;ldquo;OSCP certification&amp;rdquo;. So this is my take on this. Before I dive in - please keep in mind:&#xA;I will only describe how I approached the &amp;ldquo;PWK course&amp;rdquo; and &amp;ldquo;OSCP certification&amp;rdquo;.&#xA;THIS MIGHT NOT WORK FOR YOU!&#xA;With this out of the way, let&amp;rsquo;s dive right in.&#xA;[Top]&#xA;Pre-Enrollment # My journey started a long time before actually enrolling in the exam in 2019.</description>
     </item>
     <item>
       <title>NTLM Hashes via GPO redirect</title>
-      <link>https://www.tagnull.de/docs/Blog/gettinghashes/</link>
+      <link>http://localhost:1313/docs/Blog/gettinghashes/</link>
       <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.tagnull.de/docs/Blog/gettinghashes/</guid>
+      <guid>http://localhost:1313/docs/Blog/gettinghashes/</guid>
       <description>A while back Darren Mar-Elia tweeted about sending gpos down the wrong path. More security fun with GPOs :) : https://t.co/wEJhjn9uT5 #grouppolicy #infosec&#xA;&amp;mdash; Darren Mar-Elia (@grouppolicyguy) April 3, 2019 You should read his article before we move on here.&#xA;After I was done I thought: &amp;ldquo;If an attacker can redirect the GPO to a SMB-Share, shouldn&amp;rsquo;t he be able to use tools like impacket&amp;rsquo;s SMB-Server to capture all the NTML hashes in a domain?</description>
     </item>
   </channel>

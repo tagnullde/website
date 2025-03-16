@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="External Recon # We start our external recon with an nmap scan. Only two ports are open with a third one filtered.
 nmap -sC -sV -oN inital 10.10.10.230 PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 86:df:10:fd:27:a3:fb:d8:36:a7:ed:90:95:33:f5:bf (RSA) | 256 e7:81:d6:6c:df:ce:b7:30:03:91:5c:b5:13:42:06:44 (ECDSA) |_ 256 c6:06:34:c7:fc:00:c4:62:06:c2:36:0e:ee:5e:bf:6b (ED25519) 80/tcp open http nginx 1.14.0 (Ubuntu) |_http-server-header: nginx/1.14.0 (Ubuntu) |_http-title: The Notebook - Your Note Keeper 10010/tcp filtered rxapi The most interessting service so far is http on port 80.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://www.tagnull.de/docs/HTB-Writeups/the-notebook/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/HTB-Writeups/the-notebook/">
   <meta property="og:site_name" content="www.tagnull.de">
   <meta property="og:title" content="The Notebook">
   <meta property="og:description" content="External Recon # We start our external recon with an nmap scan. Only two ports are open with a third one filtered.
@@ -20,7 +20,7 @@ nmap -sC -sV -oN inital 10.10.10.230 PORT STATE SERVICE VERSION 22/tcp open ssh 
 <title>The Notebook | www.tagnull.de</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/logo.png" >
-<link rel="canonical" href="https://www.tagnull.de/docs/HTB-Writeups/the-notebook/">
+<link rel="canonical" href="http://localhost:1313/docs/HTB-Writeups/the-notebook/">
 <link rel="stylesheet" href="/book.min.aaab74181c6b1b4045b90f1cce4aaa1631e06c4b04ec2890a00c5723953b070a.css" integrity="sha256-qqt0GBxrG0BFuQ8czkqqFjHgbEsE7CiQoAxXI5U7Bwo=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
   <script defer src="/en.search.min.5035cae49bbd83310b6aca170808aa86a04a4cb1d7aabd84f165c6e95818f2a4.js" integrity="sha256-UDXK5Ju9gzELasoXCAiqhqBKTLHXqr2E8WXG6VgY8qQ=" crossorigin="anonymous"></script>
