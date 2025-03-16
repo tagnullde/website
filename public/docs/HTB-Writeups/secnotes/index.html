@@ -3,12 +3,52 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
+<meta name="description" content="
+  
+
+
+
+
+  External Recon
+  #
+
+As usual we start with our nmap scan and see what we are dealing with:
+nmap -sC -sV 10.10.10.97
+
+PORT    STATE SERVICE      VERSION
+80/tcp  open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+445/tcp open  microsoft-ds Windows 10 Enterprise 17134 microsoft-ds (workgroup: HTB)
+Service Info: Host: SECNOTES; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 2h40m00s, deviation: 4h37m08s, median: 0s
+| smb-os-discovery:
+|   OS: Windows 10 Enterprise 17134 (Windows 10 Enterprise 6.3)
+|   OS CPE: cpe:/o:microsoft:windows_10::-
+|   Computer name: SECNOTES
+|   NetBIOS computer name: SECNOTES\x00
+|   Workgroup: HTB\x00
+|_  System time: 2019-01-04T05:21:46-08:00
+| smb-security-mode:
+|   account_used: &lt;blank&gt;
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode:
+|   2.02:
+|_    Message signing enabled but not required
+| smb2-time:
+|   date: 2019-01-04 14:21:48
+|_  start_date: N/A
+So Port 80 &amp; 445 are open. While I explored those, I scanned all TCP Ports to see if
+there&rsquo;s more to find. Nmap by default just checks the Top1000.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://www.tagnull.de/docs/HTB-Writeups/secnotes/">
   <meta property="og:site_name" content="www.tagnull.de">
   <meta property="og:title" content="SecNotes">
+  <meta property="og:description" content="External Recon # As usual we start with our nmap scan and see what we are dealing with:
+nmap -sC -sV 10.10.10.97 PORT STATE SERVICE VERSION 80/tcp open http Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP) 445/tcp open microsoft-ds Windows 10 Enterprise 17134 microsoft-ds (workgroup: HTB) Service Info: Host: SECNOTES; OS: Windows; CPE: cpe:/o:microsoft:windows Host script results: |_clock-skew: mean: 2h40m00s, deviation: 4h37m08s, median: 0s | smb-os-discovery: | OS: Windows 10 Enterprise 17134 (Windows 10 Enterprise 6.3) | OS CPE: cpe:/o:microsoft:windows_10::- | Computer name: SECNOTES | NetBIOS computer name: SECNOTES\x00 | Workgroup: HTB\x00 |_ System time: 2019-01-04T05:21:46-08:00 | smb-security-mode: | account_used: &lt;blank&gt; | authentication_level: user | challenge_response: supported |_ message_signing: disabled (dangerous, but default) | smb2-security-mode: | 2.02: |_ Message signing enabled but not required | smb2-time: | date: 2019-01-04 14:21:48 |_ start_date: N/A So Port 80 &amp; 445 are open. While I explored those, I scanned all TCP Ports to see if there’s more to find. Nmap by default just checks the Top1000.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
@@ -400,7 +440,11 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown book-article"><hr>
+  <article class="markdown book-article"><p align="center">
+  <img src="SecNotes-Banner.png" />
+</p>
+<hr>
+<hr>
 <h1 id="external-recon">
   External Recon
   <a class="anchor" href="#external-recon">#</a>

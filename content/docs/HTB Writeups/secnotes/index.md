@@ -1,12 +1,15 @@
 ---
 title: SecNotes
 date: 2019-01-19
-# image: SecNotes-Banner.png
 # bookComments: false
 # bookSearchExclude: false
 ---
 
-<!--more-->
+<p align="center">
+  <img src="SecNotes-Banner.png" />
+</p>
+
+***
 
 ***
 
