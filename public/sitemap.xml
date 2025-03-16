@@ -2,118 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://www.tagnull.de/</loc>
     <lastmod>2021-11-20T17:54:29+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/</loc>
+    <loc>https://www.tagnull.de/security-policy/</loc>
   </url><url>
-    <loc>http://localhost:1313/security-policy/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/HTB-Writeups/</loc>
+    <loc>https://www.tagnull.de/docs/HTB-Writeups/</loc>
     <lastmod>2021-11-20T17:54:29+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/Exploit-Development/</loc>
+    <loc>https://www.tagnull.de/docs/Exploit-Development/</loc>
     <lastmod>2020-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/Blog/</loc>
+    <loc>https://www.tagnull.de/docs/Blog/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/Exploit-Development/stack-overflow/</loc>
+    <loc>https://www.tagnull.de/docs/Exploit-Development/stack-overflow/</loc>
     <lastmod>2019-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/Blog/oscp-review/</loc>
+    <loc>https://www.tagnull.de/docs/Blog/oscp-review/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/enumeration/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/initial-access/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/collection/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/lateral-movement/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/active-directory/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/antivirus-bypass/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/active-directory/discovery/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/collection/mail/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/enumeration/mail/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/enumeration/network/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/initial-access/network/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/lateral-movement/network/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/antivirus-bypass/reflective-code-loading/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/initial-access/sql/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/initial-access/web/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/enumeration/web/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/enumeration/operating-system/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/enumeration/privilege-escalation/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/enumeration/smb/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/Cheatsheet/enumeration/vulnerabilities/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/HTB-Writeups/bountyhunter/</loc>
+    <loc>https://www.tagnull.de/docs/HTB-Writeups/bountyhunter/</loc>
     <lastmod>2021-11-20T17:54:29+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/</loc>
+    <loc>https://www.tagnull.de/docs/</loc>
     <lastmod>2021-11-20T17:54:29+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/HTB-Writeups/cap/</loc>
+    <loc>https://www.tagnull.de/docs/HTB-Writeups/cap/</loc>
     <lastmod>2021-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/HTB-Writeups/the-notebook/</loc>
+    <loc>https://www.tagnull.de/docs/HTB-Writeups/the-notebook/</loc>
     <lastmod>2021-07-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/HTB-Writeups/traceback/</loc>
+    <loc>https://www.tagnull.de/docs/HTB-Writeups/traceback/</loc>
     <lastmod>2020-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/Exploit-Development/ret2plt/</loc>
+    <loc>https://www.tagnull.de/docs/Exploit-Development/ret2plt/</loc>
     <lastmod>2020-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/HTB-Writeups/safe/</loc>
+    <loc>https://www.tagnull.de/docs/HTB-Writeups/safe/</loc>
     <lastmod>2019-10-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/HTB-Writeups/fortune/</loc>
+    <loc>https://www.tagnull.de/docs/HTB-Writeups/fortune/</loc>
     <lastmod>2019-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/HTB-Writeups/onetwoseven/</loc>
+    <loc>https://www.tagnull.de/docs/HTB-Writeups/onetwoseven/</loc>
     <lastmod>2019-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/HTB-Writeups/querier/</loc>
+    <loc>https://www.tagnull.de/docs/HTB-Writeups/querier/</loc>
     <lastmod>2019-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/HTB-Writeups/irked/</loc>
+    <loc>https://www.tagnull.de/docs/HTB-Writeups/irked/</loc>
     <lastmod>2019-04-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/Blog/gettinghashes/</loc>
+    <loc>https://www.tagnull.de/docs/Blog/gettinghashes/</loc>
     <lastmod>2019-04-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/HTB-Writeups/stratosphere/</loc>
+    <loc>https://www.tagnull.de/docs/HTB-Writeups/stratosphere/</loc>
     <lastmod>2019-03-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/HTB-Writeups/access/</loc>
+    <loc>https://www.tagnull.de/docs/HTB-Writeups/access/</loc>
     <lastmod>2019-03-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/HTB-Writeups/ypuffy/</loc>
+    <loc>https://www.tagnull.de/docs/HTB-Writeups/ypuffy/</loc>
     <lastmod>2019-02-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/HTB-Writeups/secnotes/</loc>
+    <loc>https://www.tagnull.de/docs/HTB-Writeups/secnotes/</loc>
     <lastmod>2019-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://www.tagnull.de/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://www.tagnull.de/tags/</loc>
   </url>
 </urlset>

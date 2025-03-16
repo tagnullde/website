@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="External Recon # I started with my usual &ldquo;nmap&rdquo; scan:
-$ nmap -sC -sV -oN initial 10.10.10.125 135/tcp open msrpc Microsoft Windows RPC 139/tcp open netbios-ssn Microsoft Windows netbios-ssn 445/tcp open microsoft-ds? 1433/tcp open ms-sql-s Microsoft SQL Server 14.00.1000.00 | ms-sql-ntlm-info: | Target_Name: HTB | NetBIOS_Domain_Name: HTB | NetBIOS_Computer_Name: QUERIER | DNS_Domain_Name: HTB.LOCAL | DNS_Computer_Name: QUERIER.HTB.LOCAL | DNS_Tree_Name: HTB.LOCAL |_ Product_Version: 10.0.17763 I reduced the output to the interesting pieces.">
+<meta name="description" content="
+  
+
+
+
+  External Recon
+  #
+
+I started with my usual &ldquo;nmap&rdquo; scan:
+$ nmap -sC -sV -oN initial 10.10.10.125
+
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+1433/tcp open  ms-sql-s      Microsoft SQL Server  14.00.1000.00
+| ms-sql-ntlm-info:
+|   Target_Name: HTB
+|   NetBIOS_Domain_Name: HTB
+|   NetBIOS_Computer_Name: QUERIER
+|   DNS_Domain_Name: HTB.LOCAL
+|   DNS_Computer_Name: QUERIER.HTB.LOCAL
+|   DNS_Tree_Name: HTB.LOCAL
+|_  Product_Version: 10.0.17763
+I reduced the output to the interesting pieces.
+As we found some &ldquo;DNS-Names&rdquo; I put them into my &ldquo;/etc/hosts&rdquo; file.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/HTB-Writeups/querier/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://www.tagnull.de/docs/HTB-Writeups/querier/">
   <meta property="og:site_name" content="www.tagnull.de">
   <meta property="og:title" content="Querier">
   <meta property="og:description" content="External Recon # I started with my usual “nmap” scan:
-$ nmap -sC -sV -oN initial 10.10.10.125 135/tcp open msrpc Microsoft Windows RPC 139/tcp open netbios-ssn Microsoft Windows netbios-ssn 445/tcp open microsoft-ds? 1433/tcp open ms-sql-s Microsoft SQL Server 14.00.1000.00 | ms-sql-ntlm-info: | Target_Name: HTB | NetBIOS_Domain_Name: HTB | NetBIOS_Computer_Name: QUERIER | DNS_Domain_Name: HTB.LOCAL | DNS_Computer_Name: QUERIER.HTB.LOCAL | DNS_Tree_Name: HTB.LOCAL |_ Product_Version: 10.0.17763 I reduced the output to the interesting pieces.">
+$ nmap -sC -sV -oN initial 10.10.10.125 135/tcp open msrpc Microsoft Windows RPC 139/tcp open netbios-ssn Microsoft Windows netbios-ssn 445/tcp open microsoft-ds? 1433/tcp open ms-sql-s Microsoft SQL Server 14.00.1000.00 | ms-sql-ntlm-info: | Target_Name: HTB | NetBIOS_Domain_Name: HTB | NetBIOS_Computer_Name: QUERIER | DNS_Domain_Name: HTB.LOCAL | DNS_Computer_Name: QUERIER.HTB.LOCAL | DNS_Tree_Name: HTB.LOCAL |_ Product_Version: 10.0.17763 I reduced the output to the interesting pieces. As we found some “DNS-Names” I put them into my “/etc/hosts” file.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
@@ -20,13 +43,10 @@ $ nmap -sC -sV -oN initial 10.10.10.125 135/tcp open msrpc Microsoft Windows RPC
 <title>Querier | www.tagnull.de</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/logo.png" >
-<link rel="canonical" href="http://localhost:1313/docs/HTB-Writeups/querier/">
+<link rel="canonical" href="https://www.tagnull.de/docs/HTB-Writeups/querier/">
 <link rel="stylesheet" href="/book.min.aaab74181c6b1b4045b90f1cce4aaa1631e06c4b04ec2890a00c5723953b070a.css" integrity="sha256-qqt0GBxrG0BFuQ8czkqqFjHgbEsE7CiQoAxXI5U7Bwo=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.5035cae49bbd83310b6aca170808aa86a04a4cb1d7aabd84f165c6e95818f2a4.js" integrity="sha256-UDXK5Ju9gzELasoXCAiqhqBKTLHXqr2E8WXG6VgY8qQ=" crossorigin="anonymous"></script>
-
-  
-
+  <script defer src="/en.search.min.630e0d5311b0aaef94066d137443d6f034ede58bc33ceba42326d2e70c81bf1a.js" integrity="sha256-Yw4NUxGwqu&#43;UBm0TdEPW8DTt5YvDPOukIybS5wyBvxo=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -79,337 +99,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-39be5f5fdf5d4818330ae6eef1987668" class="toggle"  />
-    <label for="section-39be5f5fdf5d4818330ae6eef1987668" class="flex justify-between">
-      <a role="button" class="">Cheatsheet</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-2860456b7de11418b89bc572c43149f3" class="toggle"  />
-    <label for="section-2860456b7de11418b89bc572c43149f3" class="flex justify-between">
-      <a role="button" class="">Enumeration</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/enumeration/mail/" class="">mail</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/enumeration/network/" class="">network</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/enumeration/web/" class="">web</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/enumeration/operating-system/" class="">operating system</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/enumeration/privilege-escalation/" class="">privilege escalation</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/enumeration/smb/" class="">smb</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/enumeration/vulnerabilities/" class="">vulnerabilities</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-452375808cf41fa213a2bdcb15a5fe7c" class="toggle"  />
-    <label for="section-452375808cf41fa213a2bdcb15a5fe7c" class="flex justify-between">
-      <a role="button" class="">Initial Access</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/initial-access/network/" class="">network</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/initial-access/sql/" class="">sql</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/initial-access/web/" class="">web</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-d7b6e2b3b2bd9f24f70a74fad4ae1939" class="toggle"  />
-    <label for="section-d7b6e2b3b2bd9f24f70a74fad4ae1939" class="flex justify-between">
-      <a role="button" class="">Collection</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/collection/mail/" class="">mail</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-73088f9e1c7f62d1ff61f2cb6b3a8135" class="toggle"  />
-    <label for="section-73088f9e1c7f62d1ff61f2cb6b3a8135" class="flex justify-between">
-      <a role="button" class="">Lateral Movement</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/lateral-movement/network/" class="">network</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-300439dc6c81e7f8106c3eab98675b63" class="toggle"  />
-    <label for="section-300439dc6c81e7f8106c3eab98675b63" class="flex justify-between">
-      <a role="button" class="">Active Directory</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/active-directory/discovery/" class="">discovery</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-2620f72cfb9250eb4705d639d1d44455" class="toggle"  />
-    <label for="section-2620f72cfb9250eb4705d639d1d44455" class="flex justify-between">
-      <a role="button" class="">Antivirus Bypass</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/Cheatsheet/antivirus-bypass/reflective-code-loading/" class="">reflective code loading</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li class="book-section-flat" >
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-f1c85964cb4e1e3e13dfaf4558a33249" class="toggle" checked />
-    <label for="section-f1c85964cb4e1e3e13dfaf4558a33249" class="flex justify-between">
+    <input type="checkbox" id="section-68dfdd1925e75eeba80f6314fba9409f" class="toggle" checked />
+    <label for="section-68dfdd1925e75eeba80f6314fba9409f" class="flex justify-between">
       <a role="button" class="">HTB Writeups</a>
     </label>
   
@@ -598,8 +289,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-f5e4b22ec2bc3e8ac86e0577ec8520da" class="toggle"  />
-    <label for="section-f5e4b22ec2bc3e8ac86e0577ec8520da" class="flex justify-between">
+    <input type="checkbox" id="section-a371b3bebcf42b304463ef71f0bf4c99" class="toggle"  />
+    <label for="section-a371b3bebcf42b304463ef71f0bf4c99" class="flex justify-between">
       <a role="button" class="">Exploit Development</a>
     </label>
   
@@ -645,8 +336,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-d70066383abd9fca884e98193077f75f" class="toggle"  />
-    <label for="section-d70066383abd9fca884e98193077f75f" class="flex justify-between">
+    <input type="checkbox" id="section-e0a66dbcb0778aef460847a6ca8d2295" class="toggle"  />
+    <label for="section-e0a66dbcb0778aef460847a6ca8d2295" class="flex justify-between">
       <a role="button" class="">Blog</a>
     </label>
   
@@ -812,12 +503,8 @@ operating system.</p>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>-<span style="color:#f92672">]</span> ERROR<span style="color:#f92672">(</span>QUERIER<span style="color:#f92672">)</span>: Line 1: The EXECUTE permission was denied on the object <span style="color:#e6db74">&#39;xp_cmdshell&#39;</span>, database <span style="color:#e6db74">&#39;mssqlsystemresource&#39;</span>, schema <span style="color:#e6db74">&#39;sys&#39;</span>.</span></span></code></pre></div>
 <p>No dice. Permission denied.</p>
 <p>But, of cause there&rsquo;s a way around that. By pure chance I watched a video of ippsec who had the very same problem in a box earlier that week.</p>
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/J2unwbMQvUo?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/J2unwbMQvUo?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
 <p>So I went back and checked what he did.</p>
@@ -909,8 +596,7 @@ This misconfiguration happens when the executable associated with a service has 
 write to the .exe. Since these services run as SYSTEM, if we replace the exe with our own, we can escalate quickly.</p>
 <p>[2]
 Takes a service name [&hellip;] that the current user has configuration modification rights on and executes
-a series of automated actions to execute commands as SYSTEM.</p>
-</blockquote>
+a series of automated actions to execute commands as SYSTEM.</p></blockquote>
 <p>And this box is no exception. As far as I understand it, the service is vulnerable to the 2nd variant.</p>
 <p>
   <img src="root_shell.png" alt="root_shell" /></p>
