@@ -11,8 +11,6 @@ date: 2019-01-19
 
 ***
 
-***
-
 # External Recon
 
 As usual we start with our nmap scan and see what we are dealing with:

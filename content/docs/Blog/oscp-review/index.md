@@ -39,7 +39,7 @@ Long story short: I bought a python3 book and started learning and coding.
 I challenged myself on CTF sites which improved my coding a lot as well as other topics in infosec. 
 
 This process was repeated for other areas aswell. Exploit-Development, Metasploit-Usage, using Linux as my main OS.
-I started hosting my own mail and webserver. Which also taught me a lot about Linux and how to it works. It made me a better sysadmin too.
+I started hosting my own mail and webserver. Which also taught me a lot about Linux and how it works. It made me a better sysadmin too.
 
 All this started even before 2008. Twelf years ago.
 
@@ -47,7 +47,7 @@ Around 2017 I discovered HackTheBox and was hooked right away. I did some of the
 Some weeks (or months) later, I popped my first box on HTB and sucked up every bit of knowledge I was able to get my hands on.
 
 Chipping away on my skill-gap one box and one challenge at a time. At the beginning of 2019 I felt the need to take this a bit further.
-I had to get the OSCP certification. Just for the sake of it. Just for the challenge. Not at all for fame and attention. ;)
+I had to get the OSCP certification to advance my career.
 
 In mid 2019 I started with some hands on exploit development exercises. Prior to that - everything I did was just theoretical.
 It wasn't too difficult to be honest. I had some problems to get started though. A result of my learning style. I need to
@@ -63,7 +63,6 @@ in my <a href="https://www.tagnull.de/post/safe/" target="_blank">Safe - Writeup
 
 After doing all that I called my wife over. Together we spent some time discussing when the course and exam would fit into our calendars. 
 This is really important. The course will take a lot of your spare time. Make sure your loved ones are able to support your journey. 
-In our case - my wife had to take care of our baby for the majority of the time.
 
 Once that was out of the way - I enrolled for the course in November 2019. Start of the course was scheduled for the beginning of January 2020.
 I booked 60 days of lab time. I felt rather confident that this would be sufficient and 90 days would have collided with my wifes plans for april.
@@ -84,7 +83,7 @@ So my inital goals for the lab were:
 * Get Domain-Admin access
 * Do some of the "Big 4" machines
 
-These goals changed every now and then. Don't be afraid of changing your goals when you find them too hard or too easy.
+These goals changed every now and then. Don't be afraid of changing your goals when you find they don't align with your set goals anymore.
 
 For example, I started with the mindset of NOT doing the exercises in the course-pdf. Then I started doing them. Then I stopped doing them.
 Do what feels right for you to reach your goals.
@@ -96,23 +95,21 @@ Or in other words, this task wasn't in alignment with my goals.
 I took breaks every couple of days. Those days were either family days or a video / pdf day. But never a lab day. Your brain needs to
 cool off. Take breaks. 
 
-You can follow my <a href="https://twitter.com/tagnullde/timelines/1231963867993051137" target="_blank">diary on twitter</a>. 
-I have tweeted every day of my lab time and created a collection for you to read.
-I tried to capture the up and downs of this trip as it happend. Showing that good and bad days are really happing and normal.
+There will be ups and downs, good and bad days - those are normal.
 Don't freak out - you can do this.
 
 [[Top]](#top)
 
 # The Exam
-If you've read my tweets, you know already that I reached all of my set goals within those 60 days. And those 60 days went by really fast. 
+I reached all of my set goals within those 60 days. And those 60 days went by really fast. 
 After my lab time expired, I had 2,5 days till my exam. I used one day to go over my notes and update the cheat-sheet I made with
 the commands I used in the past weeks.
 
 By going over it I also refreshed my mind of techniques used at the very beginning of my lab time. Who knows what comes up
-in the exam, right?. Last but not least I did two of the training exploits again. I haven't done this for weeks and a quick 
+in the exam, right? Last but not least I did two of the training exploits again. I hadn't done them for weeks and a quick 
 refresher was due.
 
-For exam-day my wife and I planned that she and our kid will visit her parents. So I had over 48 hours of absolute silence to do the exam.
+For exam-day my wife and I planned that I will have the house for myself for the weekend. So I had over 48 hours of absolute silence to do the exam.
 I can assure you, I would have failed the exam without that. You need to be able to rest and focus.
 
 The exam started at 14:45 with the proctor asking me to show my room and going through their checklist.
@@ -158,7 +155,7 @@ be afraid of losing your progress.
 
 The report was written in markdown and then converted to a PDF with pandoc. 
 To make the report pretty I used the <a href="https://github.com/Wandmalfarbe/pandoc-latex-template" target="_blank">Eisvogel Latex-Template</a>.
-It's quite a hefty setup. But also very powerfull and easy to handle. Worked better than LibreOffice or Word for that matter. At least for me.
+It's quite a hefty setup. But also very powerful and easy to handle. Worked better than LibreOffice or Word for that matter. At least for me.
 John Hammond did a video on this setup too.
 
 {{< youtube MQGozZzHUwQ >}}
