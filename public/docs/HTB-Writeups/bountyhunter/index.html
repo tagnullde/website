@@ -24,16 +24,16 @@ PORT   STATE SERVICE VERSION
 |_http-server-header: Apache/2.4.41 (Ubuntu)
 |_http-title: Bounty Hunters
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
-We find a ssh service on port 22 and http service on port 80. http is usually a better target as ssh. So I start there.
+We find a ssh service on port 22 and http service on port 80. http is usually a better target than ssh. So I start there.
 The website boast a bounty hunter service. First I click on all visible links and menus to get a feeling for the website.
-What works, what doesn&rsquo;t work. But interfaces do I have - like input fields for example.">
+What works, what doesn&rsquo;t work. What interfaces do I have - like input fields for example.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://www.tagnull.de/docs/HTB-Writeups/bountyhunter/">
   <meta property="og:site_name" content="www.tagnull.de">
   <meta property="og:title" content="BountyHunter">
   <meta property="og:description" content="External Recon # We start with nmap to do our external recon:
-Nmap scan report for 10.129.192.33 PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 d4:4c:f5:79:9a:79:a3:b0:f1:66:25:52:c9:53:1f:e1 (RSA) | 256 a2:1e:67:61:8d:2f:7a:37:a7:ba:3b:51:08:e8:89:a6 (ECDSA) |_ 256 a5:75:16:d9:69:58:50:4a:14:11:7a:42:c1:b6:23:44 (ED25519) 80/tcp open http Apache httpd 2.4.41 ((Ubuntu)) |_http-server-header: Apache/2.4.41 (Ubuntu) |_http-title: Bounty Hunters Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel We find a ssh service on port 22 and http service on port 80. http is usually a better target as ssh. So I start there. The website boast a bounty hunter service. First I click on all visible links and menus to get a feeling for the website. What works, what doesn’t work. But interfaces do I have - like input fields for example.">
+Nmap scan report for 10.129.192.33 PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 d4:4c:f5:79:9a:79:a3:b0:f1:66:25:52:c9:53:1f:e1 (RSA) | 256 a2:1e:67:61:8d:2f:7a:37:a7:ba:3b:51:08:e8:89:a6 (ECDSA) |_ 256 a5:75:16:d9:69:58:50:4a:14:11:7a:42:c1:b6:23:44 (ED25519) 80/tcp open http Apache httpd 2.4.41 ((Ubuntu)) |_http-server-header: Apache/2.4.41 (Ubuntu) |_http-title: Bounty Hunters Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel We find a ssh service on port 22 and http service on port 80. http is usually a better target than ssh. So I start there. The website boast a bounty hunter service. First I click on all visible links and menus to get a feeling for the website. What works, what doesn’t work. What interfaces do I have - like input fields for example.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
@@ -43,9 +43,9 @@ Nmap scan report for 10.129.192.33 PORT STATE SERVICE VERSION 22/tcp open ssh Op
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/logo.png" >
 <link rel="canonical" href="https://www.tagnull.de/docs/HTB-Writeups/bountyhunter/">
-<link rel="stylesheet" href="/book.min.aaab74181c6b1b4045b90f1cce4aaa1631e06c4b04ec2890a00c5723953b070a.css" integrity="sha256-qqt0GBxrG0BFuQ8czkqqFjHgbEsE7CiQoAxXI5U7Bwo=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.c8d213ad53b0e74b4a5b6fd785e46d9391863be06d16a90f25baa546f9255961.css" integrity="sha256-yNITrVOw50tKW2/XheRtk5GGO&#43;BtFqkPJbqlRvklWWE=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.6a8041d17c84a395d091007b1dce67ea07ced3a77b42d5e99b0d7bbf5216382d.js" integrity="sha256-aoBB0XyEo5XQkQB7Hc5n6gfO06d7QtXpmw17v1IWOC0=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.c1a640087ca9581469f318b576cf4bd233a82c02e1349334d840c7940a557905.js" integrity="sha256-waZACHypWBRp8xi1ds9L0jOoLALhNJM02EDHlApVeQU=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -446,13 +446,13 @@ PORT   STATE SERVICE VERSION
 |_http-server-header: Apache/2.4.41 (Ubuntu)
 |_http-title: Bounty Hunters
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
-</code></pre><p>We find a ssh service on port 22 and http service on port 80. http is usually a better target as ssh. So I start there.
+</code></pre><p>We find a ssh service on port 22 and http service on port 80. http is usually a better target than ssh. So I start there.
 The website boast a bounty hunter service. First I click on all visible links and menus to get a feeling for the website.
-What works, what doesn&rsquo;t work. But interfaces do I have - like input fields for example.</p>
+What works, what doesn&rsquo;t work. What interfaces do I have - like input fields for example.</p>
 <p>The only thing that sticks out is the &ldquo;portal&rdquo; page.</p>
 <p>
   <img src="portal.png" alt="portal.png" /></p>
-<p>It&rsquo;s under development. An indicator that not all features (like propper coding) are ready.
+<p>It&rsquo;s under development. An indicator that not all features (like propper coding) are production ready.
 The &ldquo;Go here&rdquo; link leads us to a bounty Report system which seems to be in a beta stadium.</p>
 <p>
   <img src="bounty-report-system.png" alt="bounty-report-system.png" /></p>

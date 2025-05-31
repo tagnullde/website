@@ -31,15 +31,15 @@ PORT   STATE SERVICE VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-We find a ssh service on port 22 and http service on port 80. http is usually a better target as ssh. So I start there.
+We find a ssh service on port 22 and http service on port 80. http is usually a better target than ssh. So I start there.
 The website boast a bounty hunter service. First I click on all visible links and menus to get a feeling for the website.
-What works, what doesn't work. But interfaces do I have - like input fields for example.
+What works, what doesn't work. What interfaces do I have - like input fields for example.
 
 The only thing that sticks out is the "portal" page.
 
 ![portal.png](portal.png)
 
-It's under development. An indicator that not all features (like propper coding) are ready.
+It's under development. An indicator that not all features (like propper coding) are production ready.
 The "Go here" link leads us to a bounty Report system which seems to be in a beta stadium.
 
 ![bounty-report-system.png](bounty-report-system.png)
