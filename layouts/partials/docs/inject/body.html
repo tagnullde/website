@@ -1,0 +1,73 @@
+<!--
+  Override of the theme's (empty, meant-to-be-overridden) inject/body stub.
+  Fires on every page, including 404 — a small console message for anyone
+  technical enough to have devtools open.
+-->
+<script>
+  console.log(
+    '%c$ whoami', 'color:#35d30d;font-family:monospace;font-size:14px;'
+  );
+  console.log(
+    '%cSenior Penetration Tester — Active Directory Security.', 'color:#e9ecef;font-family:monospace;font-size:14px;'
+  );
+  console.log(
+    '%cFound something interesting on this site? Read the policy first:', 'color:#e9ecef;font-family:monospace;font-size:12px;'
+  );
+  console.log(
+    '%chttps://www.tagnull.de/security-policy', 'color:#35d30d;font-family:monospace;font-size:12px;'
+  );
+</script>
+
+<!--
+  Table-of-contents reading progress: marks a ToC entry (.toc-read, styled
+  in _main.scss with the accent color) once you've scrolled past its
+  heading, so the ToC fills in top-to-bottom as you read. No-ops on any
+  page without a .book-toc-side (e.g. the homepage, which opts out via
+  bookToc: false).
+-->
+<script>
+  (function () {
+    var tocLinks = document.querySelectorAll('.book-toc-side a[href^="#"]');
+    if (!tocLinks.length) return;
+
+    var entries = Array.prototype.map.call(tocLinks, function (link) {
+      var id = decodeURIComponent(link.getAttribute('href').slice(1));
+      return { link: link, heading: document.getElementById(id) };
+    }).filter(function (entry) {
+      return entry.heading;
+    });
+    if (!entries.length) return;
+
+    var ticking = false;
+
+    function update() {
+      var scrollY = window.scrollY;
+      var viewportHeight = window.innerHeight;
+      var docHeight = document.documentElement.scrollHeight;
+      // A heading in the last screenful of a page can sit lower than
+      // scrollY will ever reach — the page simply can't scroll any
+      // further once its bottom hits the bottom of the viewport. Without
+      // this, the last heading(s) of an article could never be marked
+      // read no matter how far you scroll. So: reaching the true bottom
+      // of the page always counts as having read everything.
+      var atBottom = scrollY + viewportHeight >= docHeight - 2;
+      var y = scrollY + 4;
+
+      entries.forEach(function (entry) {
+        var top = entry.heading.getBoundingClientRect().top + scrollY;
+        entry.link.classList.toggle('toc-read', atBottom || top <= y);
+      });
+      ticking = false;
+    }
+
+    function requestUpdate() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    }
+
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+    update();
+  })();
+</script>

@@ -6,27 +6,58 @@
     {{ partial "docs/inject/head" . }}
 
     <style>
-      .not-found {
-        text-align: center;
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background: var(--body-background);
+        color: var(--body-font-color);
       }
-      .not-found h1 {
-        margin: .25em 0 0 0;
-        opacity: .25;
-        font-size: 40vmin;
+      .terminal-404 {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        padding: 2rem;
+      }
+      .terminal-404 .prompt {
+        color: var(--color-link);
+      }
+      .terminal-404 a {
+        color: var(--color-link);
+      }
+      .terminal-404 .cursor {
+        display: inline-block;
+        width: 0.55em;
+        height: 1em;
+        vertical-align: text-bottom;
+        background: var(--color-link);
+        animation: term-blink 1s steps(1) infinite;
+      }
+      @keyframes term-blink {
+        50% { opacity: 0; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .terminal-404 .cursor { animation: none; }
       }
     </style>
   </head>
 
   <body>
-    <main class="flex justify-center not-found">
-      <div>
-        <h1>404</h1>
-        <h2>Page Not Found</h2>
-        <h3>
-          <a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
-        </h3>
-      </div>
+    <main class="terminal-404">
+      <p><span class="prompt">$</span> cd <span id="notfound-path">this page</span></p>
+      <p>bash: cd: No such file or directory</p>
+      <p><span class="prompt">$</span> cd ~ &amp;&amp; open <a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a></p>
+      <p><span class="prompt">$</span> <span class="cursor"></span></p>
     </main>
+
+    <script>
+      var notFoundPathEl = document.getElementById('notfound-path');
+      if (notFoundPathEl && window.location && window.location.pathname) {
+        notFoundPathEl.textContent = window.location.pathname;
+      }
+    </script>
 
     {{ partial "docs/inject/body" . }}
   </body>

@@ -14,13 +14,17 @@ $border-radius: $padding-4 !default;
 $body-font-weight: normal !default;
 
 $body-min-width: 20rem !default;
-$container-max-width: 80rem !default;
+// +20% over the theme's stock 80rem — the site was leaving a lot of empty
+// gutter on wide screens for no reason.
+$container-max-width: 96rem !default;
 
 $header-height: 3.5rem !default;
 $menu-width: 16rem !default;
-$toc-width: 16rem !default;
 
-$mobile-breakpoint: $menu-width + $body-min-width * 1.2 + $toc-width !default;
+// No separate $toc-width: the table of contents lives inside the left menu
+// column (see layouts/_default/baseof.html) instead of its own right-hand
+// column, so the mobile breakpoint only needs to account for menu + body.
+$mobile-breakpoint: $menu-width + $body-min-width * 1.2 !default;
 
 $hint-colors: (
   info: #6bf,
@@ -28,25 +32,9 @@ $hint-colors: (
   danger: #f66,
 ) !default;
 
-// Themes
-@mixin theme-light {
-  --gray-100: #f8f9fa;
-  --gray-200: #e9ecef;
-  --gray-500: #adb5bd;
-
-  --color-link: #0055bb;
-  --color-visited-link: #8440f1;
-
-  --body-background: white;
-  --body-font-color: black;
-
-  --icon-filter: none;
-
-  --hint-color-info: #6bf;
-  --hint-color-warning: #fd6;
-  --hint-color-danger: #f66;
-}
-
+// Theme
+// BookTheme is hardcoded to 'dark' in config.toml and always will be — no
+// light-theme mixin is kept here since it would never be compiled/used.
 @mixin theme-dark {
   --gray-100: rgba(255, 255, 255, 0.1);
   --gray-200: rgba(255, 255, 255, 0.2);
@@ -63,4 +51,34 @@ $hint-colors: (
   --hint-color-info: #6bf;
   --hint-color-warning: #fd6;
   --hint-color-danger: #f66;
+}
+
+// Ambient dot-grid texture, used on both `body` and
+// `.book-menu-content`/`.book-toc-side`'s container in _main.scss via this
+// one mixin, so it reads as one consistent background instead of stopping
+// dead at the sidebar's opaque backdrop.
+//
+// Deliberately a scattered dot grid, not a continuous line pattern: an
+// earlier diagonal-line version needed the two elements' patterns to align
+// pixel-perfectly across the menu/content seam, which turned out to be
+// unreliable — .book-menu-content has `will-change: transform` (for the
+// mobile slide-in animation), which per spec makes that element establish
+// its own containing block, which *also* silently breaks
+// `background-attachment: fixed`'s viewport-relative positioning for that
+// same element (a well-documented CSS interaction, not a typo/mistake) —
+// so the two line patterns didn't reliably line up. A dot grid sidesteps
+// the whole problem: a few pixels of offset between two dot grids is
+// imperceptible, where the same offset in a continuous diagonal line reads
+// as an obviously broken seam. No background-attachment/position hack
+// needed here as a result — don't reintroduce a continuous-line pattern
+// without re-solving that alignment problem first.
+@mixin scanline-texture {
+  background:
+    radial-gradient(
+      circle,
+      color-mix(in srgb, var(--color-link) 22%, transparent) 1px,
+      transparent 1px
+    ),
+    var(--body-background);
+  background-size: 24px 24px;
 }

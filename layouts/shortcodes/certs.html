@@ -1,0 +1,19 @@
+<!--
+  Renders the cert/path badge grid on the homepage from the page's front
+  matter, so adding a new cert is a front-matter entry, not a copy-pasted
+  HTML table row. Expects front matter like:
+
+  certs:
+    - name: CAPE
+      image: cape.png
+    - name: CPTS
+      image: cpts.png
+      inProgress: true
+-->
+<div class="cert-grid">
+  {{ range .Page.Params.certs }}
+  <div class="cert-badge{{ if .inProgress }} cert-badge--in-progress{{ end }}">
+    <img src="{{ .image | relURL }}" alt="{{ .name }}">
+  </div>
+  {{ end }}
+</div>
