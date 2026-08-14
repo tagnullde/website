@@ -35,7 +35,7 @@ This site is where I keep track of that journey — certifications, lab write-up
 
 {{< certs >}}
 
-<center><a href="https://app.hackthebox.eu/profile/19285" target="_blank"><img src="https://www.hackthebox.eu/badge/image/19285" alt="Hack The Box"></a></center>
+<center><a href="https://app.hackthebox.com/public/users/19285" target="_blank"><img src="https://www.hackthebox.eu/badge/image/19285" alt="Hack The Box"></a></center>
 <br>
 <center><i>Because Domain Admin rights are not enough.</i></center>
 <center><i>Hack them all!</i></center>
