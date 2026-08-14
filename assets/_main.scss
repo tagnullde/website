@@ -151,13 +151,20 @@ ul.pagination {
   // "You are here" indicator shown instead of the full list while a
   // section is collapsed (see menu-filetree.html) — hidden once the
   // section is manually expanded, since the full list's own .active
-  // highlighting already shows the same thing at that point.
+  // highlighting already shows the same thing at that point. Styled to
+  // match that .active entry exactly (accent color, full opacity) rather
+  // than the dimmed default entry look — this *is* meant to read as "the
+  // active item," just outside the (currently hidden) list, not as a
+  // separate, less-emphasized annotation.
   .book-section-current {
-    margin-inline-start: $padding-16;
+    // No inline-start margin: the expanded list's items sit flush at
+    // padding-inline-start: 0 (see .book-section-flat > ul below), so any
+    // indent here would shift this line sideways relative to where the
+    // same entry sits once the list is manually expanded.
     margin-top: $padding-4;
     margin-bottom: $padding-8;
     font-size: $font-size-12;
-    opacity: 0.7;
+    color: var(--color-link);
 
     &::before {
       content: "└─ ";
