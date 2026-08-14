@@ -23,9 +23,9 @@ certs:
 
 Senior Penetration Tester specializing in Active Directory security assessments, including ADCS exploitation, NTLM relay attacks, and cross-forest trust abuse.
 
-Before moving into offensive security, I spent close to a decade running and administering Active Directory environments as a systems administrator (MCITP/MCSA), followed by about four years as a 2nd/3rd-level SOC analyst working with QRadar — designing detection use cases and correlation rules, maintaining the SIEM itself, and handling incident response. Most pentesters attacking AD haven't spent years being the one who has to keep it running, and even fewer have sat on the defensive side triaging the alerts their own attacks would trigger — that combined background shapes how I approach these engagements.
+Before moving into offensive security, I spent close to a decade running and administering Active Directory environments as a systems administrator (MCITP/MCSA), followed by about four years as a 2nd/3rd-level SOC analyst working with QRadar, designing detection use cases and correlation rules, maintaining the SIEM itself, and handling incident response. Most pentesters attacking AD haven't spent years being the one who has to keep it running, and even fewer have sat on the defensive side triaging the alerts their own attacks would trigger. That combined background shapes how I approach these engagements.
 
-This site is where I keep track of that journey — certifications, lab write-ups, and the occasional review or blog post. Some of the earlier content reflects previous stages of that journey and remains as a record of how I got here.
+This site is where I keep track of that journey: certifications, lab write-ups, and the occasional review or blog post. Some of the earlier content reflects previous stages of that journey and remains as a record of how I got here.
 
 **Most recent certification:** HTB Certified Active Directory Pentesting Expert (CAPE)
 <br>
