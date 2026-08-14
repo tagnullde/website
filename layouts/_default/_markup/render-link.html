@@ -1,0 +1,37 @@
+<!--
+  Override of the theme's default link render hook (same broken-link check
+  via BookPortableLinks), with a fix for pure same-page fragment links like
+  [Top](#top): the upstream version resolves the empty path from a
+  fragment-only destination via GetPage(""), which returns the site's home
+  page — turning "#top" into "/#top" and sending readers to the homepage
+  instead of scrolling them back up the current article.
+-->
+{{- if .Page.Site.Params.BookPortableLinks -}}
+  {{- template "portable-link" . -}}
+{{- else -}}
+  <a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- end -}}
+
+{{- define "portable-link" -}}
+  {{- $destination := .Destination }}
+  {{- $isFragment := strings.HasPrefix .Destination "#" }}
+  {{- $isRemote := or (in .Destination ":") (strings.HasPrefix .Destination "//") }}
+  {{- if and (not $isFragment) (not $isRemote) }}
+    {{- $url := urls.Parse .Destination }}
+    {{- $path := strings.TrimSuffix "/_index.md" $url.Path }}
+    {{- $path = strings.TrimSuffix "/_index" $path }}
+    {{- $path = strings.TrimSuffix ".md" $path }}
+    {{- $page := .Page.GetPage $path }}
+    {{- if $page }}
+      {{- $destination = $page.RelPermalink }}
+      {{- if $url.Fragment }}
+        {{- $destination = print $destination "#" $url.Fragment }}
+      {{- end }}
+    {{- else if fileExists (print .Page.File.Dir .Destination) }}
+      <!-- Nothing -->
+    {{- else -}}
+      {{- warnf "Page '%s' not found in '%s'" .Destination .Page.File }}
+    {{- end }}
+  {{- end }}
+  <a href="{{ $destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- end -}}

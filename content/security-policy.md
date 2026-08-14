@@ -36,7 +36,7 @@ Please do not attempt to carry out DoS attacks, leverage black hat SEO technique
 
 ## Reporting
 
-Please contact me via <a href="mailto:infosec@tagnullde" target="_blank">email</a> with a written report of your findings. Please include all the steps that led to the exploitation of the vulnerability and also your contact details in order to be rewarded.
+Please contact me via <a href="mailto:infosec@tagnull.de" target="_blank">email</a> with a written report of your findings. Please include all the steps that led to the exploitation of the vulnerability and also your contact details in order to be rewarded.
 
 ## Rewards
 

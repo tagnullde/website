@@ -8,12 +8,30 @@
 {{ end }}
 
 {{ define "book-section-children" }}{{/* (dict "Section" .Section "CurrentPage" .CurrentPage) */}}
+  {{ $pages := where .Section.Pages "Params.bookhidden" "ne" true }}
+  {{ if eq .Section.Params.bookOrder "title" }}
+    {{ $pages = $pages.ByTitle }}
+  {{ end }}
   <ul>
-    {{ range (where .Section.Pages "Params.bookhidden" "ne" true) }}
+    {{ range $pages }}
       {{ if .IsSection }}
         <li {{- if .Params.BookFlatSection }} class="book-section-flat" {{ end -}}>
           {{ template "book-page-link" (dict "Page" . "CurrentPage" $.CurrentPage) }}
           {{ template "book-section-children" (dict "Section" . "CurrentPage" $.CurrentPage) }}
+          {{/*
+            Compact "you are here" indicator, shown only while this section
+            is collapsed (see the CSS sibling-selector hiding it once the
+            checkbox above is :checked) and only when the current page is a
+            descendant of this section but not the section index itself —
+            i.e. reading an actual article. Keeps the sidebar short without
+            losing track of which article is open. Placed after the nested
+            <ul> (not between the label and it) so it doesn't break the
+            existing `label + ul` adjacent-sibling CSS that drives expand/
+            collapse.
+          */}}
+          {{ if and .Params.BookCollapseSection (not (eq $.CurrentPage .)) (.IsAncestor $.CurrentPage) }}
+            <div class="book-section-current">{{ partial "docs/title" $.CurrentPage }}</div>
+          {{ end }}
         </li>
       {{ else if and .IsPage .Content }}
         <li>
@@ -26,10 +44,22 @@
 
 {{ define "book-page-link" }}{{/* (dict "Page" .Page "CurrentPage" .CurrentPage) */}}
   {{ $current := eq .CurrentPage .Page }}
-  {{ $ancestor := .Page.IsAncestor .CurrentPage }}
 
+  {{/*
+    Deliberately NOT auto-expanding a collapsed section just because the
+    current page is one of its descendants (upstream default: `or $current
+    $ancestor`). With Archive as one flat 16-entry list, that meant reading
+    any article kept the whole list open, pushing the table of contents
+    (now living right below the menu, see baseof.html) far down the sidebar.
+    Only expand when the section index itself is the current page — landing
+    on /docs/archive/ still shows the full list to browse, but clicking into
+    an actual article collapses it back down. This assumes the flat
+    2-section structure this site actually has; revisit if deeper nested
+    sections are ever introduced, where $ancestor is what reveals the active
+    branch of a multi-level tree.
+  */}}
   {{ if .Page.Params.BookCollapseSection }}
-    <input type="checkbox" id="section-{{ md5 .Page }}" class="toggle" {{ if or $current $ancestor }}checked{{ end }} />
+    <input type="checkbox" id="section-{{ md5 .Page }}" class="toggle" {{ if $current }}checked{{ end }} />
     <label for="section-{{ md5 .Page }}" class="flex justify-between">
       <a {{ if .Page.Content }}href="{{ .Page.RelPermalink }}"{{ else }}role="button"{{ end }} class="{{ if $current }}active{{ end }}">
         {{- partial "docs/title" .Page -}}

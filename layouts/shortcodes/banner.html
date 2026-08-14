@@ -1,0 +1,28 @@
+<!--
+  Centered banner image for a post. This is a shortcode rather than a plain
+  Markdown image because <p align="center"> is an HTML block as far as
+  Goldmark is concerned — Markdown image syntax placed inside it would be
+  left as literal text instead of rendering as an image. Raw <img> HTML
+  bypasses render-image.html entirely (no existence check, no forced alt
+  text), which is exactly how a missing-alt-text bug and a couple of
+  copy-pasted-wrong-alt bugs slipped into old posts. This shortcode does the
+  same checks by hand so a typo'd filename or missing description fails the
+  build instead of silently shipping.
+
+  Usage: banner shortcode, called with two positional args — the filename,
+  then the alt text — wrapped in the usual double-angle-bracket shortcode
+  delimiters.
+-->
+{{- $file := .Get 0 -}}
+{{- $alt := .Get 1 -}}
+{{- if not $file -}}
+  {{- warnf "banner shortcode in '%s' is missing its filename argument" .Page.File -}}
+{{- else if not (fileExists (print .Page.File.Dir $file)) -}}
+  {{- warnf "Banner image '%s' not found in '%s'" $file .Page.File -}}
+{{- end -}}
+{{- if not $alt -}}
+  {{- warnf "Banner image '%s' in '%s' is missing alt text" $file .Page.File -}}
+{{- end -}}
+<p align="center">
+  <img src="{{ $file }}" alt="{{ $alt }}" />
+</p>

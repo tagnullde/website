@@ -4,11 +4,23 @@ html {
   touch-action: manipulation;
 }
 
+// Body prose reverted to 'Roboto' (already self-hosted, same font the
+// theme shipped with originally) after actually living with full-site
+// monospace and finding it harder to read — that experiment is over.
+// Headings/nav/chrome (further below) stay on 'Roboto Mono', which is
+// where the terminal aesthetic actually lives without hurting long-form
+// readability; Roboto itself reads clean/technical enough alongside it,
+// the dark palette, and the accent green to still feel like the same site.
+// If something more distinctly "hacker" is wanted for body text later,
+// swap this family — don't reach for full monospace again without
+// re-reading this comment.
 body {
   min-width: $body-min-width;
   color: var(--body-font-color);
-  background: var(--body-background);
 
+  @include scanline-texture;
+
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 0.33px;
   font-weight: $body-font-weight;
   text-rendering: optimizeLegibility;
@@ -57,7 +69,7 @@ aside nav ul {
   }
 
   a:hover {
-    color: #35d30d;
+    color: var(--color-link);
     opacity: 1;
   }
 
@@ -104,8 +116,8 @@ ul.pagination {
   .book-menu-content {
     width: $menu-width;
     padding: $padding-16;
-    background: var(--body-background);
 
+    @include scanline-texture;
     @include fixed;
   }
 
@@ -134,6 +146,58 @@ ul.pagination {
 
   input.toggle:checked + label::after {
     content: "▾";
+  }
+
+  // "You are here" indicator shown instead of the full list while a
+  // section is collapsed (see menu-filetree.html) — hidden once the
+  // section is manually expanded, since the full list's own .active
+  // highlighting already shows the same thing at that point.
+  .book-section-current {
+    margin-inline-start: $padding-16;
+    margin-top: $padding-4;
+    margin-bottom: $padding-8;
+    font-size: $font-size-12;
+    opacity: 0.7;
+
+    &::before {
+      content: "└─ ";
+      opacity: 0.6;
+    }
+  }
+
+  input.toggle:checked ~ .book-section-current {
+    display: none;
+  }
+
+  // Give every entry inside a flat section (Archive, Blog) the same
+  // tree/terminal look as .book-section-current above — a `tree`-style
+  // branch prefix (├─ for a middle entry, └─ for the last one) and a
+  // slightly smaller, slightly dimmed treatment, brightening to full
+  // opacity + the accent color for whichever entry is actually active.
+  .book-section-flat > ul {
+    font-size: $font-size-12;
+
+    > li > a,
+    > li > span {
+      display: inline-block;
+      opacity: 0.75;
+
+      &::before {
+        content: "├─ ";
+        opacity: 0.6;
+      }
+    }
+
+    > li:last-child > a,
+    > li:last-child > span {
+      &::before {
+        content: "└─ ";
+      }
+    }
+
+    > li > a.active {
+      opacity: 1;
+    }
   }
 }
 
@@ -166,6 +230,14 @@ body[dir="rtl"] .book-menu {
   min-width: $body-min-width;
   flex-grow: 1;
   padding: $padding-16;
+
+  // Cap the actual prose measure so the wider container (see
+  // $container-max-width) becomes breathing room around the article
+  // instead of stretching paragraphs into unreadably long lines.
+  .markdown {
+    max-width: 60rem;
+    margin-inline: auto;
+  }
 }
 
 .book-post {
@@ -227,16 +299,15 @@ body[dir="rtl"] .book-menu {
   }
 }
 
-.book-toc {
-  flex: 0 0 $toc-width;
+// Table of contents, nested inside .book-menu-content (see
+// layouts/_default/baseof.html) rather than its own right-hand column —
+// it scrolls with the menu and reclaims the screen space a separate
+// .book-toc column used to reserve.
+.book-toc-side {
+  margin-top: $padding-16 * 2;
+  padding-top: $padding-16;
+  border-top: 1px solid var(--gray-200);
   font-size: $font-size-12;
-
-  .book-toc-content {
-    width: $toc-width;
-    padding: $padding-16;
-
-    @include fixed;
-  }
 
   img {
     height: 1em;
@@ -245,6 +316,27 @@ body[dir="rtl"] .book-menu {
 
   nav > ul > li:first-child {
     margin-top: 0;
+  }
+
+  // Each entry is a heading, marked as such with a "#" (matching Markdown
+  // heading syntax) rather than the menu's tree-branch glyphs — those two
+  // lists mean different things (file/nav tree vs. document outline) and
+  // shouldn't share a visual language. Progress through the article is
+  // what the color shows: a heading's link turns the accent color once
+  // you've scrolled past it (see the .toc-read class toggled by
+  // inject/body.html), building up top-to-bottom as you read. No opacity
+  // dimming here, unlike the menu — green alone carries that meaning.
+  nav ul li > a {
+    display: inline-block;
+
+    &::before {
+      content: "# ";
+      opacity: 0.6;
+    }
+  }
+
+  nav ul li > a.toc-read {
+    color: var(--color-link);
   }
 }
 
@@ -263,6 +355,31 @@ body[dir="rtl"] .book-menu {
   margin-top: $padding-16;
 }
 
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 230px);
+  justify-content: center;
+  gap: $padding-16;
+  margin: $padding-16 0;
+
+  img {
+    display: block;
+    width: 230px;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cert-badge--in-progress {
+  opacity: 0.3;
+}
+
 .book-languages {
   margin-block-end: $padding-16 * 2;
 
@@ -279,7 +396,6 @@ body[dir="rtl"] .book-menu {
 
 // Responsive styles
 .book-menu-content,
-.book-toc-content,
 .book-page,
 .book-header aside,
 .markdown {
@@ -299,10 +415,6 @@ body[dir="rtl"] .book-menu {
     margin-inline-start: -$menu-width;
     font-size: $font-size-base;
     z-index: 1;
-  }
-
-  .book-toc {
-    display: none;
   }
 
   .book-header {
@@ -358,8 +470,57 @@ body[dir="rtl"] .book-menu {
 // Extra space for big screens
 @media screen and (min-width: $container-max-width) {
   .book-page,
-  .book-menu .book-menu-content,
-  .book-toc .book-toc-content {
+  .book-menu .book-menu-content {
     padding: $padding-16 * 2 $padding-16;
+  }
+}
+
+// Thin, accent-colored scrollbar instead of the browser default
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-link) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-link);
+  border-radius: $border-radius;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+// Accent-colored prompt text, e.g. "$ whoami" on the homepage — scoped to
+// this class rather than h1 generally, since every post's own first
+// heading (e.g. "# Recon") is also an h1 and shouldn't turn green too.
+.terminal-prompt {
+  color: var(--color-link);
+}
+
+// Blinking terminal-style cursor, e.g. after "$ whoami _" on the homepage.
+// (The blink animation alone never set a color — it inherited the
+// surrounding heading's default text color, which is why it rendered
+// white instead of the accent green despite looking like it should match.)
+.blink-cursor {
+  color: var(--color-link);
+  animation: blink-cursor 1s steps(1) infinite;
+}
+
+@keyframes blink-cursor {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blink-cursor {
+    animation: none;
   }
 }
