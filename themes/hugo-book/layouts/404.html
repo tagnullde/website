@@ -12,7 +12,6 @@
         justify-content: center;
         min-height: 100vh;
         margin: 0;
-        background: var(--body-background);
         color: var(--body-font-color);
       }
       .terminal-404 {
@@ -46,16 +45,18 @@
 
   <body>
     <main class="terminal-404">
-      <p><span class="prompt">$</span> cd <span id="notfound-path">this page</span></p>
-      <p>bash: cd: No such file or directory</p>
-      <p><span class="prompt">$</span> cd ~ &amp;&amp; open <a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a></p>
+      <p><span class="prompt">$</span> cd <span class="notfound-path">this page</span></p>
+      <p>cd: The directory '<span class="notfound-path">this page</span>' does not exist</p>
+      <p><span class="prompt">$</span> open <a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a></p>
       <p><span class="prompt">$</span> <span class="cursor"></span></p>
     </main>
 
     <script>
-      var notFoundPathEl = document.getElementById('notfound-path');
-      if (notFoundPathEl && window.location && window.location.pathname) {
-        notFoundPathEl.textContent = window.location.pathname;
+      var notFoundPathEls = document.querySelectorAll('.notfound-path');
+      if (notFoundPathEls.length && window.location && window.location.pathname) {
+        notFoundPathEls.forEach(function (el) {
+          el.textContent = window.location.pathname;
+        });
       }
     </script>
 
